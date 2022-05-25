@@ -1,0 +1,12 @@
+{
+	"name": "Libadwaita",
+  "displayName": "Libadwaita",
+  "theme": "ui",
+  "version": "1.0.0",
+  "description": "Libadwaita theme for Mailspring",
+  "license": "MIT",
+  "engines": {
+    "mailspring": "*"
+  },
+  "private": true
+}
