@@ -1,161 +1,161 @@
-@import "arc-variables";
+@import "adw-variables";
 
 //------------------------------------------------------------
 // Sidebar toolbar
 //------------------------------------------------------------
 .toolbar-RootSidebar {
 	height: 100%;
-	background-color: @clrSidebarBg;
-	border-right: 1px solid @clrSidebarBorder;
+	background-color: @headerbar_bg_color;
+// 	border-right: 1px solid @clrSidebarBorder;
 
-	//---------------------------------
-	// New email button
-	//---------------------------------
-	.item-compose {
-		background: none;
-		box-shadow: none;
-		border: 1px solid transparent;
-		border-radius: 3px;
-		height: 26px;
+// 	//---------------------------------
+// 	// New email button
+// 	//---------------------------------
+// 	.item-compose {
+// 		background: none;
+// 		box-shadow: none;
+// 		border: 1px solid transparent;
+// 		border-radius: 3px;
+// 		height: 26px;
 
-		img.content-mask {
-			background-color: @clrSidebarBtnText;
-		}
+// 		img.content-mask {
+// 			background-color: @clrSidebarBtnText;
+// 		}
 
-		&:hover {
-			background-color: @clrSidebarBtnBgHover;
-			border-color: @clrSidebarBtnBorderHover;
-		}
+// 		&:hover {
+// 			background-color: @clrSidebarBtnBgHover;
+// 			border-color: @clrSidebarBtnBorderHover;
+// 		}
 
-		&:active {
-			background-color: @clrSidebarBtnBgActive;
-			border-color: @clrSidebarBtnBorderActive;
+// 		&:active {
+// 			background-color: @clrSidebarBtnBgActive;
+// 			border-color: @clrSidebarBtnBorderActive;
 
-			img.content-mask{
-				background-color: @clrSidebarBtnTextActive;
-			}
-		}
+// 			img.content-mask{
+// 				background-color: @clrSidebarBtnTextActive;
+// 			}
+// 		}
 
-		//---------------------------------
-		// New email button - inactive window
-		//---------------------------------
-		body.is-blurred & {
-			box-shadow: none !important;
+// 		//---------------------------------
+// 		// New email button - inactive window
+// 		//---------------------------------
+// 		body.is-blurred & {
+// 			box-shadow: none !important;
 
-			img.content-mask {
-				opacity: 1.0;
-			}
+// 			img.content-mask {
+// 				opacity: 1.0;
+// 			}
 
-			&:hover {
-				background-color: @clrSidebarBtnBgHover;
-				border-color: @clrSidebarBtnBorderHover;
-			}
-		}
-	}
+// 			&:hover {
+// 				background-color: @clrSidebarBtnBgHover;
+// 				border-color: @clrSidebarBtnBorderHover;
+// 			}
+// 		}
+// 	}
 }
 
-//------------------------------------------------------------
-// Activity toolbar
-//------------------------------------------------------------
-.toolbar-activity {
-	//---------------------------------
-	// Activity icon
-	//---------------------------------
-	.activity-toolbar-icon {
-		background-color: @clrSidebarTextFaded;
+// //------------------------------------------------------------
+// // Activity toolbar
+// //------------------------------------------------------------
+// .toolbar-activity {
+// 	//---------------------------------
+// 	// Activity icon
+// 	//---------------------------------
+// 	.activity-toolbar-icon {
+// 		background-color: @clrSidebarTextFaded;
 
-		&:hover {
-			background-color: @clrSidebarText;
-			cursor: pointer;
-		}
+// 		&:hover {
+// 			background-color: @clrSidebarText;
+// 			cursor: pointer;
+// 		}
 
-		&.unread {
-			background-color: @clrAccent;
+// 		&.unread {
+// 			background-color: @clrAccent;
 
-			&:hover {
-				background-color: @clrAccent;
-			}
-		}
-	}
+// 			&:hover {
+// 				background-color: @clrAccent;
+// 			}
+// 		}
+// 	}
 
-	//---------------------------------
-	// Activity unread count
-	//---------------------------------
-	.unread-count.active {
-		background: @clrAccent;
-		font-weight: 600;
-		padding-top: 1px;
-	}
-}
+// 	//---------------------------------
+// 	// Activity unread count
+// 	//---------------------------------
+// 	.unread-count.active {
+// 		background: @clrAccent;
+// 		font-weight: 600;
+// 		padding-top: 1px;
+// 	}
+// }
 
-//------------------------------------------------------------
-// Activity dropdown menu
-//------------------------------------------------------------
-.activity-list-container {
-	background-color: @clrListBg;
-	border: 1px solid @clrWindowBorder;
+// //------------------------------------------------------------
+// // Activity dropdown menu
+// //------------------------------------------------------------
+// .activity-list-container {
+// 	background-color: @clrListBg;
+// 	border: 1px solid @clrWindowBorder;
 
-	//---------------------------------
-	// Activity dropdown items
-	//---------------------------------
-	.activity-list-item {
-		border-bottom: 1px solid @clrWindowBorder;
-		color: @clrListText;
+// 	//---------------------------------
+// 	// Activity dropdown items
+// 	//---------------------------------
+// 	.activity-list-item {
+// 		border-bottom: 1px solid @clrWindowBorder;
+// 		color: @clrListText;
 
-		.timestamp {
-			color: @clrListTextFaded;
-		}
+// 		.timestamp {
+// 			color: @clrListTextFaded;
+// 		}
 
-		&:hover {
-			background-color: @clrListHover;
-		}
+// 		&:hover {
+// 			background-color: @clrListHover;
+// 		}
 
-		&.unread,
-		&.unread:hover {
-			background-color: @clrAccent;
-			color: @clrListTextActive;
+// 		&.unread,
+// 		&.unread:hover {
+// 			background-color: @clrAccent;
+// 			color: @clrListTextActive;
 
-			.timestamp {
-				color: @clrListTextActiveFaded;
-			}
-		}
-	}
+// 			.timestamp {
+// 				color: @clrListTextActiveFaded;
+// 			}
+// 		}
+// 	}
 
-	.activity-list-toggle-item {
-		background-color: @clrListBg;
-		color: @clrListTextFaded;
+// 	.activity-list-toggle-item {
+// 		background-color: @clrListBg;
+// 		color: @clrListTextFaded;
 
-		.timestamp {
-			color: @clrListTextFaded;
-		}
+// 		.timestamp {
+// 			color: @clrListTextFaded;
+// 		}
 
-		&:last-child {
-			border-bottom: 1px solid @clrWindowBorder;
-		}
-	}
+// 		&:last-child {
+// 			border-bottom: 1px solid @clrWindowBorder;
+// 		}
+// 	}
 
-	//---------------------------------
-	// Activity dropdown footer
-	//---------------------------------
-	.activity-summary-cta {
-		background: @clrWindowBg;
-		border-top: 1px solid @clrWindowBorder;
-		color: @clrTextFadedLess;
+// 	//---------------------------------
+// 	// Activity dropdown footer
+// 	//---------------------------------
+// 	.activity-summary-cta {
+// 		background: @clrWindowBg;
+// 		border-top: 1px solid @clrWindowBorder;
+// 		color: @clrTextFadedLess;
 
-		&:hover {
-			cursor: pointer;
-			color: @clrAccent;
-		}
+// 		&:hover {
+// 			cursor: pointer;
+// 			color: @clrAccent;
+// 		}
 
-		&:active {
-			background: @clrWindowBg;
-		}
-	}
+// 		&:active {
+// 			background: @clrWindowBg;
+// 		}
+// 	}
 
-	//---------------------------------
-	// Activity dropdown scrollbar
-	//---------------------------------
-	.scrollbar-track {
-		.arc-scrollbar();
-	}
-}
+// 	//---------------------------------
+// 	// Activity dropdown scrollbar
+// 	//---------------------------------
+// 	.scrollbar-track {
+// 		.arc-scrollbar();
+// 	}
+// }
