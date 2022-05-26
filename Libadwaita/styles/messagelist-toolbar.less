@@ -20,35 +20,50 @@
 // 	border-left: 1px solid @clrWindowBorder;
 	border-bottom: 1px solid @borders_color;
 
-// 	//---------------------------------
-// 	// Toolbar buttons
-// 	//---------------------------------
-// 	.btn-toolbar,
-// 	.btn-icon {
-// 		background: none;
-// 		box-shadow: none;
-// 		border: 1px solid transparent !important;
-// 		border-radius: 3px !important;
-// 		height: 26px;
+	//---------------------------------
+	// Toolbar buttons
+	//---------------------------------
+	.btn-toolbar,
+	.btn-icon {
+		background: none;
+		box-shadow: none;
+		border: 0 !important;
+		border-radius: 6px !important;
+		padding: 0;
+		width: 34px;
+		height: 34px;
 
-// 		img.content-mask {
-// 			background-color: @clrToolBtnText;
-// 		}
+		img.content-mask {
+			background-color: @text_color;
+		}
 
-// 		&:hover {
-// 			border-color: @clrToolBtnBorderHover !important;
-// 			background-color: @clrToolBtnBgHover;
-// 		}
+		&:hover {
+			background-color: @view_hover_color;
+		}
 
-// 		&:active,
-// 		&.mode-toggle.mode-false {
-// 			border-color: @clrToolBtnBorderActive !important;
-// 			background-color: @clrToolBtnBgActive;
+		&:active {
+			background-color: @view_active_color;
 
-// 			img.content-mask {
-// 				background-color: @clrToolBtnTextActive;
-// 			}
-// 		}
+			img.content-mask {
+				background-color: @text_color;
+			}
+		}
+
+		&.mode-toggle.mode-false {
+			background-color: @view_selected_color;
+
+			img.content-mask {
+				background-color: @text_color;
+			}
+
+			&:hover {
+				background-color: @view_selected_hover_color;
+			}
+
+			&:active {
+				background-color: @view_selected_active_color;
+			}
+		}
 
 // 		&.disabled {
 // 			opacity: 1;
@@ -79,7 +94,7 @@
 // 		body.is-blurred &.mode-toggle.mode-false {
 // 			background-color: @clrToolBtnBgActive;
 // 		}
-// 	}
+	}
 
 // 	.btn-icon {
 // 		margin-top: 5px;
