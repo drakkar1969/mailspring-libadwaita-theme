@@ -9,36 +9,46 @@
 	border-bottom: 1px solid @borders_color;
 }
 
-// //------------------------------------------------------------
-// // Search box
-// //------------------------------------------------------------
-// .thread-search-bar {
-// 	background: rgba(0, 0, 0, 0);
-// 	box-shadow: none;
-// 	padding-left: 9px;
-// 	width: 100%;
+//------------------------------------------------------------
+// Search box
+//------------------------------------------------------------
+.thread-search-bar {
+	background: @button_color;
+	box-shadow: none;
+	border-radius: 6px;
+	font-size: 15px;
+	height: 34px;
+	line-height: 34px;
+	margin: 5px 6px;
+	padding-left: 9px;
 
-// 	//---------------------------------
-// 	// Search box text
-// 	//---------------------------------
-// 	color: @clrText;
+	&:focus-within {
+		outline: 2px solid @focus_border_color;
+		outline-offset: -2px;
+	}
 
-// 	&.placeholder .tokenizing-contenteditable .layer-tokens {
-// 		color: @clrTextFaded;
-// 	}
+	//---------------------------------
+	// Search box text
+	//---------------------------------
+	color: @text_color;
 
-// 	.tokenizing-contenteditable .layer-tokens {
-// 		color: @clrText;
+	&.placeholder .tokenizing-contenteditable .layer-tokens {
+		color: @text_color;
+		opacity: 0.55;
+	}
 
-// 		.layer-token {
-// 			font-weight: 500;
-// 			color: @clrAccent;
-// 		}
-// 	}
+	.tokenizing-contenteditable .layer-tokens {
+		color: @text_color;
 
-// 	.tokenizing-contenteditable .layer-text {
-// 		caret-color: @clrTextFaded;
-// 	}
+		.layer-token {
+			font-weight: 500;
+			color: @accent_color;
+		}
+	}
+
+	.tokenizing-contenteditable .layer-text {
+		caret-color: @text_color;
+	}
 
 // 	//---------------------------------
 // 	// Search box icons
@@ -107,7 +117,7 @@
 // 			}
 // 		}
 // 	}
-// }
+}
 
 // //------------------------------------------------------------
 // // Selection toolbar (single pane mode)
