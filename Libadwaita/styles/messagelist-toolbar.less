@@ -1,24 +1,20 @@
 @import "adw-variables";
 
-// //------------------------------------------------------------
-// // Message list toolbar
-// //------------------------------------------------------------
-// .toolbar-MessageList {
-// 	.message-toolbar-items {
-// 		margin-right: 6px;
-// 	}
-
-// 	.btn-toolbar.mode-toggle {
-// 		margin-left: 4.5px;
-// 	}
-// }
+//------------------------------------------------------------
+// Message list toolbar
+//------------------------------------------------------------
+.toolbar-MessageList {
+	.message-toolbar-items {
+		margin-right: 10.5px;
+	}
+}
 
 .toolbar-MessageList,
 .toolbar-MessageListSidebar {
 	height: 100%;
 	background: @window_bg_color;
-// 	border-left: 1px solid @clrWindowBorder;
 	border-bottom: 1px solid @borders_color;
+	padding-right: 6px;
 
 	//---------------------------------
 	// Toolbar buttons
@@ -29,6 +25,8 @@
 		box-shadow: none;
 		border: 0 !important;
 		border-radius: 6px !important;
+		margin-left: 4px !important;
+		margin-right: 4px !important;
 		padding: 0;
 		width: 34px;
 		height: 34px;
