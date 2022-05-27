@@ -13,7 +13,7 @@ drwxr-xr-x 4 drakkar drakkar 4.0K Jan 21 12:55 images
 -rw-r--r-- 1 drakkar drakkar 2.2K May 26 15:31 messagelist-toolbar.less
 -rw-r--r-- 1 drakkar drakkar  15K Jan 21 12:55 preferences.less
 -rw-r--r-- 1 drakkar drakkar 6.4K May 26 16:17 sidebar.less
--rw-r--r-- 1 drakkar drakkar 1.2K May 25 16:08 sidebar-toolbar.less
+OK  -rw-r--r-- 1 drakkar drakkar 1.2K May 25 16:08 sidebar-toolbar.less
 -rw-r--r-- 1 drakkar drakkar  213 Jan 21 12:55 theme-colors.less
 -rw-r--r-- 1 drakkar drakkar 1.1K Jan 21 12:55 theme-selector.less
 -rw-r--r-- 1 drakkar drakkar 7.2K Jan 21 12:55 threadlist-icons.less

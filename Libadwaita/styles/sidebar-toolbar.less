@@ -36,20 +36,15 @@
 			}
 		}
 
-// 		//---------------------------------
-// 		// New email button - inactive window
-// 		//---------------------------------
-// 		body.is-blurred & {
-// 			box-shadow: none !important;
+		//---------------------------------
+		// New email button - inactive window
+		//---------------------------------
+		body.is-blurred & {
+			opacity: 0.5;
 
-// 			img.content-mask {
-// 				opacity: 1.0;
-// 			}
-
-// 			&:hover {
-// 				background-color: @clrSidebarBtnBgHover;
-// 				border-color: @clrSidebarBtnBorderHover;
-// 			}
-// 		}
+			&:hover {
+				background-color: @view_hover_color;
+			}
+		}
 	}
 }
