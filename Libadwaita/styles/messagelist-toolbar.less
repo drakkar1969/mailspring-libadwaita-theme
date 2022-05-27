@@ -65,46 +65,23 @@
 			}
 		}
 
-// 		&.disabled {
-// 			opacity: 1;
-// 			border-color: transparent !important;
-// 			background-color: transparent;
+		&.disabled {
+			opacity: 0.5;
+		}
 
-// 			img.content-mask {
-// 				background-color: @clrToolBtnTextDisabled;
-// 			}
-// 		}
+		//---------------------------------
+		// Inactive window toolbar buttons
+		//---------------------------------
+		body.is-blurred & {
+			opacity: 0.5;
 
-// 		//---------------------------------
-// 		// Inactive window toolbar buttons
-// 		//---------------------------------
-// 		body.is-blurred & {
-// 			box-shadow: none;
+			&:hover {
+				background-color: @view_hover_color;
+			}
+		}
 
-// 			img.content-mask {
-// 				opacity: 1.0;
-// 			}
-
-// 			&:hover {
-// 				border-color: @clrToolBtnBorderHover;
-// 				background-color: @clrToolBtnBgHover;
-// 			}
-// 		}
-
-// 		body.is-blurred &.mode-toggle.mode-false {
-// 			background-color: @clrToolBtnBgActive;
-// 		}
+		body.is-blurred &.mode-toggle.mode-false {
+			background-color: @view_selected_color;
+		}
 	}
-
-// 	.btn-icon {
-// 		margin-top: 5px;
-// 		padding: 0 13px;
-
-// 		img.content-mask {
-// 			-webkit-mask-position: -7px -15px;
-// 			-webkit-mask-size: 48px;
-// 			height: 32px;
-// 			width: 32px;
-// 		}
-// 	}
 }
