@@ -169,68 +169,90 @@
 // 	border-left-color: @clrSidebarText;
 // }
 
-// //------------------------------------------------------------
-// // Sidebar syncing box
-// //------------------------------------------------------------
-// .sidebar-activity {
-// 	background-color: @clrSidebarBgActivity;
-// 	box-shadow: none;
-// 	font-weight: 500;
-//   color: @clrSidebarTextActivity;
+//------------------------------------------------------------
+// Sidebar syncing box
+//------------------------------------------------------------
+.sidebar-activity {
+	background-color: @window_bg_color;
+	box-shadow: none;
+	border: 1px solid @borders_color;
+	border-width: 1px 1px 0 0;
+	color: @text_color;
+	font-size: 15px;
 
-// 	//---------------------------------
-// 	// Task count label
-// 	//---------------------------------
-// 	.item .count {
-// 		font-weight: 500;
-// 		color: @clrSidebarTextActivity;
-// 	}
+	.item .inner {
+		border-color: @borders_color;
+		font-weight: 500;
+	}
 
-// 	//---------------------------------
-// 	// Hide link
-// 	//---------------------------------
-// 	.inner a {
-// 		color: @clrAccent;
-// 		cursor: pointer;
-// 	}
+	//---------------------------------
+	// Task count label
+	//---------------------------------
+	.item .count {
+		font-weight: 500;
+		color: @text_color;
+	}
 
-// 	//---------------------------------
-// 	// Account name
-// 	//---------------------------------
-// 	.item h2 {
-// 		font-weight: 600;
-// 		color: @clrSidebarTextFaded;
-// 		margin: 6px 0px 12px;
-// 	}
+	//---------------------------------
+	// Hide link
+	//---------------------------------
+	.inner a {
+		color: @link_color;
+		font-weight: 400;
+		text-decoration: underline;
 
-// 	//---------------------------------
-// 	// Syncing indicators (circles)
-// 	//---------------------------------
-// 	.item .sync-activity .account .folder-progress::before {
-// 		background-color: @clrAccent;
-// 		border-color: @clrAccent;
-// 	}
+		&:hover {
+			cursor: pointer;
+			color: @link_hover_color;
+		}
+	}
 
-// 	.item .sync-activity .account .folder-progress.busy::before {
-// 		animation: border-pulse 3s ease-in infinite;
-// 	}
+	//---------------------------------
+	// Account name
+	//---------------------------------
+	.item h2 {
+		font-size: 15px;
+		font-weight: bold;
+		color: @text_color;
+		margin: 12px 0px;
+	}
 
-// 	@keyframes border-pulse {
-// 		0% {
-// 			border-color: transparent;
-// 		}
-// 		100% {
-// 			border-color: @clrAccent;
-// 		}
-// 	}
+	//---------------------------------
+	// Progress labels
+	//---------------------------------
+	.item .sync-activity .account .folder-progress {
+		color: @text_color;
+		font-size: 15px;
 
-// 	//---------------------------------
-// 	// Progress labels
-// 	//---------------------------------
-// 	.item .sync-activity .account .folder-progress .progress-label {
-// 		color: @clrSidebarTextFaded;
-// 	}
-// }
+		.progress-label {
+			color: @text_color_dim;
+			font-size: 15px;
+		}
+	}
+
+	//---------------------------------
+	// Syncing indicators (circles)
+	//---------------------------------
+	.item .sync-activity .account .folder-progress {
+		&::before {
+			background-color: @accent_color;
+			border-color: @accent_color;
+		}
+
+		&.busy::before {
+			animation: border-pulse 3s ease-in infinite;
+		}
+	}
+
+	@keyframes border-pulse {
+		0% {
+			border-color: transparent;
+		}
+		100% {
+			border-color: @accent_color;
+		}
+	}
+}
 
 // //------------------------------------------------------------
 // // Sidebar notifications (error/offline/update)
