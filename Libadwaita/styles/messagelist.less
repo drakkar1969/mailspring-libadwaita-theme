@@ -141,50 +141,45 @@
 // 	}
 }
 
-// //------------------------------------------------------------
-// // Message header buttons (reply/forward)
-// //------------------------------------------------------------
-// #message-list .message-header .message-actions-wrap {
-// 	.button-dropdown.bordered {
-// 		.primary-item,
-// 		.secondary-picker {
-// 			box-shadow: none;
-// 			background: @clrButtonBg;
-// 			border: 1px solid @clrButtonBorder;
+//------------------------------------------------------------
+// Message header buttons (reply/forward)
+//------------------------------------------------------------
+#message-list .message-header .message-actions-wrap {
+	.button-dropdown.bordered {
+		.primary-item,
+		.secondary-picker {
+			box-shadow: none;
+			background: @button_color;
+			border: 0;
+			height: 34px;
+			line-height: 34px;
 
-// 			img.content-mask {
-// 				background-color: @clrButtonText;
-// 			}
-// 		}
+			img.content-mask {
+				background-color: @text_color;
+			}
+		}
 
-// 		.primary-item {
-// 			border-radius: 3px 0 0 3px;
-// 		}
+		.primary-item {
+			border-radius: @button_radius 0 0 @button_radius;
+			margin-right: -1px;
+		}
 
-// 		.secondary-picker {
-// 			border-left-width: 0;
-// 			border-radius: 0 3px 3px 0;
-// 		}
+		.secondary-picker {
+			border-radius: 0 @button_radius @button_radius 0;
+			width: 24px;
+		}
 
-// 		&:hover {
-// 			.primary-item,
-// 			.secondary-picker {
-// 				background: @clrButtonBgHover;
-// 				border-color: @clrButtonBorderHover;
-// 			}
-// 		}
+		.primary-item:hover,
+		.secondary-picker:hover {
+			background: @button_hover_color;
+		}
 
-// 		.primary-item:active,
-// 		.secondary-picker:active {
-// 			background: @clrButtonBgActive;
-// 			border-color: @clrButtonBorderActive;
-
-// 			img.content-mask {
-// 				background-color: @clrButtonTextActive;
-// 			}
-// 		}
-// 	}
-// }
+		.primary-item:active,
+		.secondary-picker:active {
+			background: @button_active_color;
+		}
+	}
+}
 
 // //------------------------------------------------------------
 // // Message footer
