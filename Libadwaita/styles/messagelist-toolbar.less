@@ -64,14 +64,14 @@
 		}
 
 		&.disabled {
-			opacity: 0.5;
+			opacity: @disabled_opacity;
 		}
 
 		//---------------------------------
 		// Inactive window toolbar buttons
 		//---------------------------------
 		body.is-blurred & {
-			opacity: 0.5;
+			opacity: @disabled_opacity;
 
 			&:hover {
 				background-color: @view_hover_color;
