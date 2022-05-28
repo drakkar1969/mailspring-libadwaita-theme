@@ -74,6 +74,7 @@
 	font-size: 15px;
 }
 
+// TODO: fix overlap between header and buttons (reply, etc.)
 .message-participants {
 	.from-contact {
 		color: @text_color;
@@ -181,51 +182,45 @@
 	}
 }
 
-// //------------------------------------------------------------
-// // Message footer
-// //------------------------------------------------------------
-// #message-list  .footer-reply-area-wrap {
-// 	box-shadow: none;
-// 	background: @clrBodyBg;
-// 	border: 1px solid @clrWindowBorder;
-// 	border-radius: 0 0 3px 3px;
+//------------------------------------------------------------
+// Message footer
+//------------------------------------------------------------
+#message-list  .footer-reply-area-wrap {
+	box-shadow: none;
+	background: @window_bg_color;
+	border: 0;
+	margin-top: 3px;
 
-// 	//---------------------------------
-// 	// Reply icon/text
-// 	//---------------------------------
-// 	.footer-reply-area {
-// 		width: max-content;
-// 		background: @clrButtonBg;
-// 		border: 1px solid @clrButtonBorder;
-// 		border-radius: 3px;
-// 		margin-bottom: 9px;
-// 		margin-top: 9px;
-// 		color: @clrButtonText;
-// 		font-size: 14px;
-// 		height: 2.1em;
-// 		line-height: 1.9em;
-// 		padding: 0 0.8em;
+	//---------------------------------
+	// Reply icon/text
+	//---------------------------------
+	.footer-reply-area {
+		width: max-content;
+		background: @button_color;
+		border: 0;
+		border-radius: @button_radius;
+		margin-bottom: 8px;
+		margin-top: 8px;
+		color: @text_color;
+		font-size: 15px;
+		font-weight: bold;
+		height: 34px;
+		line-height: 34px;
+		padding: 0 10px;
 
-// 		img.content-mask {
-// 			background-color: @clrButtonText;
-// 		}
+		img.content-mask {
+			background-color: @text_color;
+		}
 
-// 		&:hover {
-// 			background-color: @clrButtonBgHover;
-// 			border-color: @clrButtonBorderHover;
-// 		}
+		&:hover {
+			background-color: @button_hover_color;
+		}
 
-// 		&:active {
-// 			background-color: @clrButtonBgActive;
-// 			border-color: @clrButtonBorderActive;
-// 			color: @clrButtonTextActive;
-
-// 			img.content-mask {
-// 				background-color: @clrButtonTextActive;
-// 			}
-// 		}
-// 	}
-// }
+		&:active {
+			background-color: @button_active_color;
+		}
+	}
+}
 
 // //------------------------------------------------------------
 // // Collapsed message
