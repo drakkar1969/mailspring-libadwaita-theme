@@ -5,7 +5,7 @@ contact-sidebar.less
 draftlist.less
 draftlist-toolbar.less
 message-draft.less
-messagelist.less
+messagelist.less				IN PROGRESS
 messagelist-toolbar.less		OK
 preferences.less
 sidebar.less					IN PROGRESS (TODO)
