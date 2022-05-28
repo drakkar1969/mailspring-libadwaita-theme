@@ -59,42 +59,39 @@
 // 	}
 // }
 
-// //---------------------------------
-// // Button
-// //---------------------------------
-// .btn, .btn.btn-emphasis {
-// 	box-shadow: none;
-// 	background: @clrButtonBg;
-// 	border: 1px solid @clrButtonBorder;
-// 	color: @clrButtonText;
-// 	height: 2.1em;
-// 	font-size: 1em;
+//---------------------------------
+// Button
+//---------------------------------
+.btn, .btn.btn-emphasis {
+	box-shadow: none;
+	background: @button_color;
+	border: 0;
+	border-radius: @button_radius;
+	color: @text_color;
+	font-size: 15px;
+	font-weight: bold;
+	height: 34px;
+	line-height: 34px;
 
-// 	&.btn-small, &.btn-large {
-// 		font-size: 1em;
-// 		padding: 0 0.8em;
-// 		line-height: 1.9em;
-// 		height: 2.1em;
-// 	}
+	&.btn-small, &.btn-large {
+		font-size: 15px;
+		height: 34px;
+		line-height: 34px;
+	}
 
-// 	&:hover {
-// 		background: @clrButtonBgHover;
-// 		border: 1px solid @clrButtonBorderHover;
-// 	}
+	&:hover {
+		background: @button_hover_color;
+	}
 
-// 	&:active {
-// 		background: @clrButtonBgActive;
-// 		border: 1px solid @clrButtonBorderActive;
-// 		color: @clrButtonTextActive;
-// 	}
+	&:active {
+		background: @button_active_color;
+	}
 
-// 	&.btn-disabled,
-// 	&.btn-disabled:active {
-// 		background: @clrButtonBgDisabled;
-// 		border: 1px solid @clrButtonBorderDisabled;
-// 		color: @clrButtonTextDisabled;
-// 	}
-// }
+	&.btn-disabled,
+	&.btn-disabled:active {
+		opacity: @disabled_opacity;
+	}
+}
 
 // //---------------------------------
 // // Select
