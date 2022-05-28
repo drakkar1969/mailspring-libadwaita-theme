@@ -8,10 +8,10 @@ message-draft.less
 messagelist.less
 messagelist-toolbar.less		OK
 preferences.less
-sidebar.less					IN PROGRESS
+sidebar.less					IN PROGRESS (TODO)
 sidebar-toolbar.less			OK
 theme-colors.less
 theme-selector.less
 threadlist-icons.less
 threadlist.less
-threadlist-toolbar.less			IN PROGRESS
+threadlist-toolbar.less			IN PROGRESS (TODO)
