@@ -89,26 +89,30 @@
 		top: 40px;
 		padding: 8px;
 
-// 		.suggestion {
-// 			color: @clrTextFadedLess;
+		.suggestion {
+			font-size: 15px;
+			font-weight: 400;
+			color: @text_color_dim;
+			border-radius: @button_radius;
 
-// 			.suggestion-token {
-// 				color: @clrAccent;
-// 			}
+			.suggestion-token {
+				font-weight: 500;
+				color: @accent_color;
+			}
 
-// 			&.selected {
-// 				background-color: @clrAccent;
-// 				color: @clrListTextActive;
+			&.selected {
+				background-color: @view_selected_color;
+				color: @text_color_dim;
 
-// 				.suggestion-token {
-// 					color: @clrListTextActive;
-// 				}
-// 			}
+				.suggestion-token {
+					color: @accent_color;
+				}
+			}
 
-// 			&:hover:not(.selected) {
-// 				background-color: @clrListHover;
-// 			}
-// 		}
+			&:hover:not(.selected) {
+				background-color: @view_hover_color;
+			}
+		}
 
 		.footer {
 			display: none;
