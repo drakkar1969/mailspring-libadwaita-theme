@@ -166,29 +166,12 @@
 // 	}
 // }
 
-// //------------------------------------------------------------
-// // Drafts/trash empty button header
-// //------------------------------------------------------------
-// .thread-list-empty-folder-bar {
-// 	background-color: @clrAccent;
-// 	border-bottom-color: @clrWindowBorder;
-// 	color: @clrTextActive;
-// 	font-size: 1em;
-
-// 	.btn {
-// 		background-color: @clrButtonInfoBg;
-// 		border: 1px solid @clrButtonInfoBorder;
-// 		color: @clrButtonInfoText;
-
-// 		&:hover {
-// 			background-color: @clrButtonInfoBgHover;
-// 			border-color: @clrButtonInfoBorderHover;
-// 		}
-
-// 		&:active {
-// 			background-color: @clrButtonInfoBgActive;
-// 			border-color: @clrButtonInfoBorderActive;
-// 			color: @clrButtonInfoTextActive;
-// 		}
-// 	}
-// }
+//------------------------------------------------------------
+// Drafts/trash empty button header
+//------------------------------------------------------------
+.thread-list-empty-folder-bar {
+	background-color: mix(@accent_bg_color, @window_bg_color, 30%);
+	border-bottom-color: @borders_color;
+	color: @text_color;
+	font-size: 15px;
+}
