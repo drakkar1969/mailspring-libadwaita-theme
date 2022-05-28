@@ -67,82 +67,70 @@
 	border-radius: @card_radius;
 }
 
-// //------------------------------------------------------------
-// // Message header
-// //------------------------------------------------------------
-// .message-participants {
-// 	.from-contact {
-// 		font-size: 14px;
-// 		color: @clrText;
-// 	}
+//------------------------------------------------------------
+// Message header
+//------------------------------------------------------------
+#message-list .message-header {
+	font-size: 15px;
+}
 
-// 	&.to-participants .collapsed-participants {
-// 		margin-top: 3px;
-// 	}
+.message-participants {
+	.from-contact {
+		color: @text_color;
+	}
 
-// 	.from-label,
-// 	.to-label,
-// 	.reply-to-label,
-// 	.cc-label,
-// 	.bcc-label {
-// 		color: @clrTextFaded;
-// 		font-size: 14px;
-// 	}
+	&.to-participants .collapsed-participants {
+		margin-top: 3px;
+	}
 
-// 	.to-contact,
-// 	.reply-to-contact,
-// 	.cc-contact,
-// 	.bcc-contact,
-// 	.to-everyone {
-// 		color: @clrTextFadedLess;
-// 		font-size: 14px;
-// 	}
+	.from-label,
+	.to-label,
+	.reply-to-label,
+	.cc-label,
+	.bcc-label {
+		color: @text_color_dim;
+	}
 
-// 	.expanded-participants {
+	.to-contact,
+	.reply-to-contact,
+	.cc-contact,
+	.bcc-contact,
+	.to-everyone {
+		color: @text_color;
+	}
+
+	.expanded-participants {
 // 		.from-contact .participant-primary,
 // 		.from-contact .participant-secondary {
 // 			color: @clrText;
 // 		}
 
-// 		.participant-primary,
-// 		.participant-secondary {
-// 			color: @clrTextFadedLess;
-// 		}
-// 	}
-// }
+		.participant-primary,
+		.participant-secondary {
+			color: @text_color;
+		}
+	}
+}
 
-// #message-list {
-// 	.message-header {
-// 		margin-bottom: 12px;
+#message-list {
+	.message-header {
+		margin-bottom: 12px;
 
-// 		.header-row {
-// 			font-size: 14px;
+		.header-row {
+			.header-label {
+				color: @text_color_dim;
+			}
 
-// 			.header-label {
-// 				color: @clrTextFaded;
-// 			}
+			.header-name {
+				color: @text_color;
+			}
+		}
 
-// 			.header-name {
-// 				color: @clrTextFadedLess;
-// 			}
-// 		}
-
-// 		.message-time,
-// 		.message-indicator {
-// 			color: @clrTextFaded;
-// 		}
-
-// 		//---------------------------------
-// 		// Message header track icon
-// 		//---------------------------------
-// 		.message-header-right {
-// 			.open-tracking-message-status.opened {
-// 				img.content-mask {
-// 					background-color: @clrAccent;
-// 				}
-// 			}
-// 		}
-// 	}
+		.message-time,
+		.message-indicator {
+			color: @text_color_dim;
+		}
+	}
 
 // 	.header-toggle-control img {
 // 		background: @clrTextFaded;
@@ -151,7 +139,7 @@
 // 			background: @clrText;
 // 		}
 // 	}
-// }
+}
 
 // //------------------------------------------------------------
 // // Message header buttons (reply/forward)
