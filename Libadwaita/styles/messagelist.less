@@ -16,49 +16,46 @@
 	padding: 6px 20px;
 }
 
-// //------------------------------------------------------------
-// // Message subject area
-// //------------------------------------------------------------
-// #message-list {
-// 	.message-subject-wrap {
-// 		padding-left: 2px;
-// 	}
+//------------------------------------------------------------
+// Message subject area
+//------------------------------------------------------------
+#message-list {
+	.message-subject-wrap {
+		padding: 0;
+	}
 
-// 	.message-subject {
-// 		color: @clrText;
-// 	}
+	// TODO: subject righ padding/margin
+	.message-subject {
+		color: @text_color;
+		font-size: 18px;
+		font-weight: bold;
+	}
 
-// 	.message-icons-wrap {
-// 		cursor: default;
+	.message-icons-wrap {
+		cursor: default;
 
-// 		div {
-// 			background: none;
-// 			border: 1px solid transparent;
-// 		 	border-radius: 3px;
-// 			height: 26px;
-// 			padding: 0px 13px;
+		div {
+			background: none;
+			border: 0;
+		 	border-radius: @button_radius;
+			width: 34px;
+			height: 34px;
+			text-align: center;
 
-// 			img.content-mask {
-// 				margin-top: -6px;
-// 				background-color: @clrToolBtnText;
-// 			}
+			img.content-mask {
+				background-color: @text_color;
+			}
 
-// 			&:hover {
-// 				background-color: @clrToolBtnBgHover;
-// 				border-color: @clrToolBtnBorderHover;
-// 			}
+			&:hover {
+				background-color: @view_hover_color;
+			}
 
-// 			&:active {
-// 				background-color: @clrToolBtnBgActive;
-// 				border-color: @clrToolBtnBorderActive;
-
-// 				img.content-mask {
-// 					background-color: @clrToolBtnTextActive;
-// 				}
-// 			}
-// 		}
-// 	}
-// }
+			&:active {
+				background-color: @view_active_color;
+			}
+		}
+	}
+}
 
 //------------------------------------------------------------
 // Message body
