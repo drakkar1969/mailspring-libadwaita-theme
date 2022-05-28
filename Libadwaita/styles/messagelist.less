@@ -27,7 +27,7 @@
 	// TODO: subject righ padding/margin
 	.message-subject {
 		color: @text_color;
-		font-size: 18px;
+		font-size: 20px;
 		font-weight: bold;
 	}
 
@@ -89,7 +89,8 @@
 	.reply-to-label,
 	.cc-label,
 	.bcc-label {
-		color: @text_color_dim;
+		color: @text_color;
+		font-weight: bold;
 	}
 
 	.to-contact,
@@ -101,11 +102,15 @@
 	}
 
 	.expanded-participants {
-// 		.from-contact .participant-primary,
-// 		.from-contact .participant-secondary {
-// 			color: @clrText;
-// 		}
-
+		.from-label,
+		.to-label,
+		.reply-to-label,
+		.cc-label,
+		.bcc-label {
+			color: @text_color;
+			font-weight: bold;
+		}
+	
 		.participant-primary,
 		.participant-secondary {
 			color: @text_color;
@@ -119,7 +124,8 @@
 
 		.header-row {
 			.header-label {
-				color: @text_color_dim;
+				color: @text_color;
+				font-weight: bold;
 			}
 
 			.header-name {
