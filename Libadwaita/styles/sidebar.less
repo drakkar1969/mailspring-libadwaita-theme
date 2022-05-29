@@ -160,13 +160,13 @@
 //------------------------------------------------------------
 // Folder expand/collapse arrows
 //------------------------------------------------------------
-.disclosure-triangle.visible div {
-	border-left-color: @text_color;
-}
+.disclosure-triangle {
+	padding-top: 13px;
 
-// .disclosure-triangle.visible:hover div {
-// 	border-left-color: @clrSidebarText;
-// }
+	&.visible div {
+		border-left-color: @text_color;
+	}
+}
 
 //------------------------------------------------------------
 // Sidebar syncing box
