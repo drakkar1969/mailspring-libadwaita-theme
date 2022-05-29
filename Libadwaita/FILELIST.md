@@ -8,7 +8,7 @@ message-draft.less
 messagelist.less				IN PROGRESS (TODO)
 messagelist-toolbar.less		OK
 preferences.less
-sidebar.less					IN PROGRESS (TODO)
+sidebar.less					IN PROGRESS
 sidebar-toolbar.less			OK
 theme-colors.less
 theme-selector.less
