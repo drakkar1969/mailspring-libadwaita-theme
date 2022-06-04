@@ -14,31 +14,34 @@
 		box-shadow: none;
 	}
 
-// 	.empty-state .perspective-empty-state .message {
-// 		color: @clrTextFaded;
+	.empty-state .perspective-empty-state {
+		transition: none;
+		
+		.message {
+			color: @text_color_dim;
 
-// 		.btn {
-// 			background-color: @clrButtonBg;
-// 			border: 1px solid @clrButtonBorder;
-// 			color: @clrButtonText;
-// 			font-size: 14px;
+			.btn {
+				background-color: @button_color;
+				border: 0;
+				color: @text_color;
+				font-size: @text_size;
+				font-weight: bold;
+	
+				&:hover {
+					background-color: @button_hover_color;
+				}
+	
+				&:active {
+					background-color: @button_active_color;
+				}
+			}
+			
+		}
 
-// 			&:hover {
-// 				background-color: @clrButtonBgHover;
-// 				border: 1px solid @clrButtonBorderHover;
-// 			}
-
-// 			&:active {
-// 				background-color: @clrButtonBgActive;
-// 				border: 1px solid @clrButtonBorderActive;
-// 				color: @clrButtonTextActive;
-// 			}
-// 		}
-// 	}
-
-// 	.empty-state .perspective-empty-state img {
-// 		background-color: @clrTextFadedLess;
-// 	}
+		img {
+			background-color: @text_color_dim;
+		}
+	}
 }
 
 .list-container .list-rows {
