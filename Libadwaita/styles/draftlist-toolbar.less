@@ -1,18 +1,17 @@
-@import "arc-variables";
+@import "adw-variables";
 
 //------------------------------------------------------------
 // Drafts list toolbar
 //------------------------------------------------------------
 .toolbar-DraftList {
 	height: 100%;
-	background: @clrWindowBg;
-
-	border: none;
-	border-left: 1px solid transparent;
+	background: @window_bg_color;
+	border: 0;
 
 	.selection-bar .absolute {
-		background: @clrWindowBg;
-		border-color: @clrWindowBg;
+		background: @window_bg_color;
+		border-left: 1px solid @borders_color;
+		margin-top: 4px;
 	}
 
 	//---------------------------------
@@ -21,28 +20,23 @@
 	.btn-toolbar {
 		box-shadow: none;
 		background: transparent;
-		border: 1px solid transparent;
-		border-radius: 3px;
-		height: 26px;
-		color: @clrToolBtnText;
+		border: 0;
+		border-radius: @button_radius;
+		height: 34px;
+		color: @text_color;
+		font-size: @text_size;
+		font-weight: bold;
 
 		img.content-mask {
-			background-color: @clrToolBtnText;
+			background-color: @text_color;
 		}
 
 		&:hover {
-			background: @clrToolBtnBgHover;
-			border-color: @clrToolBtnBorderHover;
+			background: @view_hover_color;
 		}
 
 		&:active {
-			background: @clrToolBtnBgActive;
-			border-color: @clrToolBtnBorderActive;
-			color: @clrToolBtnTextActive;
-
-			img.content-mask {
-				background-color: @clrToolBtnTextActive;
-			}
+			background: @view_active_color;
 		}
 	}
 
@@ -50,7 +44,8 @@
 	// Toolbar text
 	//---------------------------------
 	.inner .centered {
-		padding-top: 3px;
-		color: @clrTextFadedLess !important;
+		padding-top: 5px;
+		color: @text_color !important;
+		font-size: @text_size;
 	}
 }

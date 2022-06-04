@@ -3,7 +3,7 @@ arc-variables.less
 common.less						IN PROGRESS
 contact-sidebar.less
 draftlist.less
-draftlist-toolbar.less
+draftlist-toolbar.less			OK
 message-draft.less				IN PROGRESS (TODO)
 messagelist.less				IN PROGRESS (TODO)
 messagelist-toolbar.less		OK
