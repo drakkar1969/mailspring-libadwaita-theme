@@ -10,7 +10,7 @@ messagelist-toolbar.less		OK
 preferences.less
 sidebar.less					IN PROGRESS
 sidebar-toolbar.less			OK
-theme-colors.less
+theme-colors.less				OK
 theme-selector.less
 threadlist-icons.less
 threadlist.less					IN PROGRESS
