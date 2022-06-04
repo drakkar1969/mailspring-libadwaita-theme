@@ -38,99 +38,91 @@
 	border-top: 1px solid @borders_color;
 }
 
-// //------------------------------------------------------------
-// // Draft message footer buttons
-// //------------------------------------------------------------
-// .composer-inner-wrap .composer-action-bar-wrap {
-// 	.composer-action-bar-content {
-// 		padding: 9px 0;
-// 	}
+//------------------------------------------------------------
+// Draft message footer buttons
+//------------------------------------------------------------
+.composer-inner-wrap .composer-action-bar-wrap {
+	.composer-action-bar-content {
+		padding: 9px 12px;
+	}
 
-// 	.btn.btn-toolbar {
-// 		box-shadow: none;
-// 		background: @clrButtonBg !important;
-// 		border: 1px solid @clrButtonBorder;
-// 		border-radius: 3px;
-// 		color: @clrButtonText;
-// 		height: 2.1em;
-// 		line-height: 1.9em;
-// 		padding: 0 0.8em !important;
-// 		margin: 0 4px !important;
+	.btn.btn-toolbar {
+		box-shadow: none;
+		background: @button_color !important;
+		border: 0;
+		border-radius: @button_radius;
+		color: @text_color;
+		font-weight: bold;
+		height: 34px;
+		line-height: 34px;
+		min-width: 34px;
+		padding: 0 6px !important;
+		margin: 0 4px !important;
 
-// 		img.content-mask {
-// 			background-color: @clrButtonText !important;
-// 		}
+		img.content-mask {
+			background-color: @text_color !important;
+		}
 
-// 		&:hover {
-// 			background-color: @clrButtonBgHover !important;
-// 			border-color: @clrButtonBorderHover;
-// 		}
+		&:hover {
+			background-color: @button_hover_color !important;
+		}
 
-// 		&:active,
-// 		&.btn-enabled {
-// 			background-color: @clrButtonBgActive !important;
-// 			border-color: @clrButtonBorderActive;
+		&:active,
+		&.btn-enabled {
+			background-color: @button_active_color !important;
+		}
+	}
 
-// 			img.content-mask {
-// 				background-color: @clrButtonTextActive !important;
-// 			}
-// 		}
-// 	}
+	// TODO: check separator and hover/active colors
+	.btn-send {
+		.primary-item,
+		.secondary-picker {
+			box-shadow: none;
+			background: @accent_bg_color;
+			border: 0;
+			color: @accent_fg_color;
+			font-weight: bold;
+			height: 34px;
+			line-height: 34px;
+			padding: 0 6px;
 
-// 	.btn-send {
-// 		margin-top: 1px;
+			img.content-mask {
+				background-color: @accent_fg_color;
+			}
+		}
 
-// 		.primary-item,
-// 		.secondary-picker {
-// 			box-shadow: none;
-// 			background: @clrButtonDefaultBg;
-// 			border: 1px solid @clrButtonDefaultBorder;
-// 			color: @clrButtonDefaultText;
-// 			height: 2.1em;
-// 			line-height: 1.9em;
-// 			padding: 0 0.8em;
+		.primary-item {
+			border-radius: @button_radius 0 0 @button_radius;
+			margin-left: 4px;
+		}
 
-// 			img.content-mask {
-// 				background-color: @clrButtonDefaultText;
-// 			}
-// 		}
+		.secondary-picker {
+			border-radius: 0 @button_radius @button_radius 0;
+			margin-right: 4px;
 
-// 		.primary-item {
-// 			border-radius: 3px 0px 0px 3px;
-// 			margin: 0 0 0 4px;
-// 		}
+			img.content-mask {
+				margin-top: -2px;
+			}
+		}
 
-// 		.secondary-picker {
-// 			border-radius: 0px 3px 3px 0px;
-// 			margin: 0 4px 0 0;
+		.primary-item:hover,
+		.secondary-picker:hover {
+			background-color: lighten(@accent_bg_color, 4%);
+		}
 
-// 			img.content-mask {
-// 				margin-top: -3px;
-// 			}
-// 		}
+		.primary-item:active,
+		.secondary-picker:active {
+			background-color: darken(@accent_bg_color, 4%);
+		}
+	}
+}
 
-// 		&:hover {
-// 			.primary-item,
-// 			.secondary-picker {
-// 				background-color: @clrButtonDefaultBgHover;
-// 				border-color: @clrButtonDefaultBorderHover;
-// 			}
-// 		}
-
-// 		.primary-item:active,
-// 		.secondary-picker:active {
-// 			background-color: @clrButtonDefaultBgActive;
-// 			border-color: @clrButtonDefaultBorderActive;
-// 		}
-// 	}
-// }
-
-// // New message
-// .composer-full-window .composer-inner-wrap {
-// 	.composer-action-bar-content {
-// 		padding: 9px 12px;
-// 	}
-// }
+// New message
+.composer-full-window .composer-inner-wrap {
+	.composer-action-bar-content {
+		padding: 9px 12px;
+	}
+}
 
 // //------------------------------------------------------------
 // // Draft message (edit mode) header labels
