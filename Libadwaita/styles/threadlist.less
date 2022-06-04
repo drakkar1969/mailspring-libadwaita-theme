@@ -60,65 +60,44 @@
 //------------------------------------------------------------
 // Thread list items
 //------------------------------------------------------------
-// .thread-list .unread:not(.focused):not(.selected) .snippet {
-// 	color: @clrListTextFadedLess;
-// }
-
 .thread-list {
 	.list-item {
-// 		background-color: @clrListBg !important;
-// 		border-bottom: 1px solid @clrWindowBorder !important;
-// 		color: @clrListText;
+		background-color: @card_bg_color !important;
+		border-bottom: 1px solid @borders_color !important;
+		border-left: 0 !important;
+		color: @text_color !important;
 
-		border-radius: inherit;
+		&:hover {
+			background-color: @view_hover_color !important;
+		}
 
-		// &:first-child {
-		// 	border-radius: @card_radius @card_radius 0 0;
-		// }
+		&.focused,
+		&.selected {
+			background-color: @view_selected_color !important;
+			color: @text_color !important;
 
-		// &:last-child {
-		// 	border-radius: 0 0 @card_radius @card_radius;
-		// }
+			&:hover {
+				background-color: @view_selected_hover_color !important;
+			}
+		}
 
-// 		&:hover {
-// 			background-color: @clrListHover !important;
-// 		}
+		&.unread {
+			.participants span,
+			.subject {
+				font-weight: bold !important;
+			}
+		}
 
-// 		&.focused,
-// 		&.selected {
-// 			background-color: @clrAccent !important;
-// 		}
-
-// 		&.unread {
-// 			.participants span,
-// 			.subject {
-// 				font-weight: bold;
-// 			}
-// 		}
-
-// 		&.keyboard-cursor {
-// 			border-left-color: @clrAccent;
-// 		}
-
-// 		body.is-blurred & {
-// 			&.focused,
-// 			&.selected {
-// 				.participants span,
-// 				.timestamp,
-// 				.subject,
-// 				.snippet-and-labels {
-// 					color: @clrListTextActive;
-// 				}
-// 			}
-// 		}
+		.participants, .subject {
+			font-size: @text_size !important;
+		}
+	
+		.snippet, .timestamp {
+			opacity: 1 !important;
+			font-size: @text_size !important;
+			color: @text_color_dim !important
+		}
 	}
-
-// 	&.handler-split .list-item.selected.unread {
-// 		.participants span,
-// 		.subject {
-// 			font-weight: bold !important;
-// 		}
-// 	}
 }
 
 // //------------------------------------------------------------
