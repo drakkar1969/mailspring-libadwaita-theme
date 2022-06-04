@@ -2,7 +2,7 @@ adw-variables.less
 arc-variables.less
 common.less						IN PROGRESS
 contact-sidebar.less
-draftlist.less
+draftlist.less					IN PROGRESS
 draftlist-toolbar.less			OK
 message-draft.less				IN PROGRESS (TODO)
 messagelist.less				IN PROGRESS (TODO)
