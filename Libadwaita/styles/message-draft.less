@@ -152,46 +152,52 @@
 	background: @borders_color;
 }
 
-// //------------------------------------------------------------
-// // Draft message (edit mode) recipient tokens
-// //------------------------------------------------------------
-// .tokenizing-field {
+//------------------------------------------------------------
+// Draft message (edit mode) recipient tokens
+//------------------------------------------------------------
+.tokenizing-field {
 // 	// Fix for popover menu styling
 // 	.header-container {
 // 		background: transparent;
 // 		border: none;
 // 	}
 
-// 	.token {
-// 		box-shadow: none;
-// 		background: @clrButtonBg;
-// 		border: 1px solid @clrButtonBorder;
-// 		color: @clrButtonText;
-// 		height: 2.1em;
-// 		font-size: 1em;
+	.token {
+		box-shadow: none;
+		background: @button_color;
+		border: 0;
+		border-radius: @button_radius;
+		color: @text_color;
+		height: 34px;
+		line-height: 34px;
+		margin: -2px 5px 5px 1px;
 
-// 		.action img {
-// 			background-color: @clrButtonText;
-// 		}
+		.action img {
+			background-color: @text_color;
+		}
 
-// 		&:hover {
-// 			box-shadow: none;
-// 			background: @clrButtonBgHover;
-// 			border: 1px solid @clrButtonBorderHover;
-// 		}
+		&:hover {
+			box-shadow: none;
+			background: @button_hover_color;
+		}
 
-// 		&.selected,
-// 		&.dragging {
-// 			box-shadow: none;
-// 			background: @clrButtonBgActive;
-// 			border: 1px solid @clrButtonBorderActive;
+		&.selected,
+		&.dragging {
+			box-shadow: none;
+			background: @button_checked_color;
+			border: 0;
+			border-radius: @button_radius;
+			color: @text_color;
+			margin: -2px 5px 5px 1px;
 
-// 			color: @clrButtonTextActive;
+			.action img {
+				background-color: @text_color;
+			}
 
-// 			.action img {
-// 				background-color: @clrButtonTextActive;
-// 			}
-// 		}
+			&:hover {
+				background: @button_checked_hover_color;
+			}
+		}
 
 // 		body.is-blurred &:not(.invalid) {
 // 			background: @clrButtonBg;
@@ -233,16 +239,16 @@
 // 				border: 1px solid @clrWarningRed;
 // 			}
 // 		}
-// 	}
+	}
 
-// 	.tokenizing-field-input input {
-// 		margin-top: 1px;
+	.tokenizing-field-input input {
+		margin-top: 1px;
 
-// 		&:focus {
-// 			border: none;
-// 		}
-// 	}
-// }
+		&:focus {
+			border: none;
+		}
+	}
+}
 
 // //------------------------------------------------------------
 // // Draft message (edit mode) header actions
