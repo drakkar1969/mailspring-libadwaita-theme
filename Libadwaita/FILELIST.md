@@ -12,6 +12,6 @@ sidebar.less					IN PROGRESS
 sidebar-toolbar.less			OK
 theme-colors.less				OK
 theme-selector.less
-threadlist-icons.less
+threadlist-icons.less			IN PROGRESS
 threadlist.less					IN PROGRESS
 threadlist-toolbar.less			IN PROGRESS (TODO)
