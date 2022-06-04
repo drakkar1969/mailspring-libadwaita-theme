@@ -1,144 +1,170 @@
-@import "arc-variables";
+@import "adw-variables";
 
 //------------------------------------------------------------
 // Thread list
 //------------------------------------------------------------
 .column-ThreadList {
-	background: @clrListBg;
+	background: @window_bg_color;
 
-	.flexbox-handle-horizontal div {
-		box-shadow: none;
+	.scroll-region .scroll-region-content-inner {
+		margin: 12px;
 	}
 
-	.empty-state .perspective-empty-state .message {
-		color: @clrTextFaded;
+// 	.flexbox-handle-horizontal div {
+// 		box-shadow: none;
+// 	}
 
-		.btn {
-			background-color: @clrButtonBg;
-			border: 1px solid @clrButtonBorder;
-			color: @clrButtonText;
-			font-size: 14px;
+// 	.empty-state .perspective-empty-state .message {
+// 		color: @clrTextFaded;
 
-			&:hover {
-				background-color: @clrButtonBgHover;
-				border: 1px solid @clrButtonBorderHover;
-			}
+// 		.btn {
+// 			background-color: @clrButtonBg;
+// 			border: 1px solid @clrButtonBorder;
+// 			color: @clrButtonText;
+// 			font-size: 14px;
 
-			&:active {
-				background-color: @clrButtonBgActive;
-				border: 1px solid @clrButtonBorderActive;
-				color: @clrButtonTextActive;
-			}
-		}
-	}
+// 			&:hover {
+// 				background-color: @clrButtonBgHover;
+// 				border: 1px solid @clrButtonBorderHover;
+// 			}
 
-	.empty-state .perspective-empty-state img {
-		background-color: @clrTextFadedLess;
-	}
+// 			&:active {
+// 				background-color: @clrButtonBgActive;
+// 				border: 1px solid @clrButtonBorderActive;
+// 				color: @clrButtonTextActive;
+// 			}
+// 		}
+// 	}
+
+// 	.empty-state .perspective-empty-state img {
+// 		background-color: @clrTextFadedLess;
+// 	}
 }
 
 .list-container .list-rows {
-	background: @clrListBg;
+	background: @window_bg_color;
+	border-radius: @card_radius;
+	box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.03), 0 1px 3px 1px rgba(0, 0, 0, 0.07), 0 2px 6px 2px rgba(0, 0, 0, 0.03);
+
+	& > div {
+		&:first-child .list-item {
+			border-radius: @card_radius @card_radius 0 0;
+		}
+
+		&:last-child .list-item {
+			border-radius: 0 0 @card_radius @card_radius;
+		}
+	}
 }
 
 //------------------------------------------------------------
 // Thread list items
 //------------------------------------------------------------
-.thread-list .unread:not(.focused):not(.selected) .snippet {
-	color: @clrListTextFadedLess;
-}
+// .thread-list .unread:not(.focused):not(.selected) .snippet {
+// 	color: @clrListTextFadedLess;
+// }
 
 .thread-list {
 	.list-item {
-		background-color: @clrListBg !important;
-		border-bottom: 1px solid @clrWindowBorder !important;
-		color: @clrListText;
+// 		background-color: @clrListBg !important;
+// 		border-bottom: 1px solid @clrWindowBorder !important;
+// 		color: @clrListText;
 
-		&:hover {
-			background-color: @clrListHover !important;
-		}
+		border-radius: inherit;
 
-		&.focused,
-		&.selected {
-			background-color: @clrAccent !important;
-		}
+		// &:first-child {
+		// 	border-radius: @card_radius @card_radius 0 0;
+		// }
 
-		&.unread {
-			.participants span,
-			.subject {
-				font-weight: bold;
-			}
-		}
+		// &:last-child {
+		// 	border-radius: 0 0 @card_radius @card_radius;
+		// }
 
-		&.keyboard-cursor {
-			border-left-color: @clrAccent;
-		}
+// 		&:hover {
+// 			background-color: @clrListHover !important;
+// 		}
 
-		body.is-blurred & {
-			&.focused,
-			&.selected {
-				.participants span,
-				.timestamp,
-				.subject,
-				.snippet-and-labels {
-					color: @clrListTextActive;
-				}
-			}
-		}
+// 		&.focused,
+// 		&.selected {
+// 			background-color: @clrAccent !important;
+// 		}
+
+// 		&.unread {
+// 			.participants span,
+// 			.subject {
+// 				font-weight: bold;
+// 			}
+// 		}
+
+// 		&.keyboard-cursor {
+// 			border-left-color: @clrAccent;
+// 		}
+
+// 		body.is-blurred & {
+// 			&.focused,
+// 			&.selected {
+// 				.participants span,
+// 				.timestamp,
+// 				.subject,
+// 				.snippet-and-labels {
+// 					color: @clrListTextActive;
+// 				}
+// 			}
+// 		}
 	}
 
-	&.handler-split .list-item.selected.unread {
-		.participants span,
-		.subject {
-			font-weight: bold !important;
-		}
-	}
+// 	&.handler-split .list-item.selected.unread {
+// 		.participants span,
+// 		.subject {
+// 			font-weight: bold !important;
+// 		}
+// 	}
 }
 
-//------------------------------------------------------------
-// Thread list (single pane view)
-//------------------------------------------------------------
-.list-tabular .list-tabular-item {
-	.checkmark {
-		padding: 10px 11px 12px;
+// //------------------------------------------------------------
+// // Thread list (single pane view)
+// //------------------------------------------------------------
+// .list-tabular .list-tabular-item {
+// 	.checkmark {
+// 		padding: 10px 11px 12px;
 
-		.inner {
-			.arc-control(@imgCheckUnchecked, 16px);
-		}
-	}
+// 		.inner {
+// 			.arc-control(@imgCheckUnchecked, 16px);
+// 		}
+// 	}
 
-	&.selected {
-		color: @clrListTextActive;
+// 	&.selected {
+// 		color: @clrListTextActive;
 
-		.checkmark .inner {
-			.arc-control(@imgCheckCheckedSelected, 16px);
-		}
-	}
-}
+// 		.checkmark .inner {
+// 			.arc-control(@imgCheckCheckedSelected, 16px);
+// 		}
+// 	}
+// }
 
-//------------------------------------------------------------
-// Syncing message
-//------------------------------------------------------------
-.syncing-list-state {
-	color: @clrListTextFaded;
+// //------------------------------------------------------------
+// // Syncing message
+// //------------------------------------------------------------
+// .syncing-list-state {
+// 	color: @clrListTextFaded;
 
-	a {
-		color: @clrAccent;
-		font-size: 0.9em;
-		cursor: pointer;
-	}
-}
+// 	a {
+// 		color: @clrAccent;
+// 		font-size: 0.9em;
+// 		cursor: pointer;
+// 	}
+// }
 
-//------------------------------------------------------------
-// Hover action bar
-//------------------------------------------------------------
-.thread-list .list-item:hover .list-column-HoverActions .inner {
-	display: none;
-}
+// //------------------------------------------------------------
+// // Hover action bar
+// //------------------------------------------------------------
+// .thread-list .list-item:hover .list-column-HoverActions .inner {
+// 	display: none;
+// }
 
-//------------------------------------------------------------
-// Scrollbar
-//------------------------------------------------------------
-.thread-list .scrollbar-track {
-	.arc-scrollbar();
-}
+// //------------------------------------------------------------
+// // Scrollbar
+// //------------------------------------------------------------
+// .thread-list .scrollbar-track {
+// 	.arc-scrollbar();
+// }
