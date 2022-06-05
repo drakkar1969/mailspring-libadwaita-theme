@@ -288,9 +288,27 @@
 // Selected messages stack
 //------------------------------------------------------------
 .selected-items-stack .selected-items-stack-content {
-	.stack .card svg {
-		stroke: @borders_color;
-		fill: @card_bg_color;
+	.stack .card {
+		&:nth-child(2) {
+			transform: translate(5px, 0) !important;
+		}
+
+		&:nth-child(3) {
+			transform: translate(10px, 0) !important;
+		}
+
+		&:nth-child(4) {
+			transform: translate(15px, 0) !important;
+		}
+
+		&:nth-child(5) {
+			transform: translate(20px, 0) !important;
+		}
+
+		svg {
+			stroke: @borders_color;
+			fill: @card_bg_color;	
+		}
 	}
 
 	.count-info {
