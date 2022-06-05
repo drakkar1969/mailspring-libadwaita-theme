@@ -13,6 +13,10 @@
 		border-top: 1px solid @borders_color;
 	}
 
+	.scroll-region .scroll-region-content-inner {
+		margin: 16px;
+	}
+
 // 	.empty-state .perspective-empty-state .message {
 // 		color: @clrTextFaded;
 
@@ -41,36 +45,57 @@
 // 	}
 }
 
-// //------------------------------------------------------------
-// // Draft items
-// //------------------------------------------------------------
-// .draft-list .list-container .list-item {
-// 	background-color: @clrListBg;
-// 	border-bottom: 1px solid @clrWindowBorder;
-// 	color: @clrListText;
+//------------------------------------------------------------
+// Draft items
+//------------------------------------------------------------
+.draft-list .list-container .list-item {
+	background-color: @card_bg_color;
+	border-bottom: 1px solid @borders_color;
+	border-left: 0;
+	color: @text_color;
 
-// 	.participants.no-recipients {
-// 		color: @clrListTextFadedLess;
-// 	}
+	.participants {
+		font-size: @text_size;
+
+		&.no-recipients {
+			color: @text_color_dim;
+		}
+	}
+
+	.subject {
+		font-size: @text_size;
+	}
+
+	.snippet, .timestamp {
+		color: @text_color_dim;
+		font-size: @text_size;
+	}
 
 // 	.checkmark .inner {
 // 		.arc-control(@imgCheckUnchecked, 16px);
 // 	}
 
-// 	&:hover {
-// 		background-color: @clrListHover;
-// 	}
+	&:hover {
+		background-color: @view_hover_color;
+	}
 
-// 	&.selected {
-// 		.checkmark .inner {
+	&.selected {
+		background-color: @view_selected_color;
+
+		&:hover {
+			background-color: @view_selected_hover_color;
+		}
+
+		// 		.checkmark .inner {
 // 			.arc-control(@imgCheckChecked, 16px);
 // 		}
-// 	}
+	}
 
-// 	&.keyboard-cursor {
-// 		border-left-color: @clrAccent;
-// 	}
-// }
+	&.keyboard-cursor {
+		outline: 2px solid @focus_border_color;
+		outline-offset: -2px;
+	}
+}
 
 // //------------------------------------------------------------
 // // Scroll bar
