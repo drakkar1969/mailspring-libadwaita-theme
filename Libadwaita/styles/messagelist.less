@@ -284,20 +284,28 @@
 // 	}
 // }
 
-// //------------------------------------------------------------
-// // Selected messages stack
-// //------------------------------------------------------------
-// .selected-items-stack .selected-items-stack-content {
-// 	.stack .card svg {
-// 		stroke: @clrWindowBorder;
-// 		fill: @clrBodyBg;
-// 	}
+//------------------------------------------------------------
+// Selected messages stack
+//------------------------------------------------------------
+.selected-items-stack .selected-items-stack-content {
+	.stack .card svg {
+		stroke: @borders_color;
+		fill: @card_bg_color;
+	}
 
-// 	.count-info .count,
-// 	.count-info .count-message {
-// 		color: @clrListTextFadedLess;
-// 	}
-// }
+	.count-info {
+		.count {
+			color: @text_color_dim;
+			font-size: 42px;
+			font-weight: 300;
+		}
+
+		.count-message {
+			color: @text_color_dim;
+			font-size: @text_size;
+		}
+	}
+}
 
 //------------------------------------------------------------
 // Unsubscribe link
