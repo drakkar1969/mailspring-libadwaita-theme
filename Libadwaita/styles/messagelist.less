@@ -452,55 +452,42 @@
 // 	}
 // }
 
-// //------------------------------------------------------------
-// // Attachment download controls
-// //------------------------------------------------------------
-// .download-all {
-// 	.attachment-number {
-// 		font-size: 14px;
-// 		color: @clrTextFadedLess;
+//------------------------------------------------------------
+// Attachment download controls
+//------------------------------------------------------------
+.download-all {
+	.attachment-number {
+		color: @text_color_dim;
+		font-size: @text_size;
 
-// 		img.content-mask {
-// 			background-color: @clrText;
-// 		}
-// 	}
+		img.content-mask {
+			background-color: @text_color_dim;
+		}
+	}
 
-// 	.separator {
-// 		display: none;
-// 	}
+	.separator {
+		color: @text_color_dim;
+		font-size: @text_size;
+	}
 
-// 	.download-all-action {
-// 		background: @clrButtonBg;
-// 		border: 1px solid @clrButtonBorder;
-// 		border-radius: 3px;
-// 		color: @clrButtonText;
-// 		font-size: 14px;
-// 		height: 2.1em;
-// 		line-height: 1.9em;
-// 		padding: 0 0.8em;
-// 		margin-left: 12px;
+	.download-all-action {
+		color: @link_color;
+		font-size: @text_size;
 
-// 		img.content-mask {
-// 			background-color: @clrButtonText;
-// 		}
+		img.content-mask {
+			background-color: @link_color;
+		}
 
-// 		&:hover {
-// 			background-color: @clrButtonBgHover;
-// 			border-color: @clrButtonBorderHover;
-// 			color: @clrButtonText;
-// 		}
+		&:hover {
+			color: @link_hover_color;
+			cursor: pointer;
 
-// 		&:active {
-// 			background-color: @clrButtonBgActive;
-// 			border-color: @clrButtonBorderActive;
-// 			color: @clrButtonTextActive;
-
-// 			img.content-mask {
-// 				background-color: @clrButtonTextActive;
-// 			}
-// 		}
-// 	}
-// }
+			img.content-mask {
+				background-color: @link_hover_color;
+			}
+		}
+	}
+}
 
 // //------------------------------------------------------------
 // // Gmail labels
