@@ -364,67 +364,63 @@
 // 	}
 // }
 
-// //------------------------------------------------------------
-// // Message attachments
-// //------------------------------------------------------------
-// .nylas-attachment-item,
-// .nylas-attachment-item.file-attachment-item:focus {
-// 	//---------------------------------
-// 	// File attachment box
-// 	//---------------------------------
-// 	.file-thumbnail-preview {
-// 		border: 1px solid @clrWindowBorder !important;
-// 		border-radius: 3px !important;
-// 	}
+//------------------------------------------------------------
+// Message file attachments
+//------------------------------------------------------------
+.nylas-attachment-item {
+	font-size: @text_size;
 
-// 	.inner {
-// 		background: transparent;
-// 		color: @clrText;
-// 	}
+	.inner {
+		background: transparent;
+		border-radius: @button_radius;
+		color: @text_color;
+	}
 
-// 	.file-info-wrap {
-// 		border: none !important;
+	&.file-attachment-item:focus {
+		.inner {
+			outline: 2px solid @focus_border_color;
+			outline-offset: -2px;
+		}
+	}
 
-// 		.file-size {
-// 			color: @clrTextFaded;
-// 		}
+	.file-info-wrap,
+	.file-action-icon {
+		background: @button_color;
+		border: 0 !important;
+		height: 34px;
+		line-height: 34px;
 
-// 		&:hover {
-// 			cursor: pointer;
-// 		}
-// 	}
+		&:hover {
+			background-color: @button_hover_color;
+		}
 
-// 	.file-action-icon {
-// 		background: @clrButtonBg;
-// 		border: 1px solid @clrButtonBorder !important;
-// 		border-radius: 3px !important;
-// 		color: @clrButtonText;
-// 		font-size: 14px;
-// 		height: 2.1em;
-// 		line-height: 1.9em;
-// 		padding: 0 0.8em;
-// 		margin-left: 8px;
+		&:active {
+			background-color: @button_active_color;
+		}
 
-// 		img.content-mask {
-// 			background-color: @clrButtonText;
-// 		}
+		&:focus {
+			outline: 2px solid @focus_border_color;
+			outline-offset: -2px;	
+		}
+	}
 
-// 		&:hover {
-// 			background-color: @clrButtonBgHover;
-// 			border: 1px solid @clrButtonBorderHover;
-// 		}
+	.file-info-wrap {
+		border-radius: @button_radius 0 0 @button_radius !important;
+		margin-right: -1px;
 
-// 		&:active {
-// 			background-color: @clrButtonBgActive;
-// 			border: 1px solid @clrButtonBorderActive;
-// 			color: @clrButtonTextActive;
+		.file-size {
+			color: @text_color_dim;
+		}
+	}
 
-// 			img.content-mask {
-// 				background-color: @clrButtonTextActive;
-// 			}
-// 		}
-// 	}
-// }
+	.file-action-icon {
+		border-radius: 0 @button_radius @button_radius 0 !important;
+
+		img.content-mask {
+			background-color: @text_color;
+		}
+	}
+}
 
 // //------------------------------------------------------------
 // // Image attachment
