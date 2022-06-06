@@ -78,6 +78,7 @@
 .message-participants {
 	.from-contact {
 		color: @text_color;
+		font-weight: 600;
 	}
 
 	&.to-participants .collapsed-participants {
@@ -90,7 +91,7 @@
 	.cc-label,
 	.bcc-label {
 		color: @text_color;
-		font-weight: bold;
+		font-weight: 600;
 	}
 
 	.to-contact,
@@ -108,12 +109,19 @@
 		.cc-label,
 		.bcc-label {
 			color: @text_color;
-			font-weight: bold;
+			font-weight: 600;
 		}
 	
 		.participant-primary,
 		.participant-secondary {
 			color: @text_color;
+		}
+
+		.from-contact {
+			.participant-primary,
+			.participant-secondary {
+				font-weight: 600;
+			}
 		}
 	}
 }
@@ -125,7 +133,7 @@
 		.header-row {
 			.header-label {
 				color: @text_color;
-				font-weight: bold;
+				font-weight: 600;
 			}
 
 			.header-name {
@@ -315,7 +323,7 @@
 		.count {
 			color: @text_color_dim;
 			font-size: 42px;
-			font-weight: 300;
+			font-weight: normal;
 		}
 
 		.count-message {
