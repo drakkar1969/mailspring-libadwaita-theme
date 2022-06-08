@@ -14,4 +14,4 @@ theme-colors.less				OK
 theme-selector.less
 threadlist-icons.less			IN PROGRESS (TODO)
 threadlist.less					IN PROGRESS
-threadlist-toolbar.less			IN PROGRESS (TODO)
+threadlist-toolbar.less			OK (TODO)
