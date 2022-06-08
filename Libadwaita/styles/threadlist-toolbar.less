@@ -119,51 +119,45 @@
 	}
 }
 
-// //------------------------------------------------------------
-// // Selection toolbar (single pane mode)
-// //------------------------------------------------------------
-// .toolbar-ThreadList {
-// 	.selection-bar .absolute {
-// 		background: @clrWindowBg;
-// 		border-color: @clrWindowBorder;
-// 		height: 100%;
+//------------------------------------------------------------
+// Selection toolbar (single pane mode)
+//------------------------------------------------------------
+.toolbar-ThreadList {
+	.selection-bar .absolute {
+		background: @window_bg_color;
+		border-color: @borders_color;
+		height: 100%;
 
-// 		.btn-toolbar {
-// 			box-shadow: none;
-// 			background: transparent;
-// 			border: 1px solid transparent;
-// 			border-radius: 3px !important;
-// 			height: 26px;
-// 			color: @clrToolBtnText;
-// 			margin-top: 4px;
-// 			margin-bottom: 1px;
+		.btn-toolbar {
+			box-shadow: none;
+			background: transparent;
+			border: 0;
+			border-radius: @button_radius !important;
+			height: 34px;
+			color: @text_color;
+			font-size: @text_size;
+			font-weight: bold;
 
-// 			img.content-mask {
-// 				background-color: @clrToolBtnText;
-// 			}
+			img.content-mask {
+				background-color: @text_color;
+			}
 
-// 			&:hover {
-// 				background: @clrToolBtnBgHover;
-// 				border-color: @clrToolBtnBorderHover;
-// 			}
+			&:hover {
+				background: @view_hover_color;
+			}
 
-// 			&:active {
-// 				background: @clrToolBtnBgActive;
-// 				border-color: @clrToolBtnBorderActive;
-// 				color: @clrToolBtnTextActive;
+			&:active {
+				background: @view_active_color;
+			}
+		}
 
-// 				img.content-mask {
-// 					background-color: @clrToolBtnTextActive;
-// 				}
-// 			}
-// 		}
-
-// 		.inner .centered {
-// 			padding-top: 1px;
-// 			color: @clrTextFadedLess !important;
-// 		}
-// 	}
-// }
+		.inner .centered {
+			padding-top: 5px;
+			color: @text_color !important;
+			font-size: @text_size;
+		}
+	}
+}
 
 //------------------------------------------------------------
 // Drafts/trash empty button header
