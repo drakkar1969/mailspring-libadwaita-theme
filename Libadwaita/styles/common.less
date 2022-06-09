@@ -107,30 +107,31 @@ input[type='url'] {
 // //---------------------------------
 // // Select
 // //---------------------------------
-// select {
-// 	background: @clrButtonBg;
-// 	border: 1px solid @clrButtonBorder;
-// 	border-radius: 3px;
-// 	color: @clrButtonText;
-// 	height: 2.1em;
-// 	padding: 0.1em 0.8em;
+select {
+	background: @button_color;
+	border: 0;
+	border-radius: @button_radius;
+	color: @text_color;
+	font-size: @text_size;
+	font-weight: bold;
+	height: 34px;
+	line-height: 34px;
+	padding-left: 10px;
+	padding-right: 10px;
 
-// 	&:hover {
-// 		background: @clrButtonBgHover;
-// 		border: 1px solid @clrButtonBorderHover;
-// 	}
+	&:hover {
+		background: @button_hover_color;
+	}
 
-// 	&:active {
-// 		background: @clrButtonBgActive;
-// 		border: 1px solid @clrButtonBorderActive;
-// 		color: @clrButtonTextActive;
-// 	}
+	&:active {
+		background: @button_active_color;
+	}
 
-// 	option {
-// 		background: @clrPopoverBg;
-// 		color: @clrPopoverText;
-// 	}
-// }
+	option {
+		background: @popover_bg_color;
+		color: @text_color;
+	}
+}
 
 // //---------------------------------
 // // Popover menu
