@@ -28,39 +28,47 @@ mailspring-workspace {
 // 	background: @clrDashboardBg;
 // }
 
-// //------------------------------------------------------------
-// // Controls
-// //------------------------------------------------------------
-// //---------------------------------
-// // Input
-// //---------------------------------
-// .fixed-popover-container .fixed-popover input[type='text'],
-// input[type='text'],
-// input[type='email'],
-// input[type='date'],
-// input[type='datetime'],
-// input[type='datetime-local'],
-// input[type='month'],
-// input[type='number'],
-// input[type='password'],
-// input[type='search'],
-// input[type='tel'],
-// input[type='time'],
-// input[type='url'] {
-// 	background: @clrInputBg;
-// 	border: 1px solid @clrInputBorder;
-// 	color: @clrInputText;
-// 	height: 2em;
+//------------------------------------------------------------
+// Controls
+//------------------------------------------------------------
+//---------------------------------
+// Input
+//---------------------------------
+.fixed-popover-container .fixed-popover input[type='text'],
+input[type='text'],
+input[type='email'],
+input[type='date'],
+input[type='datetime'],
+input[type='datetime-local'],
+input[type='month'],
+input[type='number'],
+input[type='password'],
+input[type='search'],
+input[type='tel'],
+input[type='time'],
+input[type='url'] {
+	background: @button_color;
+	border: 0;
+	box-shadow: none;
+	border-radius: @button_radius;
+	color: @text_color;
+	font-size: @text_size;
+	height: 34px;
+	line-height: 34px;
+	padding-left: 10px;
+	padding-right: 10px;
 
-// 	&:focus {
-// 		border: 1px solid @clrAccent;
-// 		box-shadow: inset 1px 0 @clrAccent, inset -1px 0 @clrAccent, inset 0 1px @clrAccent, inset 0 -1px @clrAccent;
-// 	}
+	&:focus {
+		border: 0;
+		box-shadow: none;
+		outline: 2px solid @focus_border_color;
+		outline-offset: -2px;
+	}
 
-// 	&::placeholder {
-// 		color: @clrInputTextPlaceholder;
-// 	}
-// }
+	&::placeholder {
+		color: @text_color_dim;
+	}
+}
 
 //---------------------------------
 // Button
