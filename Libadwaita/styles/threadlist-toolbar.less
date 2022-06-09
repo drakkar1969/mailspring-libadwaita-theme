@@ -90,25 +90,30 @@
 		.suggestion {
 			font-size: @text_size;
 			font-weight: normal;
-			color: @text_color_dim;
+			color: @text_color;
 			border-radius: @button_radius;
+			margin: 3px 0;
 
 			.suggestion-token {
 				font-weight: 600;
 				color: @accent_color;
 			}
 
+			&:hover:not(.selected) {
+				background-color: @view_hover_color;
+			}
+
 			&.selected {
 				background-color: @view_selected_color;
-				color: @text_color_dim;
+				color: @text_color;
+
+				&:hover {
+					background-color: @view_selected_hover_color;
+				}
 
 				.suggestion-token {
 					color: @accent_color;
 				}
-			}
-
-			&:hover:not(.selected) {
-				background-color: @view_hover_color;
 			}
 		}
 
