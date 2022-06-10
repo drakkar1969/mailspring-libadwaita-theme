@@ -315,36 +315,32 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 // 	}
 // }
 
-// //------------------------------------------------------------
-// // Preferences: Appearance tab
-// //------------------------------------------------------------
-// .preferences-wrap .container-appearance {
-// 	// Layout selection buttons
-// 	.appearance-mode-switch .appearance-mode {
-// 		background-color: @clrButtonBg;
-// 		border: 1px solid @clrButtonBorder;
-// 		border-radius: 3px;
-// 		color: @clrButtonText;
+//------------------------------------------------------------
+// Preferences: Appearance tab
+//------------------------------------------------------------
+.preferences-wrap .container-appearance {
+	// Layout selection buttons
+	.appearance-mode-switch .appearance-mode {
+		background-color: @button_color;
+		border: 0;
+		border-radius: @button_radius;
+		color: @text_color;
+		padding: 12px 12px 9px;
 
-// 		img.content-mask {
-// 			background-color: @clrButtonText;
-// 		}
+		img.content-mask {
+			background-color: @text_color;
+		}
 
-// 		&:hover {
-// 			background-color: @clrButtonBgHover;
-// 			border: 1px solid @clrButtonBorderHover;
-// 		}
+		&:hover {
+			background-color: @button_hover_color;
+		}
 
-// 		&.active {
-// 			background-color: @clrButtonBgActive;
-// 			border: 1px solid @clrButtonBorderActive;
-// 			color: @clrButtonTextActive;
-
-// 			img.content-mask {
-// 				background-color: @clrButtonTextActive;
-// 			}
-// 		}
-// 	}
+		&.active {
+			background-color: @button_checked_color;
+			border: 0;
+			color: @text_color;
+		}
+	}
 
 // 	.platform-linux-only .platform-note .btn {
 // 		margin-top: -3px;
@@ -408,7 +404,7 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 // 			}
 // 		}
 // 	}
-// }
+}
 
 // //------------------------------------------------------------
 // // Preferences: Shortcuts tab
