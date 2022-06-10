@@ -43,52 +43,55 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 	}
 }
 
-// //------------------------------------------------------------
-// // Tab control
-// //------------------------------------------------------------
-// .preferences-wrap .container-preference-tabs {
-// 	border-color: @clrWindowBorder;
+//------------------------------------------------------------
+// Tab control
+//------------------------------------------------------------
+.preferences-wrap .container-preference-tabs {
+	border-color: @borders_color;
 
-// 	.preferences-tabs {
-// 		background-color: @clrPrefsWindowBg;
+	.preferences-tabs {
+		background-color: @tab_color;
+		padding-top: 0;
 
-// 		.item {
-// 			box-shadow: none;
-// 			border: 1px solid transparent;
-// 			border-radius: 1px 1px 0 0;
-// 			margin: 0px -1px -1px 0px;
-// 			padding-top: 0px;
+		div:first-child {
+			border-right: 1px solid @borders_color;
+		}
 
-// 			.tab-icon {
-// 				display: none;
-// 			}
+		.item {
+			box-shadow: none;
+			background-color: @tab_color;
+			border: 0;
+			border-right: 1px solid @borders_color;
+			border-radius: 0;
+			padding-top: 0px;
 
-// 			.name {
-// 				padding: 10px 11px 8px;
-// 				font-size: 14px;
-// 				font-weight: 500;
-// 				color: @clrPrefsTextFaded;
-// 			}
+			.tab-icon {
+				display: none;
+			}
 
-// 			&:hover {
-// 				background: @clrPrefsTabHover;
-// 				border-color: @clrWindowBorder;
-// 			}
+			.name {
+				padding: 13px 11px;
+				font-size: @text_size;
+				font-weight: normal;
+				color: @text_color;
+			}
 
-// 			&.active {
-// 				box-shadow: none;
-// 				background: @clrPrefsTabActive;
-// 				border-color: @clrWindowBorder;
-// 				border-bottom-color: @clrPrefsTabActive;
-// 				border-radius: 1px 1px 0 0;
+			&:hover {
+				background-image: linear-gradient(@tab_hover_color, @tab_hover_color);
+			}
 
-// 				.name {
-// 					color: @clrPrefsText;
-// 				}
-// 			}
-// 		}
-// 	}
-// }
+			&.active {
+				box-shadow: none;
+				background: @window_bg_color;
+				border-radius: 0;
+
+				&:hover {
+					background-image: linear-gradient(@tab_hover_color, @tab_hover_color);
+				}
+			}
+		}
+	}
+}
 
 //------------------------------------------------------------
 // Preferences body common settings
@@ -146,13 +149,13 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 // 		}
 // 	}
 
-// 	//---------------------------------
-// 	// Gray text
-// 	//---------------------------------
-// 	p {
-// 		color: @clrPrefsTextFaded;
-// 		font-size: 1em;
-// 	}
+	//---------------------------------
+	// Gray text
+	//---------------------------------
+	p {
+		color: @text_color_dim;
+		font-size: @text_size;
+	}
 
 // 	//---------------------------------
 // 	// Warning bar
