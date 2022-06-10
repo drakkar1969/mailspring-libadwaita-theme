@@ -169,20 +169,22 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 		font-size: @text_size;
 	}
 
-// 	//---------------------------------
-// 	// Warning bar
-// 	//---------------------------------
-// 	.platform-note {
-// 		background-color: @clrPrefsWarningBar;
-// 		border-left: 3px solid @clrAccent;
-// 		color: @clrPrefsTextFadedLess;
-// 		font-size: 1em;
-// 		margin: 10px 0;
+	//---------------------------------
+	// Warning bar
+	//---------------------------------
+	.platform-note {
+		background-color: transparent;
+		border: 0;
+		color: @text_color_dim;
+		font-size: @text_size;
+		padding: 6px 0;
 
-// 		&::before {
-// 			color: @clrAccent;
-// 		}
-// 	}
+		&::before {
+			color: @text_color_dim;
+			font-size: @text_size;
+			font-weight: 600;
+		}
+	}
 
 	//---------------------------------
 	// Labels (top left Shortcuts/Mail rules)
