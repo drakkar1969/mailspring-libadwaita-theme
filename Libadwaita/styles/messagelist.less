@@ -432,42 +432,46 @@
 	}
 }
 
-// //------------------------------------------------------------
-// // Image attachment
-// //------------------------------------------------------------
-// .nylas-attachment-item.image-attachment-item {
-// 	&:hover {
-// 		border: none;
-// 	}
+//------------------------------------------------------------
+// Image attachment
+//------------------------------------------------------------
+.nylas-attachment-item.image-attachment-item {
+	&:hover {
+		border: none;
+	}
 
-// 	//---------------------------------
-// 	// Download button (covers whole image)
-// 	//---------------------------------
-// 	.file-action-icon {
-// 		right: 0px;
-// 		top: 0px;
-// 		width: 100%;
-// 		height: 100%;
-// 		background: transparent;
-// 		cursor: pointer;
+	//---------------------------------
+	// Download button (covers whole image)
+	//---------------------------------
+	.file-action-icon {
+		right: 0px;
+		top: 0px;
+		width: 100%;
+		height: 100%;
+		border-radius: 0 !important;
+		cursor: pointer;
 
-// 		img {
-// 			display: none;
-// 		}
-// 	}
+		img {
+			display: none;
+		}
+	}
 
-// 	//---------------------------------
-// 	// Image name overlay
-// 	//---------------------------------
-// 	.file-preview .file-name-container {
-// 		background: fade(@clrBodyBg, 70%);
+	//---------------------------------
+	// Image name overlay
+	//---------------------------------
+	.file-preview .file-name-container {
+		background: @osd_bg_color;
+		border-radius: 150px;
+		left: 8px;
+		top: 8px;
 
-// 		.file-name {
-// 			color: @clrText;
-// 			font-weight: 700;
-// 		}
-// 	}
-// }
+		.file-name {
+			color: @osd_fg_color;
+			font-size: @text_size;
+			font-weight: 600;
+		}
+	}
+}
 
 //------------------------------------------------------------
 // Attachment download controls
