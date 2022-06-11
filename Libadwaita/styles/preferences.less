@@ -403,21 +403,45 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 // Preferences: Accounts tab
 //------------------------------------------------------------
 .preferences-wrap .container-accounts .accounts-content {
-	// // Left pane item
-	// .account-list {
-	// 	.account {
-	// 		border-bottom: 1px solid transparent;
-	// 	}
+	// Left pane items
+	.account-list {
+		.list-item {
+			border-radius: 0;
 
-	// 	.account-name {
-	// 		font-size: @text_size;
-	// 		font-weight: 600;
-	// 	}
+			&:first-child {
+				border-radius: @button_radius @button_radius 0 0;
+			}
 
-	// 	.account-subtext {
-	// 		font-size: @text_size;
-	// 	}
-	// }
+			&:last-child {
+				border-radius: 0 0 @button_radius @button_radius;
+			}
+
+			&:only-child {
+				border-radius: @button_radius;
+			}
+
+			&:not(:last-child) {
+				border-bottom: 1px solid @borders_color;
+			}
+
+			&:hover:not(.selected) {
+				background-color: @view_hover_color;
+			}
+		}
+
+		.account {
+			border-bottom: 0;
+		}
+
+		.account-name {
+			font-size: @text_size;
+			font-weight: 600;
+		}
+
+		.account-subtext {
+			font-size: @text_size;
+		}
+	}
 
 	// Right pane
 	.account-details {
