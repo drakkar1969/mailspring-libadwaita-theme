@@ -198,30 +198,14 @@
 			}
 		}
 
-// 		body.is-blurred &:not(.invalid) {
-// 			background: @clrButtonBg;
-// 			border: 1px solid @clrButtonBorder;
-// 			color: @clrButtonText;
+		body.is-blurred &:not(.invalid) {
+			background: @button_color;
+			color: @text_color;
 
-// 			&:hover {
-// 				box-shadow: none;
-// 				background: @clrButtonBgHover;
-// 				border: 1px solid @clrButtonBorderHover;
-// 			}
-
-// 			&.selected,
-// 			&.dragging {
-// 				box-shadow: none;
-// 				background: @clrButtonBgActive;
-// 				border: 1px solid @clrButtonBorderActive;
-
-// 				color: @clrButtonTextActive;
-
-// 				.action img {
-// 					background-color: @clrButtonTextActive;
-// 				}
-// 			}
-// 		}
+			&:hover {
+				background: @button_hover_color;
+			}
+		}
 
 // 		&.invalid {
 // 			border-bottom: 1px dashed @clrWarningRed;
