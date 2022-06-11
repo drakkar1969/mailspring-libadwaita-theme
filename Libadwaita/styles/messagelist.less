@@ -529,22 +529,26 @@
 // 	}
 // }
 
-// //------------------------------------------------------------
-// // Message warning bar
-// //------------------------------------------------------------
-// #message-list .show-hidden-messages {
-// 	border: none;
-// 	border-left: 3px solid @clrAccent;
-// 	border-radius: 0px;
-// 	background-color: @clrWarningBar;
-// 	color: @clrTextFadedLess;
-// 	margin-bottom: 16px;
+//------------------------------------------------------------
+// Message warning bar
+//------------------------------------------------------------
+#message-list .show-hidden-messages {
+	background-color: transparent;
+	border: 0;
+	color: @text_color_dim;
+	font-size: @text_size;
+	margin-bottom: 12px;
+	padding: 5px 0;
 
-// 	a {
-// 		color: @clrAccent;
-// 		cursor: pointer;
-// 	}
-// }
+	a {
+		color: @link_color;
+
+		&:hover {
+			color: @link_hover_color;
+			cursor: pointer;
+		}
+	}
+}
 
 // .autoload-images-header {
 // 	border: none;
