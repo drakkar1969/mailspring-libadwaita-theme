@@ -17,6 +17,35 @@
 }
 
 //------------------------------------------------------------
+// Account switcher (dropdown arrow)
+//------------------------------------------------------------
+.account-switcher {
+	background: transparent;
+	border-radius: @button_radius;
+	width: 34px;
+	height: 34px;
+	line-height: 34px;
+	text-align: center;
+	top: 0;
+
+	img.content-dark {
+		background-image: none;
+		background-color: @text_color;
+		-webkit-mask-repeat: no-repeat;
+		-webkit-mask-image: url(../static/images/sidebar/account-switcher-dropdown@2x.png);
+		-webkit-mask-position: 0px 0px;
+		-webkit-mask-size: 34px;
+		width: 34px !important;
+		height: 34px !important;
+		padding-top: 34px;
+	}
+
+	&:hover {
+		background-color: @view_hover_color;
+	}
+}
+
+//------------------------------------------------------------
 // Sidebar headings
 //------------------------------------------------------------
 .outline-view .heading {
@@ -42,30 +71,6 @@
 // 			color: @clrSidebarText;
 // 		}
 }
-
-// //------------------------------------------------------------
-// // Account switcher (dropdown arrow)
-// //------------------------------------------------------------
-// .account-switcher {
-// 	img.content-dark {
-// 		background-image: none;
-// 		background-color: @clrSidebarText;
-// 		-webkit-mask-repeat: no-repeat;
-// 		-webkit-mask-image: url(../static/images/sidebar/account-switcher-dropdown@2x.png);
-// 		-webkit-mask-position: 0px 0px;
-// 		width: 34px !important;
-// 		height: 34px !important;
-// 		margin-top: 8px;
-// 	}
-
-// 	&:hover {
-// 		cursor: pointer;
-
-// 		img.content-dark {
-// 			background-color: @clrSidebarTextActive;
-// 		}
-// 	}
-// }
 
 //------------------------------------------------------------
 // Sidebar items
