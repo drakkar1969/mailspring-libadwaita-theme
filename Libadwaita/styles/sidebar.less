@@ -52,25 +52,28 @@
 .outline-view .heading {
 	font-size: @text_size;
 	color: @text_color;
-		margin-bottom: 10px;
-		padding-top: 12px;
+	margin-top: 4px;
+	margin-bottom: 8px;
+	height: 36px;
 
-// 		.add-item-button {
-// 			img.content-mask {
-// 				background-color: @clrSidebarTextFaded;
-// 				margin-top: 3px;
-// 			}
+	.add-item-button {
+		background: transparent;
+		border-radius: @button_radius;
+		width: 34px;
+		height: 34px;
+		line-height: 34px;
+		margin-top: 1px;
+		padding: 10px;
+		cursor: auto;
 
-// 			&:hover {
-// 				img.content-mask {
-// 					background-color: @clrSidebarText;
-// 				}
-// 			}
-// 		}
+		img.content-mask {
+			background-color: @text_color;
+		}
 
-// 		.collapse-button:hover {
-// 			color: @clrSidebarText;
-// 		}
+		&:hover {
+			background-color: @view_hover_color;
+		}
+	}
 }
 
 //------------------------------------------------------------
