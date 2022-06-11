@@ -271,6 +271,28 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 			}
 		}
 
+		.selected {
+			background-color: @view_selected_color;
+			border-radius: 0;
+			color: @text_color;
+
+			&:first-child {
+				border-radius: @button_radius @button_radius 0 0;
+			}
+
+			&:last-child {
+				border-radius: 0 0 @button_radius @button_radius;
+			}
+
+			&:only-child {
+				border-radius: @button_radius;
+			}
+
+			&:hover {
+				background-color: @view_selected_hover_color;
+			}
+		}
+
 		.create-item-input {
 			min-height: 38px;
 			display: flex;
@@ -339,6 +361,15 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 			}
 		}
 	}
+
+	&:focus .items-wrapper .selected {
+		background-color: @view_selected_color;
+		color: @text_color;
+
+		&:hover {
+			background-color: @view_selected_hover_color;
+		}
+	}
 }
 
 //------------------------------------------------------------
@@ -395,10 +426,6 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 // // 		}
 // 	}
 
-// // 	&:focus .items-wrapper .list-item.selected {
-// // 		background-color: @clrAccent;
-// // 		color: @clrPrefsTextActive;
-// // 	}
 // }
 
 // //------------------------------------------------------------
