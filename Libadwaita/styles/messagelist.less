@@ -381,6 +381,7 @@
 //------------------------------------------------------------
 .nylas-attachment-item {
 	font-size: @text_size;
+	font-weight: bold;
 
 	.inner {
 		background: transparent;
@@ -413,8 +414,12 @@
 		border-radius: @button_radius 0 0 @button_radius !important;
 		margin-right: -1px;
 
+		.file-name {
+			font-weight: bold;
+		}
+
 		.file-size {
-			color: @text_color_dim;
+			color: @text_color;
 		}
 	}
 
