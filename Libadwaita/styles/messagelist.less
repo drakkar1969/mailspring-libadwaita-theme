@@ -347,31 +347,34 @@
 	}
 }
 
-// //------------------------------------------------------------
-// // Quoted text button
-// //------------------------------------------------------------
-// .quoted-text-control {
-// 	background: @clrButtonBg;
-// 	border: 1px solid @clrButtonBorder;
-// 	color: @clrButtonText;
-// 	height: 1.7em;
-// 	font-size: 1em;
-// 	padding: 0.3em 0.7em;
-// 	margin: 16px 0 3px;
+//------------------------------------------------------------
+// Quoted text button
+//------------------------------------------------------------
+.quoted-text-control {
+	background: @button_color;
+	border: 0;
+	border-radius: @button_radius;
+	color: @text_color;
+	min-width: 34px;
+	height: 34px;
+	line-height: 34px;
+	font-size: @text_size;
+	text-align: center;
+	margin-top: 8px;
 
-// 	&:hover {
-// 		background: @clrButtonBgHover;
-// 		border: 1px solid @clrButtonBorderHover;
-// 		color: @clrButtonText;
-// 		cursor: default;
-// 	}
+	&:hover {
+		background: @button_hover_color;
+		border: 0;
+		color: @text_color;
+		cursor: default;
+	}
 
-// 	&:active {
-// 		background: @clrButtonBgActive;
-// 		border: 1px solid @clrButtonBorderActive;
-// 		color: @clrButtonTextActive;
-// 	}
-// }
+	&:active {
+		background: @button_active_color;
+		border: 0;
+		color: @text_color;
+	}
+}
 
 //------------------------------------------------------------
 // Message file attachments
