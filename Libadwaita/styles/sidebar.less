@@ -174,12 +174,18 @@
 //------------------------------------------------------------
 // Folder expand/collapse arrows
 //------------------------------------------------------------
-// TODO: check arrow color (normal/hover)
 .disclosure-triangle {
 	padding-top: 13px;
 
 	&.visible div {
+		opacity: 0.7;
 		border-left-color: @text_color;
+	}
+
+	&:hover {
+		&.visible div {
+			opacity: 1;
+		}
 	}
 }
 
