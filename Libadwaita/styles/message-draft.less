@@ -361,72 +361,102 @@
 // 	}
 // }
 
-// //------------------------------------------------------------
-// // Draft message (edit mode) rich edit toolbar
-// //------------------------------------------------------------
-// .RichEditor-toolbar {
-// 	.inner {
-// 		background: @clrBodyBg !important;
-// 		padding-top: 1px;
-// 	}
+//------------------------------------------------------------
+// Draft message (edit mode) rich edit toolbar
+//------------------------------------------------------------
+.RichEditor-toolbar {
+	.inner {
+		background: @card_bg_color !important;
+	}
 
-// 	.floating-container {
-// 		border-bottom: 1px solid @clrTextFadedMore;
-// 	}
+	.floating-container {
+		border: 0;
+	}
 
-// 	//---------------------------------
-// 	// Buttons
-// 	//---------------------------------
-// 	button {
-// 		color: @clrButtonText;
+	//---------------------------------
+	// Buttons
+	//---------------------------------
+	button:not(.with-select) {
+		background: @button_color;
+		border-radius: @button_radius;
+		min-width: 34px;
+		max-width: 34px;
+		height: 34px;
+		line-height: 34px;
+		color: @text_color;
+		font-size: @text_size;
+		font-weight: bold;
+		margin: 8px 4px 4px;
+		padding: 0;
+		cursor: auto;
 
-// 		&:hover {
-// 			color: @clrButtonText;
-// 		}
+		&:hover {
+			background-color: @button_hover_color;
+			color: @text_color;
+		}
 
-// 		&.active {
-// 			color: @clrAccent;
-// 		}
-// 	}
+		&.active {
+			background-color: @button_checked_color;
+			color: @text_color;
 
-// 	//---------------------------------
-// 	// Selects
-// 	//---------------------------------
-// 	button.with-select {
-// 		margin: 3px 0;
-// 		max-width: 120px;
+			&:hover {
+				background-color: @button_checked_hover_color;
+			}
+		}
+	}
 
-// 		select {
-// 			background: @clrButtonBg;
-// 			border: 1px solid @clrButtonBorder;
-// 			padding: 0 0.8em;
+	.link-picker {
+		margin-left: -4px;
+		margin-right: 7px;
+	}
 
-// 			&:hover,
-// 			&:focus {
-// 				background: @clrButtonBgHover;
-// 				border: 1px solid @clrButtonBorderHover;
-// 			}
+	//---------------------------------
+	// Selects
+	//---------------------------------
+	button.with-select {
+		max-width: 120px;
+		color: @text_color;
+		padding: 0 !important;
 
-// 			&:active {
-// 				background: @clrButtonBgActive;
-// 				border: 1px solid @clrButtonBorderActive;
-// 				color: @clrButtonTextActive;
-// 			}
-// 		}
+		select {
+			background: @button_color;
+			border: 0;
+			height: 34px;
+			line-height: 34px;
+			font-size: @text_size;
+			font-weight: bold;
+			margin: 8px 4px 4px;
 
-// 		.fa {
-// 			padding-right: 6px;
-// 		}
-// 	}
+			&:hover,
+			&:focus {
+				background: @button_hover_color;
+			}
 
-// 	//---------------------------------
-// 	// Dividers
-// 	//---------------------------------
-// 	.divider {
-// 		height: 13px;
-// 		border-color: @clrTextFadedMore;
-// 	}
-// }
+			&:active {
+				background: @button_checked_color;
+
+				&:hover {
+					background: @button_checked_hover_color;
+				}
+			}
+		}
+
+		.fa {
+			font-size: @text_size;
+			font-weight: normal;
+			padding-left: 6px;
+			padding-right: 3px;
+		}
+	}
+
+	//---------------------------------
+	// Dividers
+	//---------------------------------
+	.divider {
+		// height: 13px;
+		border: 0;
+	}
+}
 
 //------------------------------------------------------------
 // Draft message (edit mode) body text
