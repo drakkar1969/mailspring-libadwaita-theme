@@ -243,27 +243,28 @@
 	}
 }
 
-// //------------------------------------------------------------
-// // Draft message (edit mode) header actions
-// //------------------------------------------------------------
-// .composer-inner-wrap .composer-header-actions {
-// 	.action {
-// 		color: @clrTextFadedLess;
+//------------------------------------------------------------
+// Draft message (edit mode) header actions
+//------------------------------------------------------------
+.composer-inner-wrap .composer-header-actions {
+	.action {
+		color: @link_color;
+		font-size: @text_size;
 
-// 		img.content-mask {
-// 			background-color: @clrTextFadedLess;
-// 		}
+		img.content-mask {
+			background-color: @link_color;
+		}
 
-// 		&:hover {
-// 			color: @clrAccent;
-// 			cursor: pointer;
+		&:hover {
+			color: @link_hover_color;
+			cursor: pointer;
 
-// 			img.content-mask {
-// 				background-color: @clrAccent;
-// 			}
-// 		}
-// 	}
-// }
+			img.content-mask {
+				background-color: @link_hover_color;
+			}
+		}
+	}
+}
 
 // //------------------------------------------------------------
 // // Draft message (edit mode) from dropdown button (new message)
