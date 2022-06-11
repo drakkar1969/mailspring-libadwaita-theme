@@ -208,6 +208,9 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 		color: @text_color;
 		font-size: @text_size;
 
+		//---------------------------------
+		// Background
+		//---------------------------------
 		.scroll-region-content-inner {
 			margin: 16px;
 			background-color: @card_bg_color;
@@ -218,6 +221,9 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 			}
 		}
 
+		//---------------------------------
+		// Items
+		//---------------------------------
 		.editable-item {
 			background-color: @card_bg_color;
 			border-color: @borders_color;
@@ -271,6 +277,9 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 			}
 		}
 
+		//---------------------------------
+		// Selected item
+		//---------------------------------
 		.selected {
 			background-color: @view_selected_color;
 			border-radius: 0;
@@ -293,6 +302,9 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 			}
 		}
 
+		//---------------------------------
+		// New item (edit box)
+		//---------------------------------
 		.create-item-input {
 			min-height: 38px;
 			display: flex;
@@ -328,6 +340,9 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 		}
 	}
 
+	//---------------------------------
+	// Footer area/buttons
+	//---------------------------------
 	.buttons-wrapper {
 		background-color: @window_bg_color;
 		border-color: @borders_color;
@@ -362,6 +377,9 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 		}
 	}
 
+	//---------------------------------
+	// Selected item (when focused)
+	//---------------------------------
 	&:focus .items-wrapper .selected {
 		background-color: @view_selected_color;
 		color: @text_color;
