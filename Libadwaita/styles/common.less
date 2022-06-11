@@ -73,7 +73,6 @@ input[type='url'] {
 //---------------------------------
 // Button
 //---------------------------------
-// NOTE: disabled button state
 .btn, .btn.btn-emphasis {
 	box-shadow: none;
 	background: @button_color;
@@ -101,6 +100,8 @@ input[type='url'] {
 
 	&.btn-disabled,
 	&.btn-disabled:active {
+		background: @button_color;
+		color: @text_color;
 		opacity: @disabled_opacity;
 	}
 }
