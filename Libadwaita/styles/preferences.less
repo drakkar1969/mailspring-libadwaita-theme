@@ -544,30 +544,26 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 
 	// Layout selection buttons
 	.appearance-mode-switch .appearance-mode {
-		background-color: @button_color;
+		background-color: @card_bg_color;
 		border: 0;
 		border-radius: @button_radius;
 		color: @text_color;
 		font-size: @text_size;
-		font-weight: bold;
+		margin-bottom: 16px;
 		padding: 12px 12px 9px;
 
 		img.content-mask {
 			background-color: @text_color;
 		}
 
-		&:hover {
-			background-color: @button_hover_color;
+		& > div {
+			margin-top: 8px;
 		}
 
 		&.active {
-			background-color: @button_checked_color;
 			border: 0;
 			color: @text_color;
-
-			&:hover {
-				background-color: @button_checked_hover_color;
-			}
+			box-shadow: 0 0 0 3px @accent_color;
 		}
 	}
 
