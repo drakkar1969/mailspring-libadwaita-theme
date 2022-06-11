@@ -207,21 +207,28 @@
 			}
 		}
 
-// 		&.invalid {
-// 			border-bottom: 1px dashed @clrWarningRed;
+		&.invalid {
+			background-color: @button_color;
+			color: @error_color;
+			border-bottom: 2px solid @error_bg_color;
 
-// 			&:hover {
-// 				box-shadow: none;
-// 				border-bottom: 1px dashed @clrWarningRed;
-// 			}
+			&:hover {
+				box-shadow: none;
+				background-color: @button_hover_color;
+			}
 
-// 			&.selected,
-// 			&.dragging {
-// 				box-shadow: none;
-// 				background: @clrWarningRed;
-// 				border: 1px solid @clrWarningRed;
-// 			}
-// 		}
+			&.selected,
+			&.dragging {
+				box-shadow: none;
+				background: @button_checked_color;
+				border: 0;
+				border-bottom: 2px solid @error_bg_color;
+
+				&:hover {
+					background: @button_checked_hover_color;
+				}
+			}
+		}
 	}
 
 	.tokenizing-field-input input {
