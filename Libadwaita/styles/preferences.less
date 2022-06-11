@@ -199,6 +199,149 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 }
 
 //------------------------------------------------------------
+// Preferences Nylas editable list
+//------------------------------------------------------------
+.nylas-editable-list {
+	.items-wrapper {
+		background-color: @window_bg_color;
+		border-color: @borders_color;
+		color: @text_color;
+		font-size: @text_size;
+
+		.scroll-region-content-inner {
+			margin: 16px;
+			background-color: @card_bg_color;
+			border-radius: @button_radius;
+
+			&:not(:empty) {
+				box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.03), 0 1px 3px 1px rgba(0, 0, 0, 0.07), 0 2px 6px 2px rgba(0, 0, 0, 0.03);
+			}
+		}
+
+		.editable-item {
+			background-color: @card_bg_color;
+			border-color: @borders_color;
+			border-radius: 0;
+			min-height: 38px;
+			display: flex;
+			align-items: center;
+			padding-top: 0;
+			padding-bottom: 0;
+
+			&:first-child {
+				border-radius: @button_radius @button_radius 0 0;
+			}
+
+			&:last-child {
+				border-radius: 0 0 @button_radius @button_radius;
+			}
+
+			&:only-child {
+				border-radius: @button_radius;
+			}
+
+			&:hover {
+				background-color: @view_hover_color;
+			}
+
+			&.selected {
+				background-color: @view_selected_color;
+				color: @text_color;
+
+				&:hover {
+					background-color: @view_selected_hover_color;
+				}
+			}
+
+			&.selected.with-edit-icon img.edit-icon {
+				background-color: @text_color;
+			}
+
+			&.editing {
+				outline: 2px solid @focus_border_color;
+				outline-offset: -2px;
+
+				input {
+					background-color: transparent;
+					color: @text_color;
+					font-size: @text_size;
+					outline: none;
+					margin-top: -2px;
+				}
+			}
+		}
+
+		.create-item-input {
+			min-height: 38px;
+			display: flex;
+			align-items: center;
+			border-radius: 0;
+			outline: 2px solid @focus_border_color;
+			outline-offset: -2px;
+
+			&:first-child {
+				border-radius: @button_radius @button_radius 0 0;
+			}
+
+			&:last-child {
+				border-radius: 0 0 @button_radius @button_radius;
+			}
+
+			&:only-child {
+				border-radius: @button_radius;
+			}
+
+			& > input {
+				background-color: transparent;
+				border: 0;
+				color: @text_color;
+				font-size: @text_size;
+				outline: none;
+
+				&::placeholder {
+					color: @text_color_dim;
+					font-style: normal;
+				}
+			}
+		}
+	}
+
+	.buttons-wrapper {
+		background-color: @window_bg_color;
+		border-color: @borders_color;
+
+		.btn-editable-list {
+			background-color: @button_color;
+			border-right: 0;
+			border-radius: @button_radius;
+			color: @text_color;
+			font-size: @text_size !important;
+			font-weight: bold;
+			width: 34px;
+			height: 34px;
+			line-height: 34px;
+			margin: 6px 0 6px 6px;
+
+			&.btn-disabled,
+			&.btn-disabled:active {
+				opacity: @disabled_opacity;
+				background-color: @button_color;
+				color: @text_color;
+			}
+
+			&:hover:not(.btn-disabled) {
+				background-color: @button_hover_color;
+			}
+
+			&:active:not(.btn-disabled) {
+				box-shadow: none;
+				background-color: @button_active_color;
+			}
+		}
+	}
+}
+
+//------------------------------------------------------------
 // Preferences: General tab
 //------------------------------------------------------------
 // Local data buttons (bottom of page)
@@ -211,10 +354,21 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 // Preferences: Accounts tab
 //------------------------------------------------------------
 .preferences-wrap .container-accounts .accounts-content {
-// 	// Left pane item border
-// 	.account-list .account {
-// 		border-bottom: 1px solid @clrWindowBorder;
-// 	}
+	// // Left pane item
+	// .account-list {
+	// 	.account {
+	// 		border-bottom: 1px solid transparent;
+	// 	}
+
+	// 	.account-name {
+	// 		font-size: @text_size;
+	// 		font-weight: 600;
+	// 	}
+
+	// 	.account-subtext {
+	// 		font-size: @text_size;
+	// 	}
+	// }
 
 	// Right pane
 	.account-details {
@@ -235,71 +389,16 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 // // Left pane
 // .nylas-editable-list {
 // 	.items-wrapper {
-// 		background-color: @clrListBg;
-// 		border-color: @clrWindowBorder;
-// 		border-radius: 3px 3px 0 0;
 
-// 		.list-item {
-// 			&:first-child {
-// 				border-radius: 3px 3px 0 0;
-// 			}
-
-// 			&:hover {
-// 				background: @clrListHover;
-// 			}
-
-// 			&.selected,
-// 			&.editing {
-// 				background-color: @clrAccent;
-// 				color: @clrPrefsTextActive;
-// 			}
-
-// 			&.editable-item {
-// 				border-bottom: 1px solid @clrWindowBorder;
-// 			}
-// 		}
-
-// 		.scrollbar-track {
-// 			.arc-scrollbar();
-// 		}
+// // 		.scrollbar-track {
+// // 			.arc-scrollbar();
+// // 		}
 // 	}
 
-// 	&:focus .items-wrapper .list-item.selected {
-// 		background-color: @clrAccent;
-// 		color: @clrPrefsTextActive;
-// 	}
-
-// 	// Left pane button footer
-// 	.buttons-wrapper {
-// 		background-color: @clrPrefsBodyBg;
-// 		border-color: @clrWindowBorder;
-// 		border-radius: 0 0 3px 3px;
-
-// 		.btn-editable-list {
-// 			border-color: @clrWindowBorder;
-// 			color: @clrButtonText;
-
-// 			&:first-child {
-// 				border-radius: 0 0 0 3px;
-// 			}
-
-// 			&.btn-disabled,
-// 			&.btn-disabled:active {
-// 				opacity: 1;
-// 				background-color: @clrPrefsBodyBg;
-// 				color: @clrButtonTextDisabled;
-// 			}
-
-// 			&:hover:not(.btn-disabled) {
-// 				background-color: @clrButtonBgHover;
-// 			}
-
-// 			&:active:not(.btn-disabled) {
-// 				background-color: @clrButtonBgActive;
-// 				color: @clrButtonTextActive;
-// 			}
-// 		}
-// 	}
+// // 	&:focus .items-wrapper .list-item.selected {
+// // 		background-color: @clrAccent;
+// // 		color: @clrPrefsTextActive;
+// // 	}
 // }
 
 // //------------------------------------------------------------
