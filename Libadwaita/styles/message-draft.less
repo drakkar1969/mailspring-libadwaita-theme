@@ -321,45 +321,53 @@
 	}
 }
 
-// //------------------------------------------------------------
-// // Draft message (edit mode) signature button
-// //------------------------------------------------------------
+//------------------------------------------------------------
+// Draft message (edit mode) signature button
+//------------------------------------------------------------
+.message-item-white-wrap.composer-outer-wrap,
+.composer-full-window .message-item-white-wrap.composer-outer-wrap {
+	.composer-participant-field .dropdown-component .signature-button-dropdown {
+		.button-dropdown {
+			padding-top: 6px;
 
-// .message-item-white-wrap.composer-outer-wrap,
-// .composer-full-window .message-item-white-wrap.composer-outer-wrap {
-// 	.composer-participant-field .dropdown-component .signature-button-dropdown .only-item {
-// 		box-shadow: none;
-// 		background: @clrButtonBg;
-// 		border: 1px solid @clrButtonBorder;
-// 		height: 2.1em;
-// 		font-size: 1em;
-// 		padding: 0 0.8em;
-// 		margin-top: -2px;
-
-// 		img.signature-button {
-// 			background-color: @clrButtonText;
-// 		}
-
-// 		&:hover {
-// 			background: @clrButtonBgHover;
-// 			border: 1px solid @clrButtonBorderHover;
-// 		}
-
-// 		&:active {
-// 			background: @clrButtonBgActive;
-// 			border: 1px solid @clrButtonBorderActive;
-
-// 			img.signature-button {
-// 				background-color: @clrButtonTextActive;
-// 			}
-// 		}
-// 	}
-
-// 	.composer-participant-field .dropdown-component .signature-button-dropdown .button-dropdown.open img.signature-button,
-// 	.composer-participant-field .dropdown-component .signature-button-dropdown .only-item img.signature-button {
-// 		background-color: @clrButtonText;
-// 	}
-// }
+			.only-item {
+				background: @button_color;
+				border: 0;
+				border-radius: @button_radius;
+				height: 34px;
+				line-height: 34px;
+				font-size: @text_size;
+				padding-right: 8px;
+	
+				img.signature-button {
+					background-color: @text_color;
+				}
+	
+				&:hover {
+					background: @button_hover_color;
+				}
+	
+				&:active {
+					background: @button_active_color;
+				}
+			}
+			
+			&.open {
+				.only-item {
+					background: @button_checked_color;
+	
+					img.signature-button {
+						background-color: @text_color;
+					}
+	
+					&:hover {
+						background-color: @button_checked_hover_color;
+					}	
+				}
+			}
+		}
+	}
+}
 
 //------------------------------------------------------------
 // Draft message (edit mode) rich edit toolbar
