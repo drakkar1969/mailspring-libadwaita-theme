@@ -299,26 +299,27 @@
 // 	}
 // }
 
-// //------------------------------------------------------------
-// // Draft message (edit mode) subject (new message)
-// //------------------------------------------------------------
-// .composer-inner-wrap .composer-subject {
-// 	input {
-// 		margin: 3px 0 6px;
+//------------------------------------------------------------
+// Draft message (edit mode) subject (new message)
+//------------------------------------------------------------
+.composer-inner-wrap .composer-subject {
+	input {
+		margin: 3px 0 6px;
 
-// 		&::placeholder {
-// 			color: @clrInputTextPlaceholder;
-// 		}
+		&::placeholder {
+			color: @text_color_dim;
+		}
 
-// 		&:focus {
-// 			border: none;
-// 		}
-// 	}
+		&:focus {
+			border: none;
+			outline: none;
+		}
+	}
 
-// 	&:after {
-// 		background: @clrTextFadedMore;
-// 	}
-// }
+	&:after {
+		background: @borders_color;
+	}
+}
 
 // //------------------------------------------------------------
 // // Draft message (edit mode) signature button
