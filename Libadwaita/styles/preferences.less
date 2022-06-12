@@ -391,25 +391,20 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 .preferences-wrap .container-accounts .accounts-content {
 	// Left pane items
 	.account-list {
+		.items-wrapper {
+			background-color: @window_bg_color;
+			border-width: 0 1px 0 0;
+	
+			.scroll-region-content-inner {
+				margin-right: 30px;
+			}
+		}
+
 		.list-item {
-			border-radius: 0;
-
-			&:first-child {
-				border-radius: @button_radius @button_radius 0 0;
-			}
-
-			&:last-child {
-				border-radius: 0 0 @button_radius @button_radius;
-			}
-
-			&:only-child {
-				border-radius: @button_radius;
-			}
-
-			&:not(:last-child) {
-				border-bottom: 1px solid @borders_color;
-			}
-
+			border-radius: @button_radius;
+			margin-top: 12px;
+			margin-bottom: 12px;
+	
 			&:hover:not(.selected) {
 				background-color: @view_hover_color;
 			}
