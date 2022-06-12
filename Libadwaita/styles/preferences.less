@@ -697,54 +697,62 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 // 	}
 // }
 
-// //------------------------------------------------------------
-// // Preferences: Folders tab
-// //------------------------------------------------------------
-// .preferences-wrap .category-mapper-container {
-// 	// Labels
-// 	.role-section .col-left {
-// 		color: @clrPrefsText;
-// 		font-size: 1em;
-// 		padding-top: 4px;
-// 	}
+//------------------------------------------------------------
+// Preferences: Folders tab
+//------------------------------------------------------------
+.preferences-wrap .category-mapper-container {
+	& > div {
+		box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.03), 0 1px 3px 1px rgba(0, 0, 0, 0.07), 0 2px 6px 2px rgba(0, 0, 0, 0.03);
+		background-color: @card_bg_color;
+		border-radius: @card_radius;
+		margin-top: 30px;
+		padding: 24px;
+	}
 
-// 	// Dropdowns
-// 	.category-picker-dropdown {
-// 		.btn {
-// 			.category-item {
-// 				font-size: 1em;
+	h6 {
+		margin-top: 0;
+	}
 
-// 				img.content-mask {
-// 					background-color: @clrButtonText;
-// 				}
+	.account-section-title {
+		margin-top: 0;
+	}
 
-// 				& + img {
-// 					width: 20px;
-// 					height: 12px;
-// 					background-image: none;
-// 					-webkit-mask-repeat: no-repeat;
-// 					-webkit-mask-image: url(../static/images/dropdown-menu/dropdown-chevron@2x.png);
-// 					-webkit-mask-size: 20px 12px;
-// 					-webkit-mask-position: 0px 0px;
-// 					background-color: @clrButtonText;
-// 					padding-top: 12px;
-// 				}
-// 			}
-// 		}
+	// Labels
+	.role-section .col-left {
+		color: @text_color;
+		font-size: @text_size;
+		line-height: 34px;
+	}
 
-// 		&:active {
-// 			.category-item {
-// 				img.content-mask {
-// 					background-color: @clrButtonTextActive;
-// 				}
+	// Dropdowns
+	.role-section .col-right {
+		margin-bottom: 8px;
+	}
+	
+	.category-picker-dropdown {
+		.btn {
+			.category-item {
+				font-size: @text_size;
+				font-weight: bold;
 
-// 				& + img {
-// 					background-color: @clrButtonTextActive;
-// 				}
-// 			}
-// 		}
-// 	}
-// }
+				img.content-mask {
+					background-color: @text_color;
+				}
+
+				& + img {
+					width: 10px;
+					height: 6px;
+					background-image: none;
+					-webkit-mask-repeat: no-repeat;
+					-webkit-mask-image: url(../static/images/dropdown-menu/dropdown-chevron@2x.png);
+					-webkit-mask-size: 10px 6px;
+					-webkit-mask-position: 0px 0px;
+					background-color: @text_color;
+				}
+			}
+		}
+	}
+}
 
 // //------------------------------------------------------------
 // // Preferences: Signatures tab
