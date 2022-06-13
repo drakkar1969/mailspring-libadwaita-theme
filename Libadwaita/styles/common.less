@@ -1,7 +1,7 @@
 @import "adw-variables";
 
 //------------------------------------------------------------
-// Main toolbar
+// Application font
 //------------------------------------------------------------
 mailspring-workspace {
 	font-family: 'Ubuntu', 'Cantarell', 'Nylas-Pro', 'Helvetica', sans-serif;
@@ -335,6 +335,59 @@ select {
 // 		stroke: @clrWarningYellow;
 // 	}
 // }
+
+//------------------------------------------------------------
+// Application font
+//------------------------------------------------------------
+.scrollbar-track {
+	@scrollbar_color: rgba(0, 0, 0, 0.08);
+	@slider_color: rgba(0, 0, 0, 0.16);
+	@slider_hover_color: rgba(0, 0, 0, 0.32);
+	@slider_dragging_color: rgba(0, 0, 0, 0.48);
+	@slider_outline_color: #ffffff;
+
+	background: transparent;
+	border: 0;
+	width: 14px;
+	margin: 7px 0;
+	padding: 0 3px 0 8px;
+
+	.scrollbar-track-inner {
+		background: transparent;
+		border-radius: 10px;
+	}
+
+	.scrollbar-handle {
+		background-color: @slider_color;
+		border: 0;
+		border-radius: 10px;
+		outline: 1px solid fade(@slider_outline_color, 40%);
+
+		&:hover {
+			background-color: @slider_hover_color;
+		}
+	}
+
+	&:hover,
+	&.dragging {
+		padding: 0 6px 0 0;
+
+		.scrollbar-track-inner {
+			background: @scrollbar_color;
+			outline: 1px solid fade(@slider_outline_color, 35%);
+		}
+
+		.scrollbar-handle {
+			outline: 1px solid fade(@slider_outline_color, 35%);
+		}
+	}
+
+	&.dragging {
+		.scrollbar-handle {
+			background-color: @slider_dragging_color;
+		}
+	}
+}
 
 // //---------------------------------
 // // Scrollbar tooltips
