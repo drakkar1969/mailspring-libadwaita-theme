@@ -37,7 +37,6 @@
 			.threadlist-icon(url(../static/images/thread-list/icon-attachment-@2x.png), 15px, @text_color);
 		}
 
-		// TODO: fix vertical position (wide threadlist view)
 		//---------------------------------
 		// Draft icon
 		//---------------------------------
@@ -110,41 +109,28 @@
 	}
 }
 
-// //------------------------------------------------------------
-// // Adjust icon vertical positions
-// //------------------------------------------------------------
-// .thread-list .list-container .list-item {
-// 	.thread-icon-replied,
-// 	.thread-icon-forwarded,
-// 	.thread-icon-unread,
-// 	.thread-icon-star,
-// 	.thread-icon-none {
-// 		margin-top: 3px;
-// 	}
-// }
+//------------------------------------------------------------
+// Adjust icon vertical positions
+//------------------------------------------------------------
+.thread-list .list-container .list-item {
+	.thread-icon.thread-icon-attachment {
+		margin-top: 0;
+	}
 
-// .thread-list-narrow .list-container .list-item {
-// 	.thread-icon-replied,
-// 	.thread-icon-forwarded,
-// 	.thread-icon-unread,
-// 	.thread-icon-star,
-// 	.thread-icon-none {
-// 		margin-top: 1px;
-// 	}
-// }
+	.draft-icon {
+		margin-top: 6px;
+	}
+}
 
-// //------------------------------------------------------------
-// // Link tracking icons
-// //------------------------------------------------------------
-// .open-tracking-icon img.content-mask {
-// 	&.unopened {
-// 		background-color: @clrListTextFaded;
-// 	}
+.thread-list-narrow .list-container .list-item {
+	.thread-icon.thread-icon-attachment {
+		margin-top: 1px;
+	}
 
-// 	&.opened {
-// 		background-color: @clrAccent;
-// 	}
-// }
+	.draft-icon {
+		margin-top: 1px;
+	}
+}
 
 // //------------------------------------------------------------
 // // Important icon (gmail)
