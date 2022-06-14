@@ -3,11 +3,11 @@
 //------------------------------------------------------------
 // LESS mixin
 //------------------------------------------------------------
-.threadlist-icon(@image, @color) {
+.threadlist-icon(@image, @size, @color) {
 	background-image: none;
 	-webkit-mask-repeat: no-repeat;
 	-webkit-mask-image: @image;
-	-webkit-mask-size: 15px;
+	-webkit-mask-size: @size;
 	-webkit-mask-position: 6px 4px;
 	filter: none;
 	background-color: @color;
@@ -21,7 +21,7 @@
 //---------------------------------
 .draft-list {
 	.thread-icon.thread-icon-attachment {
-		.threadlist-icon(url(../static/images/thread-list/icon-attachment-@2x.png), @text_color);
+		.threadlist-icon(url(../static/images/thread-list/icon-attachment-@2x.png), 15px, @text_color);
 	}
 }
 
@@ -34,7 +34,7 @@
 		// Attachment icon
 		//---------------------------------
 		.thread-icon.thread-icon-attachment {
-			.threadlist-icon(url(../static/images/thread-list/icon-attachment-@2x.png), @text_color);
+			.threadlist-icon(url(../static/images/thread-list/icon-attachment-@2x.png), 15px, @text_color);
 		}
 
 		// TODO: fix vertical position (wide threadlist view)
@@ -42,7 +42,7 @@
 		// Draft icon
 		//---------------------------------
 		.draft-icon {
-			.threadlist-icon(url(../static/images/thread-list/icon-draft-pencil@2x.png), @text_color);
+			.threadlist-icon(url(../static/images/thread-list/icon-draft-pencil@2x.png), 15px, @text_color);
 			zoom: 1 !important;
 			width: 26px;
 			height: 24px;
@@ -50,92 +50,62 @@
 		}
 
 		//---------------------------------
-		// Replied/forwarded icons
+		// None icon
 		//---------------------------------
-		.thread-icon.thread-icon-replied {
-			.threadlist-icon(url(../static/images/thread-list/icon-replied-@2x.png), @text_color);
+		.thread-icon-none {
+			.threadlist-icon(url(../static/images/thread-list/icon-star-hover-@2x.png), 16px, transparent);
 
-// 			&:hover {
-// 				.threadlist-icon(url(../static/images/thread-list/icon-star-@2x.png), transparent);
-// 			}
 		}
 
-		.thread-icon.thread-icon-forwarded {
-			.threadlist-icon(url(../static/images/thread-list/icon-forwarded-@2x.png), @text_color);
+		&:hover {
+			.thread-icon-none {
+				background-color: @text_color_dim;
+			}
+		}
 
-// 			&:hover {
-// 				.threadlist-icon(url(../static/images/thread-list/icon-star-@2x.png), transparent);
-// 			}
+		//---------------------------------
+		// Star icon
+		//---------------------------------
+		.thread-icon-star-on-hover:hover {
+			.threadlist-icon(url(../static/images/thread-list/icon-star-hover-@2x.png), 16px, @text_color);
+		}
+
+		.thread-icon.thread-icon-star {
+			.threadlist-icon(url(../static/images/thread-list/icon-star-@2x.png), 16px, @accent_bg_color);
+
+			&:hover {
+				background-color: darken(@accent_bg_color, 10%);
+			}
 		}
 
 		//---------------------------------
 		// Unread icon
 		//---------------------------------
 		.thread-icon.thread-icon-unread {
-			.threadlist-icon(url(../static/images/thread-list/icon-unread-@2x.png), @accent_bg_color);
+			.threadlist-icon(url(../static/images/thread-list/icon-unread-@2x.png), 15px, @accent_bg_color);
 
-// 			&:hover {
-// 				.threadlist-icon(url(../static/images/thread-list/icon-star-@2x.png), transparent);
-// 			}
+			&:hover {
+				.threadlist-icon(url(../static/images/thread-list/icon-star-hover-@2x.png), 16px, @text_color);
+			}
 		}
 
-// 		//---------------------------------
-// 		// Star icon
-// 		//---------------------------------
-// 		.thread-icon.thread-icon-star {
-// 			.threadlist-icon(url(../static/images/thread-list/icon-star-@2x.png), @clrAccent);
+		//---------------------------------
+		// Replied/forwarded icons
+		//---------------------------------
+		.thread-icon.thread-icon-replied {
+			.threadlist-icon(url(../static/images/thread-list/icon-replied-@2x.png), 15px, @text_color);
+		}
 
-// 			&:hover {
-// 				background-color: fade(@clrAccent, 70%);
-// 			}
-// 		}
+		.thread-icon.thread-icon-forwarded {
+			.threadlist-icon(url(../static/images/thread-list/icon-forwarded-@2x.png), 15px, @text_color);
+		}
 
-// 		&.focused,
-// 		&.selected {
-// 			.thread-icon.thread-icon-star {
-// 				background-color: @clrListTextActive;
-
-// 				&:hover {
-// 					background-color: fade(@clrListTextActive, 70%);
-// 				}
-// 			}
-// 		}
-
-// 		//---------------------------------
-// 		// None icon
-// 		//---------------------------------
-// 		.thread-icon-none {
-// 			.threadlist-icon(url(../static/images/thread-list/icon-star-@2x.png), transparent);
-// 		}
-
-// 		&:hover:not(.unread) {
-// 			.thread-icon-none {
-// 				background-color: fade(@clrListText, 25%);
-// 			}
-// 		}
-
-// 		&.focused:hover,
-// 		&.selected:hover {
-// 			.thread-icon-none {
-// 				background-color: fade(@clrListTextActive, 35%);
-// 			}
-// 		}
-
-// 		//---------------------------------
-// 		// Star hover icon
-// 		//---------------------------------
-// 		&:hover {
-// 			.thread-icon-star-on-hover:hover {
-// 				background-color: fade(@clrListText, 50%);
-// 			}
-// 		}
-
-// 		&.focused,
-// 		&.selected {
-// 			.thread-icon-star-on-hover:hover {
-// 				background-color: fade(@clrListTextActive, 60%);
-// 			}
-// 		}
+		.thread-icon.thread-icon-replied,
+		.thread-icon.thread-icon-forwarded {
+			&:hover {
+				.threadlist-icon(url(../static/images/thread-list/icon-star-hover-@2x.png), 16px, @text_color);
+			}
+		}
 	}
 }
 
