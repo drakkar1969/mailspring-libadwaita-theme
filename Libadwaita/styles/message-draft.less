@@ -266,38 +266,39 @@
 	}
 }
 
-// //------------------------------------------------------------
-// // Draft message (edit mode) from dropdown button (new message)
-// //------------------------------------------------------------
-// .composer-participant-field .button-dropdown .primary-item,
-// .composer-participant-field .button-dropdown .only-item {
-// 	box-shadow: none;
-// 	background: @clrButtonBg;
-// 	border: 1px solid @clrButtonBorder;
-// 	color: @clrButtonText;
-// 	height: 2.1em;
-// 	font-size: 1em;
-// 	margin-top: -2px;
+//------------------------------------------------------------
+// Draft message (edit mode) from dropdown button (new message)
+//------------------------------------------------------------
+.composer-participant-field .button-dropdown ,
+.composer-participant-field .button-dropdown {
+	padding-top: 6px;
 
-// 	img.content-mask {
-// 		background-color: @clrButtonText;
-// 	}
-
-// 	&:hover {
-// 		background: @clrButtonBgHover;
-// 		border: 1px solid @clrButtonBorderHover;
-// 	}
-
-// 	&:active {
-// 		background: @clrButtonBgActive;
-// 		border: 1px solid @clrButtonBorderActive;
-// 		color: @clrButtonTextActive;
-
-// 		img.content-mask {
-// 			background-color: @clrButtonTextActive;
-// 		}
-// 	}
-// }
+	.primary-item,
+	.only-item {
+		box-shadow: none;
+		background: @button_color;
+		border: 0;
+		border-radius: @button_radius !important;
+		color: @text_color;
+		font-size: @text_size;
+		font-weight: bold;
+		height: 34px;
+		line-height: 34px;
+	
+		img.content-mask {
+			background-color: @text_color;
+		}
+	
+		&:hover {
+			background: @button_hover_color;
+		}
+	
+		&:active {
+			background: @button_active_color;
+		}
+	
+	}
+}
 
 //------------------------------------------------------------
 // Draft message (edit mode) subject (new message)
