@@ -1,53 +1,73 @@
-@import "arc-variables";
+@import "adw-variables";
 
 //------------------------------------------------------------
 // Theme selector window
 //------------------------------------------------------------
 .modal-container .modal {
-	background: @clrWindowBg !important;
-	border-radius: 3px !important;
+	box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.09), 0 2px 14px 3px rgba(0, 0, 0, 0.05) !important;
+	background: @window_bg_color !important;
+	border-radius: @card_radius !important;
+	height: 400px !important;
 
-	.modal-close {
-		width: 16px !important;
-		height: 16px !important;
-		zoom: 0.9 !important;
-		margin: 8px;
-		content: @imgBtnClose;
+// 	.modal-close {
+// 		width: 16px !important;
+// 		height: 16px !important;
+// 		zoom: 0.9 !important;
+// 		margin: 8px;
+// 		content: @imgBtnClose;
 
-		&:hover {
-			content: @imgBtnCloseHover;
-		}
+// 		&:hover {
+// 			content: @imgBtnCloseHover;
+// 		}
 
-		&:active {
-			content: @imgBtnCloseActive;
-		}
+// 		&:active {
+// 			content: @imgBtnCloseActive;
+// 		}
 
-		.platform-linux.is-blurred & {
-			content: @imgBtnCloseBackdrop;
-		}
+// 		.platform-linux.is-blurred & {
+// 			content: @imgBtnCloseBackdrop;
+// 		}
+// 	}
+
+	.scroll-region {
+		height: 300px !important;
 	}
 }
 
 .theme-picker {
 	h4 {
-		color: @clrText !important;
-		font-size: 15.5px;
-		margin-top: -16px;
-		margin-bottom: 0;
+		color: @text_color !important;
+		font-size: @text_size;
+		font-weight: bold;
+		margin-top: -18px;
+		margin-bottom: 3px;
 	}
 
 	h4 + div {
-		color: @clrText !important;
-		font-size: 13px !important;
+		color: @text_color_dim !important;
+		font-size: @text_size !important;
 	}
 
 	.create-theme {
-		margin-top: 10px;
+		margin-top: 8px;
 
 		a {
-			color: @clrLink !important;
+			color: @link_color !important;
+			font-size: @text_size;
 			text-decoration: underline;
-			cursor: pointer;
+
+			&:hover {
+				color: @link_hover_color !important;
+				cursor: pointer;
+			}
 		}
 	}
+}
+
+.theme-option {
+	background-color: red !important;
+}
+
+.theme-option .theme-name {
+	font-size: @text_size;
 }
