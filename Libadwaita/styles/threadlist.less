@@ -117,7 +117,7 @@
 }
 
 //------------------------------------------------------------
-// Thread list (single pane view)
+// Thread list items (single pane view)
 //------------------------------------------------------------
 .list-tabular .list-tabular-item {
 	.list-column.list-column-Check {
@@ -179,18 +179,23 @@
 	}
 }
 
-// //------------------------------------------------------------
-// // Syncing message
-// //------------------------------------------------------------
-// .syncing-list-state {
-// 	color: @clrListTextFaded;
+//------------------------------------------------------------
+// Syncing message
+//------------------------------------------------------------
+.syncing-list-state {
+	color: @text_color_dim;
+	font-size: @text_size;
 
-// 	a {
-// 		color: @clrAccent;
-// 		font-size: 0.9em;
-// 		cursor: pointer;
-// 	}
-// }
+	a {
+		color: @link_color;
+		font-size: @text_size;
+
+		&:hover {
+			color: @link_hover_color;
+			cursor: pointer;
+		}
+	}
+}
 
 //------------------------------------------------------------
 // Hover action bar
