@@ -313,53 +313,59 @@ select {
 // 	}
 // }
 
-//------------------------------------------------------------
+// ------------------------------------------------------------
 // Undo/redo toasts
-//------------------------------------------------------------
-// .undo-redo-toast {
-// 	.content {
-// 		background: @clrToastBg;
-// 		border: 1px solid @clrToastBorder;
-// 		border-radius: 2px;
-// 		opacity: 0.95;
-// 	}
+// ------------------------------------------------------------
+.undo-redo-toast {
+	@osd_bg_color: rgba(0, 0, 0, 0.7);
+	@osd_fg_color: rgba(255, 255, 255, 0.9);
 
-// 	.message {
-// 		color: @clrToastText;
-// 	}
+	.content {
+		background: @osd_bg_color;
+		border: 0;
+		border-radius: 23px;
+		height: 46px;
+		opacity: 1;
+	}
 
-// 	.action {
-// 		background: @clrToastButtonBg;
-// 		border: 1px solid @clrToastButtonBorder;
-// 		border-radius: 3px;
+	.message {
+		color: @osd_fg_color;
+		margin-left: 24px;
+	}
 
-// 		.undo-action-text {
-// 			color: @clrToastText;
-// 		}
+	.action {
+		background: rgba(0, 0, 0, 0.65);
+		border: 0;
+		border-radius: @button_radius;
+		height: 34px;
+		line-height: 34px;
+		margin-right: 24px;
+		padding: 0 8px;
 
-// 		img {
-// 			background-color: @clrToastText;
-// 		}
+		.undo-action-text {
+			color: @osd_fg_color;
+			font-size: @text_size;
+			font-weight: bold;
+		}
 
-// 		&:hover {
-// 			background: @clrToastButtonBgHover;
-// 			border: 1px solid @clrToastButtonBorderHover;
-// 		}
+		img {
+			background-color: @osd_fg_color;
+		}
 
-// 		&:active {
-// 			background: @clrToastButtonBgActive;
-// 			border: 1px solid @clrToastButtonBorderActive;
+		&:hover {
+			background: fade(mix(black, rgba(0, 0, 0, 0.8), 85%), 65%);
+			border: 0;
 
-// 			.undo-action-text {
-// 				color: @clrToastTextActive;
-// 			}
-
-// 			img {
-// 				background-color: @clrToastTextActive;
-// 			}
-// 		}
-// 	}
-// }
+			.undo-action-text {
+				color: white;
+			}
+	
+			img {
+				background-color: white;
+			}
+		}
+	}
+}
 
 // .countdown {
 // 	.countdown-number {
