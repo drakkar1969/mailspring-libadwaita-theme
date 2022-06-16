@@ -9,9 +9,9 @@ messagelist.less				IN PROGRESS (TODO)
 messagelist-toolbar.less		OK + COMMENTS
 preferences.less				IN PROGRESS (TODO)
 sidebar.less					IN PROGRESS
-sidebar-toolbar.less			OK
-theme-colors.less				OK
+sidebar-toolbar.less			OK + COMMENTS
+theme-colors.less				OK + COMMENTS
 theme-selector.less				IN PROGRESS
 threadlist-icons.less			IN PROGRESS
 threadlist.less					IN PROGRESS
-threadlist-toolbar.less			OK
+threadlist-toolbar.less			OK + COMMENTS
