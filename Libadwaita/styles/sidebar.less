@@ -124,21 +124,22 @@
 		}
 	}
 
-// 	//---------------------------------
-// 	// Drop target item
-// 	//---------------------------------
-// 	.item-container.dropping {
-// 		background: transparent;
+	//---------------------------------
+	// Drop target item
+	//---------------------------------
+	.item-container.dropping {
+		background: transparent;
 
-// 		.item {
-// 			background-color: @clrAccent;
-// 			color: @clrSidebarTextActive;
+		.item {
+			box-shadow: 0 0 0 2px @accent_color;
+			background-color: @window_bg_color;
+			color: @text_color;
 
-// 			img.content-mask {
-// 				background-color: @clrSidebarTextActive;
-// 			}
-// 		}
-// 	}
+			img.content-mask {
+				background-color: @text_color
+			}
+		}
+	}
 
 	//---------------------------------
 	// New folder edit box
