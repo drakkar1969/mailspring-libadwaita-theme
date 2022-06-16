@@ -17,6 +17,9 @@
 		margin: 16px;
 	}
 
+	//---------------------------------
+	// Empty state
+	//---------------------------------
 	.empty-state .perspective-empty-state {
 		transition: none;
 
@@ -56,6 +59,9 @@
 	border-left: 0;
 	color: @text_color;
 
+	//---------------------------------
+	// Details
+	//---------------------------------
 	.participants {
 		font-size: @text_size;
 
@@ -98,6 +104,9 @@
 		}
 	}
 
+	//---------------------------------
+	// Items
+	//---------------------------------
 	&:hover {
 		background-color: @view_hover_color;
 	}
@@ -127,6 +136,7 @@
 		}
 	}
 
+	// key focus state
 	&.keyboard-cursor {
 		outline: 2px solid @focus_border_color;
 		outline-offset: -2px;
