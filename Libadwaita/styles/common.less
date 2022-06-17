@@ -52,7 +52,8 @@ input[type='password'],
 input[type='search'],
 input[type='tel'],
 input[type='time'],
-input[type='url'] {
+input[type='url'],
+input[type='color'] {
 	background: @button_color;
 	border: 0;
 	box-shadow: none;
@@ -73,6 +74,16 @@ input[type='url'] {
 
 	&::placeholder {
 		color: @text_color_dim;
+	}
+}
+
+input[type='color'] {
+	&:hover {
+		background: @button_hover_color;
+	}
+
+	&:active {
+		background: @button_active_color;
 	}
 }
 
@@ -355,7 +366,7 @@ select {
 	.header-container {
 		margin-bottom: 0;
 	}
-	
+
 	.content-container {
 		box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.09), 0 2px 14px 3px rgba(0, 0, 0, 0.05);
 		background: @popover_bg_color;
