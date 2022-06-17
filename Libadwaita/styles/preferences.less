@@ -235,6 +235,7 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 	.items-wrapper {
 		background-color: @card_bg_color;
 		border-color: @borders_color;
+		border-radius: @button_radius @button_radius 0 0;
 		color: @text_color;
 		font-size: @text_size;
 
@@ -250,6 +251,10 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 			align-items: center;
 			padding-top: 0;
 			padding-bottom: 0;
+
+			&:first-child {
+				border-radius: @button_radius @button_radius 0 0;
+			}
 
 			&:hover {
 				background-color: @view_hover_color;
@@ -290,6 +295,10 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 			border-radius: 0;
 			color: @text_color;
 
+			&:first-child {
+				border-radius: @button_radius @button_radius 0 0;
+			}
+
 			&:hover {
 				background-color: @view_selected_hover_color;
 			}
@@ -305,6 +314,10 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 			border-radius: 0;
 			outline: 2px solid @focus_border_color;
 			outline-offset: -2px;
+
+			&:first-child {
+				border-radius: @button_radius @button_radius 0 0;
+			}
 
 			& > input {
 				background-color: transparent;
@@ -327,6 +340,7 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 	.buttons-wrapper {
 		background-color: @window_bg_color;
 		border-color: @borders_color;
+		border-radius: 0 0 @button_radius @button_radius;
 
 		.btn-editable-list {
 			background-color: @button_color;
