@@ -789,10 +789,10 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 	}
 }
 
-// //------------------------------------------------------------
-// // Preferences: Signatures tab
-// //------------------------------------------------------------
-// .preferences-signatures-container .signature-wrap {
+//------------------------------------------------------------
+// Preferences: Signatures tab
+//------------------------------------------------------------
+.preferences-signatures-container .signature-wrap {
 // 	.account-picker {
 // 		color: @clrPrefsTextFaded;
 // 	}
@@ -826,42 +826,41 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 // 		}
 // 	}
 
-// 	.section-header {
-// 		font-weight: 700;
-// 		margin-top: 24px;
-// 		margin-bottom: 12px;
-// 	}
+	.section-header {
+		font-weight: bold;
+		margin-left: 16px;
+	}
 
-// 	.section {
-// 		background-color: @clrPrefsBodyBg;
-// 		border: 1px solid @clrWindowBorder;
+	.section {
+		border: 0;
+		margin: 16px;
 
-// 		&.preview {
-// 			background-color: @clrListBg;
-// 			border-radius: 3px 3px 0 0;
-// 			color: @clrInputText;
+		&.preview {
+			background: @card_bg_color;
+			box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.03), 0 1px 3px 1px rgba(0, 0, 0, 0.07), 0 2px 6px 2px rgba(0, 0, 0, 0.03);
+			border-radius: @card_radius;
+			padding: 24px;
 
-// 			.label {
-// 				color: @clrPrefsTextFaded;
-// 			}
+			.label {
+				color: @text_color_dim;
+				font-size: @text_size;
+			}
 
-// 			a {
-// 				color: @clrLink;
-// 			}
-// 		}
+			a {
+				color: @link_color;
+				font-size: @text_size;
+			}
+		}
 
-// 		&.preview + .section {
-// 			border-radius: 0 0 3px 3px;
-// 			border-top-color: @clrPrefsBodyBg;
-// 		}
+		&.information {
+			background: @card_bg_color;
+			box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.03), 0 1px 3px 1px rgba(0, 0, 0, 0.07), 0 2px 6px 2px rgba(0, 0, 0, 0.03);
+			border-radius: @card_radius;
+			padding: 24px;
 
-// 		&.information {
-// 			border: none;
-// 			padding: 0;
-
-// 			.field label {
-// 				color: @clrPrefsTextFadedLess;
-// 			}
+			.field label {
+				color: @text_color;
+			}
 
 // 			.field.photo-picker .photo-well {
 // 				border: 1px solid @clrWindowBorder;
@@ -881,22 +880,23 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 // 					color: @clrButtonText;
 // 				}
 // 			}
-// 		}
-// 	}
+		}
+	}
 
-// 	.signature-template-picker {
-// 		background: @clrPrefsBodyBg;
+	.signature-template-picker {
+		background: @window_bg_color;
 
-// 		.option {
-// 			background: @clrListBg;
-// 			border: 1px solid @clrWindowBorder;
-// 			border-radius: 3px;
+		.option {
+			background: @card_bg_color;
+			border: 1px solid @borders_color;
+			border-radius: @button_radius;
+			margin-right: 4px;
 
-// 			&.active {
-// 				border: 1px solid @clrAccent;
-// 			}
-// 		}
-// 	}
+			&.active {
+				box-shadow: 0 0 0 1px @accent_color;
+			}
+		}
+	}
 
 // 	textarea.raw-html {
 // 		border-radius: 3px;
@@ -906,7 +906,7 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 // 			box-shadow: inset 1px 0 @clrAccent, inset -1px 0 @clrAccent, inset 0 1px @clrAccent, inset 0 -1px @clrAccent;
 // 		}
 // 	}
-// }
+}
 
 // //------------------------------------------------------------
 // // Preferences: Templates tab
