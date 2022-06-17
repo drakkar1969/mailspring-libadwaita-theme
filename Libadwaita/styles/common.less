@@ -3,6 +3,8 @@
 //------------------------------------------------------------
 // Application font
 //------------------------------------------------------------
+mailspring-popover-container,
+mailspring-modal-container,
 mailspring-workspace {
 	font-family: 'Ubuntu', 'Cantarell', 'Nylas-Pro', 'Helvetica', sans-serif;
 }
@@ -142,194 +144,230 @@ select {
 //------------------------------------------------------------
 // Popover menus
 //------------------------------------------------------------
-.fixed-popover-container .fixed-popover-pointer,
-.fixed-popover-container .fixed-popover-pointer.shadow {
-	display: none;
-}
-
-// .category-picker-popover .menu,
-// .dropdown-menu .menu,
-.fixed-popover-container .fixed-popover,
-.button-dropdown.open.open-down .secondary-items,
-.button-dropdown.open.open-up .secondary-items,
-.category-picker-dropdown .menu
-{
-	box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.09), 0 2px 14px 3px rgba(0, 0, 0, 0.05);
-	background: @popover_bg_color;
-	border: 1px solid rgba(0, 0, 0, 0.14);
-	border-radius: @popover_radius;
-	margin-top: 6px;
-	padding: 8px;
-	font-family: 'Ubuntu', 'Cantarell', 'Nylas-Pro', 'Helvetica', sans-serif;
-}
-
-// .category-picker-popover .menu .header-container,
-// .menu .header-container,
-.fixed-popover-container .fixed-popover .menu .header-container,
-.category-picker-dropdown .menu .header-container
-{
-	background: @popover_bg_color;
-}
-
-// .tokenizing-field .content-container {
-// 	border: 1px solid @clrPopoverBorder;
-// }
-
-.fixed-popover-container .fixed-popover .menu .header-container {
-	color: @text_color;
-	font-size: @text_size;
-	font-weight: 600;
-}
-
-.fixed-popover-container .fixed-popover input[type='text'].search {
-	background-position: 7px 9px;
-}
-
-.menu .header-container {
-	background-color: @popover_bg_color;
-	border-color: @borders_color;
-}
-
-.fixed-popover-container .fixed-popover .menu .content-container,
-.menu .content-container {
-	background: @popover_bg_color;
-}
-
-// .button-dropdown .secondary-items .menu .footer-container,
-.menu .footer-container {
-	background: @popover_bg_color;
-	border-color: @borders_color;
-}
-
-// .template-picker .footer-container {
-// 	border-top: 1px solid @clrPopoverBg;
-// }
-
-// .message-item-white-wrap.composer-outer-wrap .composer-participant-field .dropdown-component .signature-button-dropdown .button-dropdown .secondary-items .menu .footer-container {
-// 	border-top: 1px solid @clrPopoverBg;
-// }
-
-.button-dropdown .secondary-items .menu .item {
-	background: @popover_bg_color;
-	color: @text_color;
-	font-size: @text_size;
-	border-radius: @button_radius;
-	margin: 3px 0;
-
-	&:first-child {
-		border-top-left-radius: @button_radius;
-	}
-	
-	&:last-child {
-		border-bottom-left-radius: @button_radius;
-		border-bottom-right-radius: @button_radius;
+// TODO: remove bold font in preferences folders tab dropdowns
+// TODO: remove input padding
+.menu {
+	.header-container {
+		background: none;
+		border-bottom: 0;
+		margin-bottom: 8px;
+		padding: 0;
 	}
 
-	&:hover {
-		background-color: @view_hover_color;
+	.content-container {
+		background: @popover_bg_color;
+		margin-top: 0;
 	}
 
-	&.selected {
+	.item {
+		border-radius: @button_radius;
 		color: @text_color;
-	}
-}
+		font-size: @text_size;
+		height: 32px;
+		line-height: 32px;
+		margin: 6px 0;
+		padding-top: 0;
+		padding-bottom: 0;
 
-.menu .item {
-	background: @popover_bg_color;
-	color: @text_color;
-	border-radius: @button_radius;
-	margin: 3px 0;
-	padding-top: 0;
-	padding-bottom: 0;
-
-	// img.content-mask {
-	// 	background-color: red;
-	// }
-
-// 	.secondary {
-// 		color: @clrPopoverTextFaded;
-// 	}
-
-	&:not(.active):not(.selected):hover {
-		background-color: @view_hover_color;
-// 		color: @clrPopoverTextActive;
-
-// 		img.content-mask {
-// 			background-color: @clrPopoverTextActive;
-// 		}
-
-// 		.secondary {
-// 			color: @clrPopoverTextActiveFaded;
-// 		}
+		.secondary {
+			color: @text_color_dim;
+		}
 	}
 
-	&:active,
-	&.selected {
+	.item.selected,
+	.item:active {
 		background-color: @view_selected_color;
 		color: @text_color;
 
 		&:hover {
 			background-color: @view_selected_hover_color;
 		}
+
+		.primary {
+			color: @text_color;
+		}
+
+		.secondary {
+			color: @text_color_dim;
+		}
+	}
+
+	.item:not(.active):not(.selected):hover {
+		background-color: @view_hover_color;
 	}
 }
 
-.fixed-popover-container .fixed-popover .menu .item:not(.divider) {
-	padding-top: 6px;
-	padding-bottom: 6px;
+.dropdown-menu {
+	.menu {
+		box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.09), 0 2px 14px 3px rgba(0, 0, 0, 0.05);
+		background: @popover_bg_color;
+		border: 1px solid rgba(0, 0, 0, 0.14);
+		border-radius: @popover_radius;
+		margin-top: 6px;
+		padding: 8px;
+	}
 }
 
-.category-picker-popover .category-item, .category-picker-dropdown .category-item {
-	font-size: @text_size;
+// TODO: fix header text margins/padding
+.fixed-popover-container {
+	.fixed-popover {
+		box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.09), 0 2px 14px 3px rgba(0, 0, 0, 0.05);
+		background: @popover_bg_color;
+		border: 1px solid rgba(0, 0, 0, 0.14);
+		border-radius: @popover_radius;
+		color: @text_color;
+		padding: 8px;
+
+		.menu {
+			background-color: @popover_bg_color;
+
+			.header-container {
+				background: @popover_bg_color;
+				border-bottom: none;
+				border-radius: 0;
+				color: @text_color;
+				font-size: @text_size;
+				font-weight: 600;
+				margin-bottom: 8px;
+				padding: 0;
+			}
+
+			.content-container {
+				background: @popover_bg_color;
+			}
+
+			.footer-container {
+				background: @popover_bg_color;
+			}
+		}
+
+		.section {
+			margin-top: 8px;
+			padding: 0;
+		}
+  
+		.divider {
+			background: @borders_color;
+			border: 0;
+			height: 1px;
+			margin: 6px 0;
+		}
+  
+		input[type='text'] {
+			&.search {
+				background-position: 7px 9px;
+			}
+		}
+	}
+  
+	.fixed-popover-pointer,
+	.fixed-popover-pointer.shadow {
+		display: none;
+	}
 }
 
-.preferences-wrap .category-mapper-container .category-picker-dropdown .btn .menu input {
-	text-indent: 0;
+.category-picker-popover,
+.category-picker-dropdown {
+	.menu {
+		background: @popover_bg_color;
+
+		.item.divider {
+			background-color: @borders_color;
+			border: 0;
+			height: 1px;
+		}
+	}
+
+	.category-item {
+		font-size: @text_size;
+	}
 }
 
-.preferences-wrap .category-mapper-container .category-picker-dropdown .btn .menu .category-item {
-	font-weight: normal;
+.button-dropdown {
+	&.open.open-up {
+		.secondary-items {
+			box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.09), 0 2px 14px 3px rgba(0, 0, 0, 0.05);
+			background: @popover_bg_color;
+			border: 1px solid rgba(0, 0, 0, 0.14);
+			border-radius: @popover_radius;
+			padding: 8px;
+		}
+	}
+	&.open.open-down {
+		.secondary-items {
+			box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.09), 0 2px 14px 3px rgba(0, 0, 0, 0.05);
+			background: @popover_bg_color;
+			border: 1px solid rgba(0, 0, 0, 0.14);
+			border-radius: @popover_radius;
+			padding: 8px;
+		}
+	}
+
+	.secondary-items {
+		.menu {
+			.content-container {
+				background: @popover_bg_color;
+			}
+
+			.item {
+				border-radius: @button_radius;
+				font-size: @text_size;
+				height: 32px;
+				line-height: 32px;
+				margin: 6px 0;
+				padding: 0 10px;
+
+				&:first-child {
+					padding-top: 0;
+				}
+
+				&:last-child {
+					padding-bottom: 0;
+				}
+
+				&:hover {
+					background-color: @view_hover_color;
+				}
+
+				&.selected {
+					background-color: @view_selected_color;
+					color: @text_color;
+
+					&:hover {
+						background-color: @view_selected_hover_color;
+					}
+				}
+			}
+
+			.item:first-child {
+				border-top-left-radius: @button_radius;
+			}
+
+			.item:last-child {
+				border-bottom-left-radius: @button_radius;
+				border-bottom-right-radius: @button_radius;
+			}
+		}
+	}
 }
 
-// .category-picker-dropdown .menu .item.divider,
-// .fixed-popover-container .fixed-popover .divider
-.category-picker-popover .menu .item.divider {
-	background: @borders_color;
-	height: 1px;
+.tokenizing-field {
+	.header-container {
+		margin-bottom: 0;
+	}
+	
+	.content-container {
+		box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.09), 0 2px 14px 3px rgba(0, 0, 0, 0.05);
+		background: @popover_bg_color;
+		border: 1px solid rgba(0, 0, 0, 0.14);
+		border-radius: @popover_radius;
+		padding: 8px;
+	
+		&:empty {
+			padding: 0;
+		}
+	}
 }
-
-// .message-item-white-wrap.composer-outer-wrap .composer-participant-field .dropdown-component .signature-button-dropdown .button-dropdown .secondary-items .menu .item {
-// 	padding: 5px 20px 5px 28px;
-
-// 	&.checked {
-// 		background-image: @imgCheckChecked;
-// 		background-size: 16px;
-// 		background-position-y: 5px;
-
-// 		&:not(.active):not(.selected):hover,
-// 		&.selected,
-// 		&:active {
-// 			background-image: @imgCheckCheckedSelected;
-// 		}
-// 	}
-// }
-
-// .preferences-signatures-container .signature-wrap .account-picker .button-dropdown .secondary-items .menu .item {
-// 	padding: 5px 20px 5px 32px;
-
-// 	&.checked {
-// 		background-image: @imgCheckChecked;
-// 		background-size: 16px;
-// 		background-position-y: 7px;
-// 		padding: 5px 20px 5px 32px;
-
-// 		&:not(.active):not(.selected):hover,
-// 		&.selected,
-// 		&:active {
-// 			background-image: @imgCheckCheckedSelected;
-// 		}
-// 	}
-// }
 
 // ------------------------------------------------------------
 // Undo/redo toasts
