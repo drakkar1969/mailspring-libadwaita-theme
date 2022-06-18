@@ -797,34 +797,30 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 // 		color: @clrPrefsTextFaded;
 // 	}
 
-// 	.button-dropdown .primary-item, .button-dropdown .only-item {
-// 		box-shadow: none;
-// 		background: @clrButtonBg;
-// 		border: 1px solid @clrButtonBorder;
-// 		color: @clrButtonText;
-// 		height: 2.1em;
-// 		font-size: 1em;
-// 		margin-left: 6px;
+	.button-dropdown .primary-item, .button-dropdown .only-item {
+		box-shadow: none;
+		background: @button_color;
+		border: 0;
+		border-radius: @button_radius;
+		color: @text_color;
+		font-size: @text_size;
+		font-weight: bold;
+		height: 34px;
+		line-height: 34px;
+		margin-left: 6px;
 
-// 		img.content-mask {
-// 			background-color: @clrButtonText;
-// 		}
+		img.content-mask {
+			background-color: @text_color;
+		}
 
-// 		&:hover {
-// 			background: @clrButtonBgHover;
-// 			border: 1px solid @clrButtonBorderHover;
-// 		}
+		&:hover {
+			background: @button_hover_color;
+		}
 
-// 		&:active {
-// 			background: @clrButtonBgActive;
-// 			border: 1px solid @clrButtonBorderActive;
-// 			color: @clrButtonTextActive;
-
-// 			img.content-mask {
-// 				background-color: @clrButtonTextActive;
-// 			}
-// 		}
-// 	}
+		&:active {
+			background: @button_active_color;
+		}
+	}
 
 	.section-header {
 		font-weight: bold;
@@ -834,6 +830,10 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 	.section {
 		border: 0;
 		margin: 16px;
+
+		&.basic-info {
+			margin-top: 0;
+		}
 
 		&.preview {
 			background: @card_bg_color;
