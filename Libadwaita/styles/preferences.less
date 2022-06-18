@@ -863,28 +863,22 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 			border-radius: @card_radius;
 			padding: 24px;
 
-			.field label {
-				color: @text_color;
+			.field {
+				margin-bottom: 12px;
+				padding: 0 12px;
+
+				label {
+					color: @text_color;
+				}
+	
+				&.photo-picker {
+					margin-bottom: 0;
+
+					input[id="photoURL"] {
+						margin-top: 8px;
+					}
+				}
 			}
-
-// 			.field.photo-picker .photo-well {
-// 				border: 1px solid @clrWindowBorder;
-
-// 				&:hover {
-// 					border: 1px solid @clrAccent;
-// 				}
-// 			}
-
-// 			.field.photo-picker .drop-note {
-// 				color: @clrPrefsTextFaded;
-// 				font-size: 0.9em;
-// 			}
-
-// 			.field.photo-picker .photo-options {
-// 				a:hover {
-// 					color: @clrButtonText;
-// 				}
-// 			}
 		}
 	}
 
