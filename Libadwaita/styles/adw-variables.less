@@ -1,69 +1,78 @@
 //------------------------------------------------------------
-// Color variables
+// Variables
 //------------------------------------------------------------
 
-//---------------------------------
-// Base colors
-//---------------------------------
-@accent_bg_color: #3584e4;
-@accent_fg_color: #ffffff;
-@accent_color: #1c71d8;
+// Base variables
 @text_color: rgba(0, 0, 0, 0.8);
 @text_color_dim: rgba(0, 0, 0, 0.44);
+@text_size: 15px;
+
 @focus_border_color: fade(@accent_color, 50%);
 @borders_color: rgba(0, 0, 0, 0.12);
 
-@window_bg_color: #fafafa;
+@disabled_opacity: 0.5;
 
+// Accent colors
+@accent_bg_color: #3584e4;
+@accent_fg_color: #ffffff;
+@accent_color: #1c71d8;
+
+// Warning colors
+@warning_color: #ae7b03;
+@warning_bg_color: #e5a50a;
+@warning_fg_color: @text_color;
+
+// Error colors
+@error_color: #c01c28;
+@error_bg_color: #e01b24;
+@error_fg_color: #ffffff;
+
+// Window
+@window_bg_color: #fafafa;
 @headerbar_bg_color: #ebebeb;
 
+// View controls
 @view_hover_color: rgba(0, 0, 0, 0.056);
 @view_active_color: rgba(0, 0, 0, 0.128);
 @view_selected_color: rgba(0, 0, 0, 0.08);
 @view_selected_hover_color: rgba(0, 0, 0, 0.104);
 @view_selected_active_color: rgba(0, 0, 0, 0.152);
 
+// Buttons
+@button_height: 34px;
+@button_radius: 6px;
 @button_color: rgba(0, 0, 0, 0.08);
 @button_hover_color: rgba(0, 0, 0, 0.12);
 @button_active_color: rgba(0, 0, 0, 0.24);
 @button_checked_color: rgba(0, 0, 0, 0.24);
 @button_checked_hover_color: rgba(0, 0, 0, 0.28);
 
+// Cards
+@card_radius: 12px;
 @card_bg_color: #ffffff;
 @card_shadow: 0 0 0 1px rgba(0, 0, 0, 0.03), 0 1px 3px 1px rgba(0, 0, 0, 0.07), 0 2px 6px 2px rgba(0, 0, 0, 0.03);
 
+// Popovers
 @popover_bg_color: #ffffff;
+@popover_radius: 12px;
 @popover_border_color: rgba(0, 0, 0, 0.14);
 @popover_shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.09), 0 2px 14px 3px rgba(0, 0, 0, 0.05);
 @popover_item_height: 32px;
 
-@slider_color: #ffffff;
-
+// Tabs
 @tab_color: #e1e1e1;
 @tab_hover_color: rgba(0, 0, 0, 0.024);
 @tab_selected_color: #ebebeb;
 @tab_inactive_color: #f0f0f0;
 @tab_selected_inactive_color: @window_bg_color;
 
+// OSD controls
 @osd_bg_color: rgba(0, 0, 0, 0.7);
 @osd_fg_color: rgba(255, 255, 255, 0.9);
 
+// Links
 @link_color: @accent_color;
 @link_hover_color: mix(@accent_color, black, 80%);
 
-@warning_color: #ae7b03;
-@warning_bg_color: #e5a50a;
-@warning_fg_color: @text_color;
-
-@error_color: #c01c28;
-@error_bg_color: #e01b24;
-@error_fg_color: #ffffff;
-
-@text_size: 15px;
-
-@button_height: 34px;
-@button_radius: 6px;
-@card_radius: 12px;
-@popover_radius: 12px;
-
-@disabled_opacity: 0.5;
+// Sliders
+@slider_color: #ffffff;
