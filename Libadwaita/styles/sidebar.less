@@ -21,9 +21,9 @@
 .account-switcher {
 	background: transparent;
 	border-radius: @button_radius;
-	width: 34px;
-	height: 34px;
-	line-height: 34px;
+	width: @button_height;
+	height: @button_height;
+	line-height: @button_height;
 	text-align: center;
 	top: 5px;
 	right: 13px;
@@ -34,10 +34,10 @@
 		-webkit-mask-repeat: no-repeat;
 		-webkit-mask-image: url(../static/images/sidebar/account-switcher-dropdown@2x.png);
 		-webkit-mask-position: 0px 0px;
-		-webkit-mask-size: 34px;
-		width: 34px !important;
-		height: 34px !important;
-		padding-top: 34px;
+		-webkit-mask-size: @button_height;
+		width: @button_height !important;
+		height: @button_height !important;
+		padding-top: @button_height;
 	}
 
 	&:hover {
@@ -58,9 +58,9 @@
 	.add-item-button {
 		background: transparent;
 		border-radius: @button_radius;
-		width: 34px;
-		height: 34px;
-		line-height: 34px;
+		width: @button_height;
+		height: @button_height;
+		line-height: @button_height;
 		margin-top: 1px;
 		padding: 10px;
 		cursor: auto;
@@ -90,8 +90,8 @@
 		margin-top: 1px;
 		margin-bottom: 1px;
 		margin-right: 12px;
-		height: 34px;
-		line-height: 34px;
+		height: @button_height;
+		line-height: @button_height;
 
 		.icon {
 			margin-left: 8px;
@@ -145,7 +145,7 @@
 	//---------------------------------
 	.item.editing .item-input {
 		font-size: @text_size;
-		height: 34px;
+		height: @button_height;
 		text-indent: 10px;
 	}
 }
@@ -307,8 +307,8 @@
 		border-radius: @button_radius;
 		color: @text_color;
 		font-weight: bold;
-		height: 34px;
-		line-height: 34px;
+		height: @button_height;
+		line-height: @button_height;
 		margin-top: 4px;
 
 		&:hover {
