@@ -913,51 +913,41 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 	}
 }
 
-// //------------------------------------------------------------
-// // Preferences: Templates tab
-// //------------------------------------------------------------
-// .preferences-templates-container {
-// 	a {
-// 		cursor: pointer;
-// 		color: @clrLink;
-// 		font-size: 1em !important;
-// 		text-decoration: underline;
-// 	}
+//------------------------------------------------------------
+// Preferences: Templates tab
+//------------------------------------------------------------
+.preferences-templates-container {
+	a {
+		color: @link_color;
+		font-size: @text_size !important;
+		text-decoration: underline;
 
-// 	.template-wrap {
-// 		.RichEditor-root {
-// 			background: @clrListBg;
-// 			border: 1px solid @clrWindowBorder;
-// 			border-radius: 3px;
+		&:hover {
+			color: @link_hover_color;
+			cursor: pointer;
+		}
+	}
 
-// 			&.focused {
-// 				border: 1px solid @clrAccent;
-// 				box-shadow: inset 1px 0 @clrAccent, inset -1px 0 @clrAccent, inset 0 1px @clrAccent, inset 0 -1px @clrAccent;
-// 			}
+	.template-wrap {
+		&.empty {
+			opacity: @disabled_opacity;
+		}
 
-// 			.RichEditor-content {
-// 				color: @clrInputText;
-// 			}
+		.RichEditor-root {
+			background: @card_bg_color;
+			border: 0;
+			border-radius: @card_radius;
+			box-shadow: @card_shadow;
 
-// 			.template-variable {
-// 				background-color: fade(@clrAccent, 50%);
-// 				border-bottom: 1px solid @clrAccent;
-// 				color: @clrInputText;
+			&.focused {
+				outline: 2px solid @focus_border_color;
+			}
+		}
 
-// 				&.selected {
-// 					border: 1px solid @clrAccent;
-// 				}
-// 			}
-// 		}
+		.section.note {
+			color: @text_color_dim;
+			font-size: @text_size;
 
-// 		.section.note {
-// 			color: @clrPrefsTextFaded;
-// 			font-size: 1em;
-
-// 			// a {
-// 			// 	cursor: pointer;
-// 			// 	color: @clrLink;
-// 			// }
-// 		}
-// 	}
-// }
+		}
+	}
+}
