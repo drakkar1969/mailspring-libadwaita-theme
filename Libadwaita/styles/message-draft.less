@@ -478,42 +478,36 @@
 	font-size: @text_size;
 }
 
-// //------------------------------------------------------------
-// // Draft message (edit mode) remove quoted text button
-// //------------------------------------------------------------
-// .composer-inner-wrap .compose-body .quoted-text-control .remove-quoted-text {
-// 	background: @clrButtonBg;
-// 	border: 1px solid @clrButtonBorder;
-// 	border-radius: 50%;
-// 	height: 20px;
-// 	width: 20px;
-// 	top: -10px;
-// 	right: -10px;
-// 	padding-top: 2px;
-// 	cursor: default;
+//------------------------------------------------------------
+// Draft message (edit mode) remove quoted text button
+//------------------------------------------------------------
+.composer-inner-wrap .compose-body .quoted-text-control .remove-quoted-text {
+	background: @button_color;
+	border: 0;
+	border-radius: 50%;
+	height: 16px;
+	line-height: 16px;
+	width: 16px;
+	top: 0;
+	right: 0px;
+	cursor: default;
 
-// 	img {
-// 		height: 0;
-// 	}
+	img {
+		display: none;
+	}
 
-// 	&:before {
-// 		content: 'x';
-// 		margin-left: 6px;
-// 		color: @clrButtonText;
-// 	}
+	&:before {
+		content: 'x';
+		color: @text_color;
+		font-size: @text_size;
+		font-weight: bold;
+	}
 
-// 	&:hover {
-// 		background-color: @clrButtonBgHover;
-// 		border-color: @clrButtonBorderHover;
-// 	}
+	&:hover {
+		background-color: @button_hover_color;
+	}
 
-// 	&:active {
-// 		background-color: @clrButtonBgActive;
-// 		border-color: @clrButtonBorderActive;
-
-// 		&:before {
-// 			content: 'x';
-// 			color: @clrButtonTextActive;
-// 		}
-// 	}
-// }
+	&:active {
+		background-color: @button_active_color;
+	}
+}
