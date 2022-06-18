@@ -7,7 +7,7 @@ draftlist-toolbar.less			OK + COMMENTS
 message-draft.less				IN PROGRESS
 messagelist.less				IN PROGRESS (TODO)
 messagelist-toolbar.less		OK + COMMENTS
-preferences.less				IN PROGRESS (TODO)
+preferences.less				OK + COMMENTS (TODO)
 sidebar.less					OK + COMMENTS (TODO)
 sidebar-toolbar.less			OK + COMMENTS
 theme-colors.less				OK + COMMENTS

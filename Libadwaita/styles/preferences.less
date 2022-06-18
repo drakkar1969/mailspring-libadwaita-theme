@@ -388,7 +388,6 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 //------------------------------------------------------------
 // Preferences: General tab
 //------------------------------------------------------------
-// Local data buttons (bottom of page)
 .preferences-wrap .container-general {
 	max-width: 900px;
 
@@ -402,10 +401,16 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 		}
 	}
 
+	//---------------------------------
+	// Headers
+	//---------------------------------
 	h6 {
 		margin-top: 0 !important;
 	}
 
+	//---------------------------------
+	// Local data buttons (bottom of page)
+	//---------------------------------
 	.local-data {
 		box-shadow: @card_shadow;
 		background-color: @card_bg_color;
@@ -424,7 +429,9 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 // Preferences: Accounts tab
 //------------------------------------------------------------
 .preferences-wrap .container-accounts .accounts-content {
+	//---------------------------------
 	// Left pane items
+	//---------------------------------
 	.account-list {
 		.items-wrapper {
 			background-color: @window_bg_color;
@@ -471,7 +478,9 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 		}
 	}
 
+	//---------------------------------
 	// Right pane
+	//---------------------------------
 	.account-details {
 		box-shadow: @card_shadow;
 		background-color: @card_bg_color;
@@ -502,8 +511,10 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 	.identity-content-box {
 		color: @text_color_dim;
 
-		// Button
-		.btn-emphasis {
+	//---------------------------------
+	// Button
+	//---------------------------------
+	.btn-emphasis {
 			width: 200px;
 			background: none;
 			background-color: @accent_bg_color;
@@ -522,13 +533,17 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 			}
 		}
 
+		//---------------------------------
 		// Horizontal line
+		//---------------------------------
 		.padded:last-child {
 			border-top: 1px solid @borders_color;
 		}
 	}
 
+	//---------------------------------
 	// Feature title
+	//---------------------------------
 	.feature-explore-title {
 		color: @text_color;
 		font-size: @text_size;
@@ -537,7 +552,9 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 		margin-bottom: 16px;
 	}
 
+	//---------------------------------
 	// Feature grid
+	//---------------------------------
 	.feature-explore-grid .feature {
 		box-shadow: @card_shadow;
 		background-color: @card_bg_color;
@@ -595,11 +612,16 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 		margin-bottom: 30px;
 	}
 
+	//---------------------------------
+	// Headers
+	//---------------------------------
 	h6 {
 		margin-top: 0 !important;
 	}
 
+	//---------------------------------
 	// Layout selection buttons
+	//---------------------------------
 	.appearance-mode-switch .appearance-mode {
 		background-color: @card_bg_color;
 		border: 0;
@@ -624,7 +646,9 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 		}
 	}
 
+	//---------------------------------
 	// Scale slider
+	//---------------------------------
 	.appearance-scale-slider {
 		.ruler {
 			.midpoint {
@@ -698,10 +722,16 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 		margin-bottom: 30px;
 	}
 
+	//---------------------------------
+	// Headers
+	//---------------------------------
 	.shortcut-section-title {
 		margin-top: 0;
 	}
 
+	//---------------------------------
+	// Shortcut items
+	//---------------------------------
 	.shortcut {
 		color: @text_color;
 
@@ -740,7 +770,9 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 		}
 	}
 
+	//---------------------------------
 	// Large title (bottom of page)
+	//---------------------------------
 	h2 {
 		color: @text_color;
 		font-size: @text_size;
@@ -749,12 +781,15 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 	}
 }
 
-// //------------------------------------------------------------
-// // Preferences: Mail Rules tab
-// //------------------------------------------------------------
+//------------------------------------------------------------
+// Preferences: Mail Rules tab
+//------------------------------------------------------------
 .container-mail-rules {
 	max-width: 1000px;
 
+	//---------------------------------
+	// Empty pane
+	//---------------------------------
 	.empty-list {
 		background-color: @window_bg_color;
 		border: 0;
@@ -774,6 +809,9 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 		}
 	}
 
+	//---------------------------------
+	// Rules
+	//---------------------------------
 	.rule-list {
 		margin-top: 16px;
 	}
@@ -828,6 +866,9 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 		padding: 24px;
 	}
 
+	//---------------------------------
+	// Headers
+	//---------------------------------
 	h6 {
 		margin-top: 0;
 	}
@@ -836,14 +877,18 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 		margin-top: 0;
 	}
 
+	//---------------------------------
 	// Labels
+	//---------------------------------
 	.role-section .col-left {
 		color: @text_color;
 		font-size: @text_size;
 		line-height: @button_height;
 	}
 
+	//---------------------------------
 	// Dropdowns
+	//---------------------------------
 	.role-section .col-right {
 		margin-bottom: 8px;
 	}
@@ -877,6 +922,9 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 // Preferences: Signatures tab
 //------------------------------------------------------------
 .preferences-signatures-container .signature-wrap {
+	//---------------------------------
+	// Account select
+	//---------------------------------
 	.account-picker {
 		color: @text_color;
 	}
@@ -906,6 +954,9 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 		}
 	}
 
+	//---------------------------------
+	// Headers
+	//---------------------------------
 	.section-header {
 		font-weight: bold;
 		margin-left: 16px;
@@ -919,6 +970,9 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 			margin-top: 0;
 		}
 
+		//---------------------------------
+		// Preview pane
+		//---------------------------------
 		&.preview {
 			background: @card_bg_color;
 			box-shadow: @card_shadow;
@@ -941,6 +995,9 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 			}
 		}
 
+		//---------------------------------
+		// Information pane
+		//---------------------------------
 		&.information {
 			background: @card_bg_color;
 			box-shadow: @card_shadow;
@@ -966,6 +1023,9 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 		}
 	}
 
+	//---------------------------------
+	// Signature template buttons
+	//---------------------------------
 	.signature-template-picker {
 		background: @window_bg_color;
 
@@ -982,6 +1042,9 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 		}
 	}
 
+	//---------------------------------
+	// Raw HTML editor
+	//---------------------------------
 	textarea.raw-html {
 		background: @card_bg_color;
 		border: 0;
@@ -1001,6 +1064,9 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 // Preferences: Templates tab
 //------------------------------------------------------------
 .preferences-templates-container {
+	//---------------------------------
+	// Links
+	//---------------------------------
 	a {
 		color: @link_color;
 		font-size: @text_size !important;
@@ -1012,6 +1078,9 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 		}
 	}
 
+	//---------------------------------
+	// Template pane
+	//---------------------------------
 	.template-wrap {
 		&.empty {
 			opacity: @disabled_opacity;
