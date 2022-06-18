@@ -495,33 +495,93 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 	}
 }
 
-// //------------------------------------------------------------
-// // Preferences: Subscription tab
-// //------------------------------------------------------------
-// .container-identity {
-// 	.identity-content-box {
-// 		color: @clrPrefsText;
+//------------------------------------------------------------
+// Preferences: Subscription tab
+//------------------------------------------------------------
+.container-identity {
+	.identity-content-box {
+		color: @text_color_dim;
 
-// 		// Horizontal line
-// 		.padded:last-child {
-// 			border-top: 1px solid @clrPrefsTextFadedMore;
-// 		}
-// 	}
+		// Button
+		.btn-emphasis {
+			width: 200px;
+			background: none;
+			background-color: @accent_bg_color;
+			color: @accent_fg_color;
 
-// 	// Feature grid
-// 	.feature-explore-grid .feature {
-// 		background-color: @clrPrefsWarningBar;
-// 		border-left: 3px solid @clrAccent;
+			&::before {
+				display:none
+			}	
 
-// 		h3 {
-// 			color: @clrPrefsText;
-// 		}
+			&:hover {
+				background-image: linear-gradient(rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.08));
+			}
+	
+			&:active {
+				background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+			}
+		}
 
-// 		p {
-// 			color: @clrPrefsTextFadedLess;
-// 		}
-// 	}
-// }
+		// Horizontal line
+		.padded:last-child {
+			border-top: 1px solid @borders_color;
+		}
+	}
+
+	// Feature title
+	.feature-explore-title {
+		color: @text_color;
+		font-size: @text_size;
+		font-weight: bold;
+		margin-top: 16px;
+		margin-bottom: 16px;
+	}
+
+	// Feature grid
+	.feature-explore-grid .feature {
+		box-shadow: @card_shadow;
+		background-color: @card_bg_color;
+		border: 0;
+		border-radius: @card_radius;
+		padding: 24px;
+
+		&:hover {
+			box-shadow: @card_shadow;
+			transform: translate(0, 0);
+			cursor: pointer;
+		}
+
+		.popout {
+			img {
+				-webkit-mask-repeat: no-repeat;
+				-webkit-mask-size: 12px;
+				-webkit-mask-image: url(../static/images/message-list/thread-popout@1x.png);
+				background-color: @text_color;
+				width: 12px;
+				height: 12px;
+				padding-top: 12px;
+				opacity: 0.7;
+			}
+
+			&:hover {
+				img {
+					opacity: 1;
+				}
+			}
+		}
+
+		h3 {
+			color: @text_color;
+			font-size: @text_size;
+			font-weight: bold;
+		}
+
+		p {
+			color: @text_color;
+			font-size: @text_size;
+		}
+	}
+}
 
 //------------------------------------------------------------
 // Preferences: Appearance tab
