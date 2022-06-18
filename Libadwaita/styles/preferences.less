@@ -898,14 +898,17 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 		}
 	}
 
-// 	textarea.raw-html {
-// 		border-radius: 3px;
-
-// 		&:focus {
-// 			border: 1px solid @clrAccent;
-// 			box-shadow: inset 1px 0 @clrAccent, inset -1px 0 @clrAccent, inset 0 1px @clrAccent, inset 0 -1px @clrAccent;
-// 		}
-// 	}
+	textarea.raw-html {
+		background: @card_bg_color;
+		border: 0;
+		border-radius: @card_radius;
+		box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.03), 0 1px 3px 1px rgba(0, 0, 0, 0.07), 0 2px 6px 2px rgba(0, 0, 0, 0.03) !important;
+		width: auto;
+	
+		&:focus {
+			outline: 2px solid @focus_border_color;
+		}
+	}
 }
 
 // //------------------------------------------------------------
