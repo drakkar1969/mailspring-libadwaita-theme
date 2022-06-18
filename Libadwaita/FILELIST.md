@@ -4,7 +4,7 @@ common.less						IN PROGRESS (TODO)
 contact-sidebar.less
 draftlist.less					OK + COMMENTS
 draftlist-toolbar.less			OK + COMMENTS
-message-draft.less				IN PROGRESS
+message-draft.less				OK
 messagelist.less				IN PROGRESS (TODO)
 messagelist-toolbar.less		OK + COMMENTS
 preferences.less				OK + COMMENTS (TODO)
