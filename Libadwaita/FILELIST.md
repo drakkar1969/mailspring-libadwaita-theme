@@ -1,7 +1,7 @@
 adw-variables.less
 arc-variables.less
 common.less						IN PROGRESS (TODO)
-contact-sidebar.less
+contact-sidebar.less			OK + COMMENTS
 draftlist.less					OK + COMMENTS
 draftlist-toolbar.less			OK + COMMENTS
 message-draft.less				OK
