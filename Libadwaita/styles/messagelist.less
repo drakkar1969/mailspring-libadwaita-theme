@@ -579,58 +579,67 @@
 // 	}
 // }
 
-// //------------------------------------------------------------
-// // Event header
-// //------------------------------------------------------------
-// .event-wrapper {
-// 	font-size: 14px;
-// 	border: 1px solid @clrTextFadedMore;
+//------------------------------------------------------------
+// Event header
+//------------------------------------------------------------
+.event-wrapper {
+	font-size: @text_size;
+	border: 1px solid @borders_color;
+	border-radius: @card_radius;
 
-// 	.event-header {
-// 		border-bottom: 1px solid @clrTextFadedMore;
+	.event-header {
+		border-bottom: 1px solid @borders_color;
+		padding: 6px 10px;
 
-// 		.event-title-text {
-// 			color: @clrTextFaded;
-// 		}
-// 		.event-title {
-// 			color: @clrTextFadedLess;
-// 		}
+		.event-title-text {
+			color: @text_color;
+			font-weight: bold;
+			line-height: @button_height;
+		}
 
-// 		.event-download {
-// 			background-color: @clrButtonBg;
-// 			border: 1px solid @clrButtonBorder;
-// 			padding: 0 8px;
+		.event-title {
+			color: @text_color
+		}
 
-// 			img.content-mask {
-// 				background: @clrButtonText;
-// 			}
+		.event-download {
+			background: @button_color;
+			border: 0;
+			border-radius: @button_radius;
+			color: @text_color;
+			font-size: @text_size;
+			font-weight: bold;
+			width: @button_height;
+			height: @button_height;
+			line-height: @button_height;
+			text-align: center;
 
-// 			&:hover {
-// 				background-color: @clrButtonBgHover;
-// 				border-color: @clrButtonBorderHover;
-// 			}
+			img.content-mask {
+				background: @text_color;
+			}
 
-// 			&:active {
-// 				background-color: @clrButtonBgActive;
-// 				border-color: @clrButtonBorderActive;
+			&:hover {
+				background-color: @button_hover_color;
+			}
 
-// 				img.content-mask {
-// 					background: @clrButtonTextActive;
-// 				}
-// 			}
-// 		}
-// 	}
+			&:active {
+				background-color: @button_active_color;
+			}
+		}
+	}
 
-// 	.event-body {
-// 		color: @clrText;
+	.event-body {
+		color: @text_color;
 
-// 		.event-date .event-day {
-// 			font-size: 14px;
-// 			color: @clrTextFadedLess;
-// 		}
+		.event-date {
+			.event-day {
+				font-size: @text_size;
+				color: @error_color;
+			}
 
-// 		.event-location {
-// 			color: @clrTextFadedLess;
-// 		}
-// 	}
-// }
+			.event-time {
+				color: @error_color;
+				font-weight: normal;
+			}
+		}
+	}
+}
