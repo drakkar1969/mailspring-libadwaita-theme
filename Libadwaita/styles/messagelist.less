@@ -514,24 +514,25 @@
 	}
 }
 
-// //------------------------------------------------------------
-// // Gmail labels
-// //------------------------------------------------------------
-// .mail-label.removable {
-// 	box-shadow: none !important;
-// 	background: @clrAccent !important;
-// 	color: @clrTextActive !important;
-// 	margin-top: 3px;
-// 	font-weight: 500;
+//------------------------------------------------------------
+// Gmail labels
+//------------------------------------------------------------
+.mail-label.removable {
+	box-shadow: none !important;
+	background: @accent_bg_color !important;
+	border-radius: @button_radius;
+	color: @accent_fg_color !important;
+	margin-top: 1px;
+	font-weight: 600;
 
-// 	img.content-mask {
-// 		background-color: @clrTextActive !important;
+	img.content-mask {
+		background-color: @accent_fg_color !important;
 
-// 		&:hover {
-// 			cursor: pointer;
-// 		}
-// 	}
-// }
+		&:hover {
+			cursor: pointer;
+		}
+	}
+}
 
 //------------------------------------------------------------
 // Message warning bar
