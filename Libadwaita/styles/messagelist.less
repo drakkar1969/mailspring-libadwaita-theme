@@ -22,9 +22,12 @@
 #message-list {
 	.message-subject-wrap {
 		padding: 0;
+
+		& > div:first-child:not(.message-icons-wrap) {
+			margin-right: 16px;
+		}
 	}
 
-	// TODO: subject right padding/margin
 	.message-subject {
 		color: @text_color;
 		font-size: 20px;
@@ -74,7 +77,6 @@
 	font-size: @text_size;
 }
 
-// TODO: fix overlap between header and buttons (reply, etc.)
 .message-participants {
 	.from-contact {
 		color: @text_color;

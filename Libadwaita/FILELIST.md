@@ -5,7 +5,7 @@ contact-sidebar.less			OK + COMMENTS
 draftlist.less					OK + COMMENTS
 draftlist-toolbar.less			OK + COMMENTS
 message-draft.less				OK + COMMENTS
-messagelist.less				OK + COMMENTS (TODO)
+messagelist.less				OK + COMMENTS
 messagelist-toolbar.less		OK + COMMENTS
 preferences.less				OK + COMMENTS
 sidebar.less					OK + COMMENTS
