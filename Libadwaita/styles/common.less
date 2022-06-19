@@ -9,17 +9,6 @@ mailspring-workspace {
 	font-family: 'Ubuntu', 'Cantarell', 'Nylas-Pro', 'Helvetica', sans-serif;
 }
 
-// //------------------------------------------------------------
-// // Main window
-// //------------------------------------------------------------
-// .sheet-container {
-// 	border-top: 1px solid @clrTitlebarBorder;
-// }
-
-// .sheet {
-// 	background-color: @clrListBg;
-// }
-
 //------------------------------------------------------------
 // Main toolbar
 //------------------------------------------------------------
@@ -28,11 +17,6 @@ mailspring-workspace {
 	height: 45px;
 	max-height: 45px;
 }
-
-// // Needed for activity dashboard
-// body.platform-linux .sheet-toolbar-container {
-// 	background: @clrDashboardBg;
-// }
 
 //------------------------------------------------------------
 // Controls
@@ -462,29 +446,35 @@ select {
 	}
 }
 
-// .countdown {
-// 	.countdown-number {
-// 		color: @clrToastText;
-// 	}
+.countdown {
+	font-size: @text_size;
+	font-weight: bold;
+	margin-left: 7px;
 
-// 	svg circle {
-// 		stroke: red;
-// 	}
-// }
-// @keyframes countdown {
-// 	0% {
-// 		stroke-dashoffset: 0;
-// 		stroke: @clrToastText;
-// 	}
-// 	65% {
-// 		stroke-dashoffset: 57.2px;
-// 		stroke: @clrToastText;
-// 	}
-// 	100% {
-// 		stroke-dashoffset: 88px;
-// 		stroke: @clrWarningYellow;
-// 	}
-// }
+	.countdown-number {
+		color: @osd_fg_color;
+	}
+
+	svg circle {
+		stroke: @osd_fg_color;
+		stroke-width: 2px;
+	}
+}
+
+@keyframes countdown {
+	0% {
+		stroke-dashoffset: 0;
+		stroke: @osd_fg_color;
+	}
+	65% {
+		stroke-dashoffset: 57.2px;
+		stroke: @osd_fg_color
+	}
+	100% {
+		stroke-dashoffset: 88px;
+		stroke: @warning_color;
+	}
+}
 
 //------------------------------------------------------------
 // Scrollbars
