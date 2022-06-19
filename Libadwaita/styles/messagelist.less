@@ -561,23 +561,23 @@
 	}
 }
 
-// .autoload-images-header {
-// 	border: none;
-// 	border-left: 3px solid @clrWarningYellow;
-// 	border-radius: 0px;
-// 	background-color: @clrWarningBar;
-// 	color: @clrTextFadedLess;
-// 	margin-bottom: 16px;
+.autoload-images-header {
+	border: 0;
+	border-radius: @button_radius;
+	background-color: mix(@warning_bg_color, @card_bg_color, 30%);
+	color: @warning_fg_color;
+	font-size: @text_size;
+	margin-bottom: 16px;
 
-// 	.option {
-// 		color: @clrWarningYellow;
-// 		cursor: pointer;
+	.option {
+		color: @link_color;
 
-// 		&:hover {
-// 			color: @clrWarningYellow;
-// 		}
-// 	}
-// }
+		&:hover {
+			color: @link_hover_color;
+			cursor: pointer;
+		}
+	}
+}
 
 //------------------------------------------------------------
 // Event header (calendar)
