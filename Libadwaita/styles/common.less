@@ -155,8 +155,6 @@ select {
 //------------------------------------------------------------
 // Popover menus
 //------------------------------------------------------------
-// TODO: remove bold font in preferences folders tab dropdowns
-// TODO: remove input padding
 .menu {
 	.header-container {
 		background: none;
@@ -219,7 +217,6 @@ select {
 	}
 }
 
-// TODO: fix header text margins/padding
 .fixed-popover-container {
 	.fixed-popover {
 		box-shadow: @popover_shadow;
@@ -382,6 +379,10 @@ select {
 			padding: 0;
 		}
 	}
+}
+
+.preferences-wrap .category-mapper-container .category-picker-dropdown .btn .menu .category-item {
+	font-weight: normal;
 }
 
 .message-item-white-wrap.composer-outer-wrap .composer-participant-field .dropdown-component .signature-button-dropdown .button-dropdown .secondary-items .menu {
