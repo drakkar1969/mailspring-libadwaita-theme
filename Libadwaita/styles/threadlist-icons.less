@@ -147,17 +147,21 @@
 
 .mail-important-icon {
 	.threadlist-icon(url(../static/images/important/Icon-Important-Hover@2x.png), 16px, @text_color_dim);
+	opacity: 0.6;
 
 	&.enabled:hover {
 		.threadlist-icon(url(../static/images/important/Icon-Important-Hover@2x.png), 16px, @text_color);
+		opacity: 0.6;
 	}
 
 	&.enabled.active {
 		.threadlist-icon(url(../static/images/important/Icon-Important-Active@2x.png), 16px, @warning_bg_color);
+		opacity: 1;
 	}
 
 	&.enabled.active:hover {
 		.threadlist-icon(url(../static/images/important/Icon-Important-Active@2x.png), 16px, darken(@warning_bg_color, 5%));
+		opacity: 1;
 	}
 }
 
