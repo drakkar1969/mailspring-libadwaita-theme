@@ -268,33 +268,39 @@
 	}
 }
 
-// //------------------------------------------------------------
-// // Minified messages
-// //------------------------------------------------------------
-// #message-list .minified-bundle {
-// 	.msg-line {
-//  		box-shadow: none;
-// 		background-color: @clrBodyBg;
-// 		border: 1px solid @clrWindowBorder;
-// 		border-radius: 3px 3px 0 0;
-// 	}
+//------------------------------------------------------------
+// Minified messages
+//------------------------------------------------------------
+#message-list .minified-bundle {
+	.msg-lines {
+		margin-top: 1px;
+		margin-bottom: 15px;
+	}
+	.msg-line {
+ 		box-shadow: none;
+		background-color: transparent;
+		border: 0;
+	}
 
-// 	.num-messages {
-// 		background-color: @clrBodyBg;
-// 		border: 1px solid @clrWindowBorder;
-// 		color: @clrButtonText;
+	.num-messages {
+		background: @button_color;
+		border: 0;
+		border-radius: @button_radius;
+		color: @text_color;
+		font-size: @text_size;
+		font-weight: bold;
+		height: @button_height;
+		line-height: @button_height;
 
-// 		&:hover {
-// 			background-color: @clrButtonBgHover;
-// 			border-color: @clrButtonBorderHover;
-// 		}
-
-// 		&:active {
-// 			background-color: @clrButtonBgActive;
-// 			border-color: @clrButtonBorderActive;
-// 		}
-// 	}
-// }
+		&:hover {
+			background: @button_hover_color;
+		}
+	
+		&:active {
+			background: @button_active_color;
+		}
+	}
+}
 
 //------------------------------------------------------------
 // Selected messages stack
