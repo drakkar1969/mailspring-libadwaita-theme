@@ -302,6 +302,7 @@ select {
 			border: 1px solid @popover_border_color;
 			border-radius: @popover_radius;
 			padding: 8px;
+			margin-bottom: 6px;
 		}
 	}
 	&.open.open-down {
@@ -311,10 +312,13 @@ select {
 			border: 1px solid @popover_border_color;
 			border-radius: @popover_radius;
 			padding: 8px;
+			margin-top: 6px;
 		}
 	}
 
 	.secondary-items {
+		z-index: 4;
+
 		.menu {
 			.content-container {
 				background: @popover_bg_color;
