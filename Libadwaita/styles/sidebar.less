@@ -285,10 +285,11 @@
 }
 
 .notification {
-	background: transparent;
+	background: mix(@accent_bg_color, @headerbar_bg_color, 30%);
+	border-radius: @card_radius;
 	color: @text_color;
 	font-size: @text_size;
-	margin: 16px;
+	margin: 12px 12px 8px;
 
 	.icon {
 		display: none;
@@ -309,7 +310,7 @@
 		font-weight: bold;
 		height: @button_height;
 		line-height: @button_height;
-		margin-top: 4px;
+		margin: 4px 8px 12px;
 
 		&:hover {
 			box-shadow: none !important;
@@ -322,20 +323,10 @@
 	}
 
 	&.error {
-		background: transparent;
-		color: @error_color;
-
-		.subtitle {
-			color: @error_color;
-		}
+		background: mix(@error_bg_color, @headerbar_bg_color, 30%);
 	}
 
 	&.offline {
-		background: transparent;
-		color: @warning_color;
-
-		.subtitle {
-			color: @warning_color;
-		}
+		background: mix(@warning_bg_color, @headerbar_bg_color, 30%);
 	}
 }
