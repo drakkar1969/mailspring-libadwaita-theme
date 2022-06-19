@@ -5,7 +5,7 @@ contact-sidebar.less			OK + COMMENTS
 draftlist.less					OK + COMMENTS
 draftlist-toolbar.less			OK + COMMENTS
 message-draft.less				OK
-messagelist.less				IN PROGRESS (TODO)
+messagelist.less				OK + COMMENTS (TODO)
 messagelist-toolbar.less		OK + COMMENTS
 preferences.less				OK + COMMENTS (TODO)
 sidebar.less					OK + COMMENTS
