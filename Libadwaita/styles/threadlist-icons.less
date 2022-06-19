@@ -132,58 +132,34 @@
 	}
 }
 
-// //------------------------------------------------------------
-// // Important icon (gmail)
-// //------------------------------------------------------------
-// .thread-list .mail-important-icon {
-// 	margin-top: 5px;
-// }
+//------------------------------------------------------------
+// Important icon (gmail)
+//------------------------------------------------------------
+.thread-list .mail-important-icon {
+	margin-left: 6px;
+	margin-top: 2px;
+}
 
-// .thread-list-narrow .mail-important-icon {
-// 	margin-top: -2px;
-// }
+.thread-list-narrow .mail-important-icon {
+	margin-left: 0;
+	margin-top: 0;
+}
 
-// #message-list .mail-important-icon {
-// 	margin-top: 5px;
-// }
+.mail-important-icon {
+	.threadlist-icon(url(../static/images/important/Icon-Important-Hover@2x.png), 16px, @text_color_dim);
 
-// .mail-important-icon {
-// 	.threadlist-icon(url(../static/images/important/Icon-Important-Active@2x.png), fade(@clrListText, 25%));
+	&.enabled:hover {
+		.threadlist-icon(url(../static/images/important/Icon-Important-Hover@2x.png), 16px, @text_color);
+	}
 
-// 	&.enabled:hover {
-// 		.threadlist-icon(url(../static/images/important/Icon-Important-Active@2x.png), fade(@clrListText, 50%));
-// 	}
+	&.enabled.active {
+		.threadlist-icon(url(../static/images/important/Icon-Important-Active@2x.png), 16px, @warning_bg_color);
+	}
 
-// 	&.enabled.active {
-// 		.threadlist-icon(url(../static/images/important/Icon-Important-Active@2x.png), @clrAccent);
-// 	}
-
-// 	&.enabled.active:hover {
-// 		.threadlist-icon(url(../static/images/important/Icon-Important-Active@2x.png), fade(@clrAccent, 70%));
-// 	}
-// }
-
-// .thread-list .list-container {
-// 	.list-item.focused,
-// 	.list-item.focused {
-// 		.mail-important-icon {
-// 			.threadlist-icon(url(../static/images/important/Icon-Important-Active@2x.png), fade(@clrListTextActive, 35%));
-
-// 			&:hover {
-// 				.threadlist-icon(url(../static/images/important/Icon-Important-Active@2x.png), fade(@clrListTextActive, 60%));
-// 			}
-
-// 			&.enabled.active {
-// 				.threadlist-icon(url(../static/images/important/Icon-Important-Active@2x.png), @clrListTextActive);
-// 			}
-
-// 			&.enabled.active:hover {
-// 				.threadlist-icon(url(../static/images/important/Icon-Important-Active@2x.png), fade(@clrListTextActive, 70%));
-// 			}
-// 		}
-// 	}
-// }
-
+	&.enabled.active:hover {
+		.threadlist-icon(url(../static/images/important/Icon-Important-Active@2x.png), 16px, darken(@warning_bg_color, 5%));
+	}
+}
 
 // //------------------------------------------------------------
 // // Gmail labels
