@@ -394,9 +394,6 @@ select {
 // Undo/redo toasts
 // ------------------------------------------------------------
 .undo-redo-toast {
-	@osd_bg_color: rgba(0, 0, 0, 0.7);
-	@osd_fg_color: rgba(255, 255, 255, 0.9);
-
 	.content {
 		background: @osd_bg_color;
 		border: 0;
@@ -413,7 +410,7 @@ select {
 	}
 
 	.action {
-		background: rgba(255, 255, 255, 0.09);
+		background: @osd_fg_color;
 		border: 0;
 		border-radius: @button_radius;
 		height: @button_height;
@@ -432,7 +429,7 @@ select {
 		}
 
 		&:hover {
-			background: rgba(255, 255, 255, 0.135);
+			background: @osd_button_hover_color;
 			border: 0;
 
 			.undo-action-text {
@@ -481,10 +478,10 @@ select {
 //------------------------------------------------------------
 .scrollbar-track {
 	@scrollbar_color: rgba(0, 0, 0, 0.08);
-	@slider_color: rgba(0, 0, 0, 0.16);
-	@slider_hover_color: rgba(0, 0, 0, 0.32);
-	@slider_dragging_color: rgba(0, 0, 0, 0.48);
-	@slider_outline_color: #ffffff;
+	@scrollbar_slider_color: rgba(0, 0, 0, 0.16);
+	@scrollbar_slider_hover_color: rgba(0, 0, 0, 0.32);
+	@scrollbar_slider_dragging_color: rgba(0, 0, 0, 0.48);
+	@scrollbar_slider_outline_color: #ffffff;
 
 	background: transparent;
 	border: 0;
@@ -498,13 +495,13 @@ select {
 	}
 
 	.scrollbar-handle {
-		background-color: @slider_color;
+		background-color: @scrollbar_slider_color;
 		border: 0;
 		border-radius: 10px;
-		outline: 1px solid fade(@slider_outline_color, 40%);
+		outline: 1px solid fade(@scrollbar_slider_outline_color, 40%);
 
 		&:hover {
-			background-color: @slider_hover_color;
+			background-color: @scrollbar_slider_hover_color;
 		}
 	}
 
@@ -514,17 +511,17 @@ select {
 
 		.scrollbar-track-inner {
 			background: @scrollbar_color;
-			outline: 1px solid fade(@slider_outline_color, 35%);
+			outline: 1px solid fade(@scrollbar_slider_outline_color, 35%);
 		}
 
 		.scrollbar-handle {
-			outline: 1px solid fade(@slider_outline_color, 35%);
+			outline: 1px solid fade(@scrollbar_slider_outline_color, 35%);
 		}
 	}
 
 	&.dragging {
 		.scrollbar-handle {
-			background-color: @slider_dragging_color;
+			background-color: @scrollbar_slider_dragging_color;
 		}
 	}
 }
@@ -533,11 +530,15 @@ select {
 // Scrollbar tooltips
 //---------------------------------
 .scroll-tooltip {
+	@tooltip_bg_color: rgba(0, 0, 0, 0.8);
+	@tooltip_fg_color: #ffffff;
+	@tooltip_border: 1px solid rgba(255, 255, 255, 0.1);
+
 	box-shadow: none;
-	background: rgba(0, 0, 0, 0.8);
-	border: 1px solid rgba(255, 255, 255, 0.1);
+	background: @tooltip_bg_color;
+	border: @tooltip_border;
 	border-radius: 10px;
-	color: #ffffff;
+	color: @tooltip_fg_color;
 	transform: translate(-8px, 0);
 
 	&:before,
