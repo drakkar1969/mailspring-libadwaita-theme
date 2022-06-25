@@ -297,6 +297,7 @@
 		margin-top: 1px;
 		margin-bottom: 15px;
 	}
+	
 	.msg-line {
  		box-shadow: none;
 		background-color: transparent;
@@ -304,7 +305,9 @@
 	}
 
 	.num-messages {
-		background: @button_color;
+		// Note: use background color/image for opaque background over minified lines
+		background-color: @window_bg_color;
+		background-image: linear-gradient(@button_color, @button_color);
 		border: 0;
 		border-radius: @button_radius;
 		color: @text_color;
@@ -314,11 +317,11 @@
 		line-height: @button_height;
 
 		&:hover {
-			background: @button_hover_color;
+			background-image: linear-gradient(@button_hover_color, @button_hover_color);
 		}
 	
 		&:active {
-			background: @button_active_color;
+			background-image: linear-gradient(@button_active_color, @button_active_color);
 		}
 	}
 }
