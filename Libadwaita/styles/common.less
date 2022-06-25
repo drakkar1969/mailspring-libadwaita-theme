@@ -270,8 +270,21 @@ select {
 		}
 	}
 
+	.item {
+		img.content-mask {
+			background-color: @text_color;
+		}
+	}
+
 	.category-item {
 		font-size: @text_size;
+	}
+
+	.item.selected,
+	.item.active {
+		img.content-mask {
+			background-color: @text_color;
+		}
 	}
 }
 
