@@ -465,6 +465,20 @@
 }
 
 //---------------------------------
+// Remove signature button
+//---------------------------------
+.RichEditor-root .uneditable {
+	.uneditable-remove:before {
+		content: url(mailspring://Libadwaita/styles/papirus/dummy.svg) !important;
+		-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/cancel.svg);
+		-webkit-mask-repeat: no-repeat;
+		-webkit-mask-size: 16px;
+		-webkit-mask-position: 0px 0px;
+		background-color: @text_color;
+	}
+}
+
+//---------------------------------
 // Remove quoted text button
 //---------------------------------
 .composer-inner-wrap .compose-body .quoted-text-control .remove-quoted-text {
