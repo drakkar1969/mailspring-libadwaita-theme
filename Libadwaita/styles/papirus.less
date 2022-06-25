@@ -300,6 +300,26 @@
 // Message draft
 //------------------------------------------------------------
 //---------------------------------
+// Signature button
+//---------------------------------
+.message-item-white-wrap.composer-outer-wrap,
+.composer-full-window .message-item-white-wrap.composer-outer-wrap {
+	.composer-participant-field .dropdown-component .signature-button-dropdown {
+		.button-dropdown .only-item {
+			min-width: 34px !important;
+			padding: 0 9px !important;
+
+			img.signature-button {
+				-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/signature.svg) !important;
+				width: 16px !important;
+				height: 16px !important;
+				zoom: 1 !important;
+				margin-top: -1px !important;
+			}
+		}
+	}
+}
+//---------------------------------
 // Footer buttons (send, etc.)
 //---------------------------------
 .composer-inner-wrap .composer-action-bar-wrap .btn-send {
