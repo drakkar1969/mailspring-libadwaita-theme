@@ -446,6 +446,23 @@
 }
 
 //---------------------------------
+// remove quoted text button
+//---------------------------------
+.composer-inner-wrap .compose-body .quoted-text-control .remove-quoted-text {
+	top: -2px;
+	right: -1px;
+
+	&:before {
+		content: url(mailspring://Libadwaita/styles/papirus/dummy.svg);
+		-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/cancel.svg);
+		-webkit-mask-repeat: no-repeat;
+		-webkit-mask-size: 16px;
+		-webkit-mask-position: 0px 0px;
+		background-color: @text_color;
+	}
+}
+
+//---------------------------------
 // Footer buttons (send, etc.)
 //---------------------------------
 .composer-inner-wrap .composer-action-bar-wrap .btn-send {
