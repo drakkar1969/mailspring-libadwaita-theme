@@ -487,15 +487,15 @@
 // Draft message (edit mode) remove quoted text button
 //------------------------------------------------------------
 .composer-inner-wrap .compose-body .quoted-text-control .remove-quoted-text {
-	background: @button_color;
+	background: transparent;
 	border: 0;
-	border-radius: 50%;
 	height: 16px;
 	line-height: 16px;
 	width: 16px;
 	top: 0;
 	right: 0px;
 	cursor: default;
+	opacity: 0.7;
 
 	img {
 		display: none;
@@ -509,10 +509,6 @@
 	}
 
 	&:hover {
-		background-color: @button_hover_color;
-	}
-
-	&:active {
-		background-color: @button_active_color;
+		opacity: 1;
 	}
 }
