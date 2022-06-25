@@ -79,6 +79,10 @@
 }
 
 .message-participants {
+	&.to-participants {
+		margin-top: 16px;
+	}
+
 	.from-contact {
 		color: @text_color;
 		font-weight: 600;
@@ -134,6 +138,10 @@
 	.message-header {
 		margin-bottom: 12px;
 
+		.message-header-right {
+			align-items: inherit;
+		}
+
 		.header-row {
 			.header-label {
 				color: @text_color;
@@ -148,6 +156,7 @@
 		.message-time,
 		.message-indicator {
 			color: @text_color_dim;
+			margin-top: 2px;
 		}
 	}
 
