@@ -294,14 +294,16 @@
 //------------------------------------------------------------
 #message-list .minified-bundle {
 	.msg-lines {
-		margin-top: 1px;
-		margin-bottom: 15px;
+		margin-top: 2px;
+		margin-bottom: 11px;
 	}
-	
+
 	.msg-line {
- 		box-shadow: none;
-		background-color: transparent;
+ 		box-shadow: @card_shadow;
+		 background-color: darken(@window_bg_color, 1.5%);
 		border: 0;
+		border-radius: @card_radius !important;
+		height: 12px !important;
 	}
 
 	.num-messages {
