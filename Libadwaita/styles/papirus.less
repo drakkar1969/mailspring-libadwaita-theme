@@ -597,3 +597,23 @@
 		}
 	}
 }
+
+//------------------------------------------------------------
+// Preferences: Signatures tab
+//------------------------------------------------------------
+.preferences-signatures-container .signature-wrap .account-picker .button-dropdown .secondary-items .menu .item.checked {
+	background-image: none;
+
+	&::before {
+		content: url(mailspring://Libadwaita/styles/papirus/dummy.svg);
+		-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/check.svg) !important;
+		-webkit-mask-repeat: no-repeat;
+		-webkit-mask-size: 16px;
+		-webkit-mask-position: 0px 1px;
+		background-color: @text_color;
+		width: 16px;
+		height: 16px;
+		margin-left: -20px;
+		margin-right: 4px;
+	}
+}
