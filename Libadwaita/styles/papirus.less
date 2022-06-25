@@ -307,7 +307,7 @@
 	.composer-participant-field .dropdown-component .signature-button-dropdown {
 		.button-dropdown .only-item {
 			min-width: 34px !important;
-			padding: 0 9px !important;
+			padding: 0 6px 0 9px !important;
 
 			img.signature-button {
 				-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/signature.svg) !important;
@@ -315,6 +315,15 @@
 				height: 16px !important;
 				zoom: 1 !important;
 				margin-top: -1px !important;
+			}
+
+			&::after {
+				content: url(mailspring://Libadwaita/styles/papirus/dummy.svg);
+				-webkit-mask-repeat: no-repeat;
+				-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/dropdown.svg);
+				-webkit-mask-size: 16px;
+				-webkit-mask-position: 3px 1px;
+				background-color: @text_color;
 			}
 		}
 	}
