@@ -352,25 +352,44 @@
 .message-item-white-wrap.composer-outer-wrap,
 .composer-full-window .message-item-white-wrap.composer-outer-wrap {
 	.composer-participant-field .dropdown-component .signature-button-dropdown {
-		.button-dropdown .only-item {
-			min-width: 34px !important;
-			padding: 0 6px 0 9px !important;
-
-			img.signature-button {
-				-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/signature.svg) !important;
-				width: 16px !important;
-				height: 16px !important;
-				zoom: 1 !important;
-				margin-top: -1px !important;
+		.button-dropdown {
+			.only-item {
+				min-width: 34px !important;
+				padding: 0 6px 0 9px !important;
+	
+				img.signature-button {
+					-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/signature.svg) !important;
+					width: 16px !important;
+					height: 16px !important;
+					zoom: 1 !important;
+					margin-top: -1px !important;
+				}
+	
+				&::after {
+					content: url(mailspring://Libadwaita/styles/papirus/dummy.svg);
+					-webkit-mask-repeat: no-repeat;
+					-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/dropdown.svg);
+					-webkit-mask-size: 16px;
+					-webkit-mask-position: 3px 1px;
+					background-color: @text_color;
+				}
 			}
 
-			&::after {
-				content: url(mailspring://Libadwaita/styles/papirus/dummy.svg);
-				-webkit-mask-repeat: no-repeat;
-				-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/dropdown.svg);
-				-webkit-mask-size: 16px;
-				-webkit-mask-position: 3px 1px;
-				background-color: @text_color;
+			.secondary-items .menu .item.checked {
+				background-image: none;
+
+				&::before {
+					content: url(mailspring://Libadwaita/styles/papirus/dummy.svg);
+					-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/check.svg) !important;
+					-webkit-mask-repeat: no-repeat;
+					-webkit-mask-size: 16px;
+					-webkit-mask-position: 0px 1px;
+					background-color: @text_color;
+					width: 16px;
+					height: 16px;
+					margin-left: -20px;
+					margin-right: 4px;
+				}
 			}
 		}
 	}
