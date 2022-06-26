@@ -592,12 +592,77 @@
 //------------------------------------------------------------
 // Preferences: Subscription tab
 //------------------------------------------------------------
-.container-identity .feature-explore-grid .feature .popout img {
-	-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/link.svg) !important;
-	-webkit-mask-size: 16px !important;
-	width: 16px !important;
-	height: 16px !important;
-	padding-top: 16px !important;
+.container-identity {
+	.btn.btn-emphasis img.content-mask {
+		zoom: 1 !important;
+		width: 16px !important;
+		height: 16px !important;
+		margin-left: -4px !important;
+		margin-right: 4px !important;
+		padding-top: 16px !important;
+		background-color: @accent_fg_color !important;
+		-webkit-mask-size: 16px !important;
+		-webkit-mask-repeat: no-repeat !important;
+		-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/account.svg) !important;
+	}
+
+	.feature-explore-grid .feature {
+		h3 img {
+			zoom: 1 !important;
+			background-image: none !important;
+			width: 28px !important;
+			height: 16px !important;
+			padding-top: 16px !important;
+			padding-right: 12px !important;
+			background-color: @text_color !important;
+			-webkit-mask-size: 16px !important;
+			-webkit-mask-repeat: no-repeat !important;
+	
+			&[alt="icon-composer-reminders.png"] {
+				-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/alarm.svg) !important;
+			}
+	
+			&[alt="toolbar-person-sidebar.png"] {
+				-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/person.svg) !important;
+			}
+	
+			&[alt="icon-composer-eye.png"] {
+				-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/eye.svg) !important;
+			}
+	
+			&[alt="toolbar-templates.png"] {
+				-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/template.svg) !important;
+			}
+	
+			&[alt="icon-composer-linktracking.png"] {
+				-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/format-link.svg) !important;
+			}
+	
+			&[alt="icon-composer-sendlater.png"] {
+				-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/send.svg) !important;
+			}
+	
+			&[alt="toolbar-snooze.png"] {
+				-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/snoozed.svg) !important;
+			}
+	
+			&[alt="icon-toolbar-activity.png"] {
+				-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/insights.svg) !important;
+			}
+	
+			&[alt="pro-feature-translation.png"] {
+				-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/translate.svg) !important;
+			}
+		}
+	
+		.popout img {
+			-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/link.svg) !important;
+			-webkit-mask-size: 16px !important;
+			width: 16px !important;
+			height: 16px !important;
+			padding-top: 16px !important;
+		}
+	}
 }
 
 //------------------------------------------------------------
