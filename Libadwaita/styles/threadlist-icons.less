@@ -8,7 +8,7 @@
 	-webkit-mask-repeat: no-repeat;
 	-webkit-mask-image: @image;
 	-webkit-mask-size: @size;
-	-webkit-mask-position: 6px 4px;
+	-webkit-mask-position: center;
 	filter: none;
 	background-color: @color;
 }
@@ -41,12 +41,11 @@
 		// Draft icon
 		//---------------------------------
 		.draft-icon {
-			.threadlist-icon(url(../static/images/thread-list/icon-draft-pencil@2x.png), 15px, @text_color);
-			zoom: 1 !important;
-			width: 26px;
-			height: 24px;
-			margin-left: 4px;
-			padding-top: 24px;
+			.threadlist-icon(url(../static/images/thread-list/icon-draft-pencil@2x.png), 32px, @text_color);
+			width: 32px;
+			height: 32px;
+			margin-left: 20px;
+			padding-top: 32px;
 		}
 
 		//---------------------------------
@@ -113,36 +112,22 @@
 // Adjust icon vertical positions
 //------------------------------------------------------------
 .thread-list .list-container .list-item {
-	.thread-icon.thread-icon-attachment {
-		margin-top: 0;
-	}
-
 	.draft-icon {
-		margin-top: 6px;
+		margin-top: 18px;
 	}
 }
 
 .thread-list-narrow .list-container .list-item {
-	.thread-icon.thread-icon-attachment {
-		margin-top: 1px;
-	}
-
 	.draft-icon {
-		margin-top: 1px;
+		margin-top: 0px;
 	}
 }
 
 //------------------------------------------------------------
 // Important icon (gmail)
 //------------------------------------------------------------
-.thread-list .mail-important-icon {
-	margin-left: 6px;
-	margin-top: 2px;
-}
-
 .thread-list-narrow .mail-important-icon {
-	margin-left: 0;
-	margin-top: 0;
+	margin-top: -2px;
 }
 
 .mail-important-icon {
