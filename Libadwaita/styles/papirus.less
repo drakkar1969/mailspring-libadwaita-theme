@@ -105,6 +105,64 @@
 	}
 }
 
+//---------------------------------
+// Toolbar buttons
+//---------------------------------
+.toolbar-ThreadList .selection-bar .absolute .btn-toolbar img.content-mask {
+	-webkit-mask-size: 16px !important;
+	width: 16px !important;
+	height: 16px !important;
+
+	&[alt="toolbar-archive.png"] {
+		-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/archive.svg) !important;
+	}
+	
+	&[alt="toolbar-spam.png"] {
+		-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/spam.svg) !important;
+	}
+	
+	&[alt="toolbar-not-spam.png"] {
+		-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/not-spam.svg) !important;
+	}
+
+	&[alt="toolbar-trash.png"] {
+		-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/trash.svg) !important;
+	}
+	
+	&[alt="toolbar-star.png"] {
+		-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/star.svg) !important;
+	}
+	
+	&[alt="toolbar-star-selected.png"] {
+		-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/unstar.svg) !important;
+	}
+	
+	&[alt="toolbar-markasunread.png"] {
+		-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/unread.svg) !important;
+	}
+	
+	&[alt="toolbar-markasread.png"] {
+		-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/read.svg) !important;
+	}
+	
+	&[alt="toolbar-movetofolder.png"] {
+		-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/movetofolder.svg) !important;
+	}	
+}
+
+//------------------------------------------------------------
+// Draftlist toolbar
+//------------------------------------------------------------
+.toolbar-DraftList .btn-toolbar img.content-mask {
+	-webkit-mask-size: 16px !important;
+	width: 16px !important;
+	height: 16px !important;
+
+	&[alt="icon-composer-trash.png"] {
+		-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/trash.svg) !important;
+	}
+}
+
 //------------------------------------------------------------
 // Threadlist icons
 //------------------------------------------------------------
