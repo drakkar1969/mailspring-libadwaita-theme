@@ -1,16 +1,22 @@
 //------------------------------------------------------------
-// Variables
+// User variables
 //------------------------------------------------------------
 
-// Base variables
-@text_color: rgba(0, 0, 0, 0.8);
-@text_color_dim: rgba(0, 0, 0, 0.44);
+// Text size
 @text_size: 15px;
 
-@focus_border_color: fade(@accent_color, 50%);
-@borders_color: rgba(0, 0, 0, 0.12);
+// Control height (button/input/select)
+@button_height: 34px;
 
-@disabled_opacity: 0.5;
+// Popover item height
+@popover_item_height: 32px;
+
+//------------------------------------------------------------
+// Variant colors (light/dark)
+//------------------------------------------------------------
+
+// Text color
+@text_color: rgba(0, 0, 0, 0.8);
 
 // Accent colors
 @accent_bg_color: #3584e4;
@@ -32,50 +38,115 @@
 @error_bg_color: #e01b24;
 @error_fg_color: #ffffff;
 
-// Palette colors
-@yellow_4: #f5c211;
-
-// Window
+// Window/header colors
 @window_bg_color: #fafafa;
 @headerbar_bg_color: #ebebeb;
 
-// View controls
-@view_hover_color: rgba(0, 0, 0, 0.056);
-@view_active_color: rgba(0, 0, 0, 0.128);
-@view_selected_color: rgba(0, 0, 0, 0.08);
-@view_selected_hover_color: rgba(0, 0, 0, 0.104);
-@view_selected_active_color: rgba(0, 0, 0, 0.152);
-
-// Buttons
-@button_height: 34px;
-@button_radius: 6px;
-@button_color: rgba(0, 0, 0, 0.08);
-@button_hover_color: rgba(0, 0, 0, 0.12);
-@button_active_color: rgba(0, 0, 0, 0.24);
-@button_checked_color: rgba(0, 0, 0, 0.24);
-@button_checked_hover_color: rgba(0, 0, 0, 0.28);
-
-@button_default_hover_color: linear-gradient(rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.08));
-@button_default_active_color: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
-
-// Checkboxes and radio buttons
-@check_shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.12);
-@check_hover_shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.16);
-@check_active_color: rgba(0, 0, 0, 0.2);
-@check_selected_hover_color: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
-@check_selected_active_color: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
-
-// Cards
-@card_radius: 12px;
+// Card colors
 @card_bg_color: #ffffff;
-@card_shadow: 0 0 0 1px rgba(0, 0, 0, 0.03), 0 1px 3px 1px rgba(0, 0, 0, 0.07), 0 2px 6px 2px rgba(0, 0, 0, 0.03);
 
-// Popovers
+// Popover colors
 @popover_bg_color: #ffffff;
+
+// View colors
+@view_bg_color: #ffffff;
+@view_fg_color: #000000;
+
+//------------------------------------------------------------
+// Palette colors (fixed)
+//------------------------------------------------------------
+@yellow_4: #f5c211;
+
+//------------------------------------------------------------
+// Calculated + fixed colors (do not modify)
+//------------------------------------------------------------
+
+// Dim text color
+@text_color_dim: fade(@text_color, alpha(@text_color)*100*0.55);
+
+// Border color
+@borders_color: fade(@text_color, alpha(@text_color)*100*0.15);
+
+// Focus border color
+@focus_border_color: fade(@accent_color, 50%);
+
+// View colors
+@view_hover_color: fade(@text_color, alpha(@text_color)*100*0.07);
+@view_active_color: fade(@text_color, alpha(@text_color)*100*0.16);
+@view_selected_color: fade(@text_color, alpha(@text_color)*100*0.1);
+@view_selected_hover_color: fade(@text_color, alpha(@text_color)*100*0.13);
+@view_selected_active_color: fade(@text_color, alpha(@text_color)*100*0.19);
+
+// Button colors
+@button_color: fade(@text_color, alpha(@text_color)*100*0.1);
+@button_hover_color: fade(@text_color, alpha(@text_color)*100*0.15);
+@button_active_color: fade(@text_color, alpha(@text_color)*100*0.3);
+@button_checked_color: fade(@text_color, alpha(@text_color)*100*0.3);
+@button_checked_hover_color: fade(@text_color, alpha(@text_color)*100*0.35);
+
+// Default button colors
+@button_default_hover_color: linear-gradient(fade(@text_color, alpha(@text_color)*100*0.1), fade(@text_color, alpha(@text_color)*100*0.1));
+@button_default_active_color: linear-gradient(fade(black, 20%), fade(black, 20%));
+
+// Trough colors (used for checkboxes and radio buttons)
+@trough_color: fade(@text_color, alpha(@text_color)*100*0.15);
+@trough_hover_color: fade(@text_color, alpha(@text_color)*100*0.2);
+@trough_active_color: fade(@text_color, alpha(@text_color)*100*0.25);
+
+// Checkbox/radio button colors
+@check_shadow: inset 0 0 0 2px @trough_color;
+@check_hover_shadow: inset 0 0 0 2px @trough_hover_color;
+@check_active_color: @trough_active_color;
+@check_selected_hover_color: linear-gradient(fade(@accent_fg_color, 10%), fade(@accent_fg_color, 10%));
+@check_selected_active_color: linear-gradient(fade(black, 20%), fade(black, 20%));
+
+// Card colors
+@card_shadow: 0 0 0 1px fade(black, 3%), 0 1px 3px 1px fade(black, 7%), 0 2px 6px 2px fade(black, 3%);
+
+// Popover colors
+@popover_border_color: fade(black, 14%);
+@popover_shadow: 0 1px 5px 1px fade(black, 9%), 0 2px 14px 3px fade(black, 5%);
+
+// OSD colors
+@osd_bg_color: fade(black, 70%);
+@osd_fg_color: fade(white, 90%);
+@osd_button_color: fade(white, 9%);
+@osd_button_hover_color: fade(white, 13.5%);
+
+// Link colors
+@link_color: @accent_color;
+@link_hover_color: mix(@accent_color, @view_fg_color, 80%);
+
+// Scale slider colors
+@slider_color: mix(white, @view_bg_color, 80%);
+@slider_shadow: 0 2px 4px fade(black, 20%);
+@slider_outline: 1px solid fade(black, 10%);
+
+//------------------------------------------------------------
+// Other fixed variables
+//------------------------------------------------------------
+
+// Disabled opacity
+@disabled_opacity: 0.5;
+
+// Button radius
+@button_radius: 6px;
+
+// Card radius
+@card_radius: 12px;
+
+// Popover radius
 @popover_radius: 12px;
-@popover_border_color: rgba(0, 0, 0, 0.14);
-@popover_shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.09), 0 2px 14px 3px rgba(0, 0, 0, 0.05);
-@popover_item_height: 32px;
+
+
+
+
+
+
+
+
+
+
 
 // Tabs
 @tab_color: #e1e1e1;
@@ -84,20 +155,10 @@
 @tab_inactive_color: #f0f0f0;
 @tab_selected_inactive_color: @window_bg_color;
 
-// OSD controls
-@osd_bg_color: rgba(0, 0, 0, 0.7);
-@osd_fg_color: rgba(255, 255, 255, 0.9);
-@osd_button_color: rgba(255, 255, 255, 0.09);
-@osd_button_hover_color: rgba(255, 255, 255, 0.135);
 
-// Links
-@link_color: @accent_color;
-@link_hover_color: mix(@accent_color, black, 80%);
-
-// Sliders
-@slider_color: #ffffff;
-@slider_shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-@slider_outline: 1px solid rgba(0, 0, 0, 0.1);
+//------------------------------------------------------------
+// LESS styling
+//------------------------------------------------------------
 
 @import "../../Libadwaita-common/common.less";
 @import "../../Libadwaita-common/contact-sidebar.less";
