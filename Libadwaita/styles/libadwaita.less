@@ -52,6 +52,9 @@
 @view_bg_color: #ffffff;
 @view_fg_color: #000000;
 
+// Scrollbar colors
+@scrollbar_outline_color: #ffffff;
+
 //------------------------------------------------------------
 // Palette colors (fixed)
 //------------------------------------------------------------
@@ -127,6 +130,12 @@
 @tooltip_bg_color: fade(black, 80%);
 @tooltip_fg_color: white;
 @tooltip_border_color: fade(white, 10%);
+
+// Scrollbar colors
+@scrollbar_track_color: fade(@text_color, alpha(@text_color)*100*0.1);
+@scrollbar_slider_color: fade(@text_color, alpha(@text_color)*100*0.2);
+@scrollbar_slider_hover_color: fade(@text_color, alpha(@text_color)*100*0.4);
+@scrollbar_slider_dragging_color: fade(@text_color, alpha(@text_color)*100*0.6);
 
 //------------------------------------------------------------
 // Other fixed variables

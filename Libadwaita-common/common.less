@@ -488,12 +488,6 @@ select {
 // Scrollbars
 //------------------------------------------------------------
 .scrollbar-track {
-	@scrollbar_color: rgba(0, 0, 0, 0.08);
-	@scrollbar_slider_color: rgba(0, 0, 0, 0.16);
-	@scrollbar_slider_hover_color: rgba(0, 0, 0, 0.32);
-	@scrollbar_slider_dragging_color: rgba(0, 0, 0, 0.48);
-	@scrollbar_slider_outline_color: #ffffff;
-
 	background: transparent;
 	border: 0;
 	width: 14px;
@@ -509,7 +503,7 @@ select {
 		background-color: @scrollbar_slider_color;
 		border: 0;
 		border-radius: 10px;
-		outline: 1px solid fade(@scrollbar_slider_outline_color, 40%);
+		outline: 1px solid fade(@scrollbar_outline_color, alpha(@scrollbar_outline_color)*100*0.35);
 
 		&:hover {
 			background-color: @scrollbar_slider_hover_color;
@@ -521,12 +515,12 @@ select {
 		padding: 0 6px 0 0;
 
 		.scrollbar-track-inner {
-			background: @scrollbar_color;
-			outline: 1px solid fade(@scrollbar_slider_outline_color, 35%);
+			background: @scrollbar_track_color;
+			outline: 1px solid fade(@scrollbar_outline_color, alpha(@scrollbar_outline_color)*100*0.4);
 		}
 
 		.scrollbar-handle {
-			outline: 1px solid fade(@scrollbar_slider_outline_color, 35%);
+			outline: 1px solid fade(@scrollbar_outline_color, alpha(@scrollbar_outline_color)*100*0.4);
 		}
 	}
 
