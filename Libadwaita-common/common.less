@@ -541,13 +541,9 @@ select {
 // Scrollbar tooltips
 //---------------------------------
 .scroll-tooltip {
-	@tooltip_bg_color: rgba(0, 0, 0, 0.8);
-	@tooltip_fg_color: #ffffff;
-	@tooltip_border: 1px solid rgba(255, 255, 255, 0.1);
-
 	box-shadow: none;
 	background: @tooltip_bg_color;
-	border: @tooltip_border;
+	border: 1px solid @tooltip_border_color;
 	border-radius: 10px;
 	color: @tooltip_fg_color;
 	transform: translate(-8px, 0);
