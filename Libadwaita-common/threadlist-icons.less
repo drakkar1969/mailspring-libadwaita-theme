@@ -71,7 +71,7 @@
 			.threadlist-icon(url(../static/images/thread-list/icon-star-@2x.png), 16px, @accent_bg_color);
 
 			&:hover {
-				background-color: mix(@accent_bg_color, @view_fg_color, 90%);
+				background-image: @button_default_hover_color;
 			}
 		}
 
@@ -143,8 +143,7 @@
 	}
 
 	&.enabled.active:hover {
-		.threadlist-icon(url(../static/images/important/Icon-Important-Active@2x.png), 16px, mix(@yellow_4, @view_fg_color, 94%));
-		opacity: 1;
+		background-image: @button_default_hover_color;
 	}
 }
 
