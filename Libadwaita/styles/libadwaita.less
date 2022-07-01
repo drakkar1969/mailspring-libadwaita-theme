@@ -41,6 +41,7 @@
 // Window/header colors
 @window_bg_color: #fafafa;
 @headerbar_bg_color: #ebebeb;
+@headerbar_shade_color: fade(black, 7%);
 
 // Card colors
 @card_bg_color: #ffffff;
@@ -137,6 +138,10 @@
 @scrollbar_slider_hover_color: fade(@text_color, alpha(@text_color)*100*0.4);
 @scrollbar_slider_dragging_color: fade(@text_color, alpha(@text_color)*100*0.6);
 
+// Tab colors
+@tab_color: fade(@headerbar_shade_color, alpha(@headerbar_shade_color)*100*0.6);
+@tab_hover_color: fade(@text_color, alpha(@text_color)*100*0.03);
+
 //------------------------------------------------------------
 // Other fixed variables
 //------------------------------------------------------------
@@ -152,24 +157,6 @@
 
 // Popover radius
 @popover_radius: 12px;
-
-
-
-
-
-
-
-
-
-
-
-// Tabs
-@tab_color: #e1e1e1;
-@tab_hover_color: rgba(0, 0, 0, 0.024);
-@tab_selected_color: #ebebeb;
-@tab_inactive_color: #f0f0f0;
-@tab_selected_inactive_color: @window_bg_color;
-
 
 //------------------------------------------------------------
 // LESS styling

@@ -48,11 +48,11 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 	border-color: @borders_color;
 
 	.preferences-tabs {
-		background-color: @tab_color;
+		background-color: @headerbar_bg_color;
 		padding-top: 0;
 
 		body.is-blurred & {
-			background-color: @tab_inactive_color;
+			background-color: @window_bg_color;
 		}
 
 		div:first-child {
@@ -66,10 +66,6 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 			border-right: 1px solid @borders_color;
 			border-radius: 0;
 			padding-top: 0px;
-
-			body.is-blurred & {
-				background-color: @tab_inactive_color;
-			}
 
 			.tab-icon {
 				display: none;
@@ -88,12 +84,8 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 
 			&.active {
 				box-shadow: none;
-				background: @tab_selected_color;
+				background: transparent;
 				border-radius: 0;
-
-				body.is-blurred & {
-					background-color: @tab_selected_inactive_color;
-				}
 
 				&:hover {
 					background-image: linear-gradient(@tab_hover_color, @tab_hover_color);
