@@ -35,10 +35,16 @@
 //---------------------------------
 // New message
 //---------------------------------
-.composer-full-window .composer-inner-wrap .composer-action-bar-wrap {
-	background-color: @window_bg_color;
-	box-shadow: none;
-	border-top: 1px solid @borders_color;
+.composer-full-window {
+	.composer-outer-wrap {
+		background: @card_bg_color;
+	}
+
+	.composer-inner-wrap .composer-action-bar-wrap {
+		background-color: @window_bg_color;
+		box-shadow: none;
+		border-top: 1px solid @borders_color;
+	}
 }
 
 //------------------------------------------------------------
