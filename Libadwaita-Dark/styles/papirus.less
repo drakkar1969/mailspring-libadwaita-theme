@@ -1,0 +1,809 @@
+@import "main.less";
+
+//------------------------------------------------------------
+// Sidebar toolbar
+//------------------------------------------------------------
+//---------------------------------
+// New email button
+//---------------------------------
+.toolbar-RootSidebar .item-compose img.content-mask {
+	-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/edit.svg) !important;
+}
+
+//------------------------------------------------------------
+// Sidebar
+//------------------------------------------------------------
+//---------------------------------
+// Account switcher
+//---------------------------------
+.account-switcher img.content-dark[alt="account-switcher-dropdown.png"] {
+	-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/accounts.svg) !important;
+	-webkit-mask-size: 16px !important;
+	width: 16px !important;
+	height: 16px !important;
+	zoom: 1 !important;
+	padding-top: 16px !important;
+}
+
+//---------------------------------
+// Heading add item button
+//---------------------------------
+.outline-view .heading .add-item-button {
+	padding: 9px 10px 11px !important;
+
+	img.content-mask {
+		-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/add.svg) !important;
+		width: 16px !important;
+		height: 16px !important;
+		zoom: 1 !important;
+	}
+}
+
+//---------------------------------
+// List items
+//---------------------------------
+.outline-view .item img.content-mask[alt="inbox.png"] {
+	-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/inbox.svg) !important;
+}
+
+.outline-view .item img.content-mask[alt="unread.png"] {
+	-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/unread.svg) !important;
+}
+
+.outline-view .item img.content-mask[alt="starred.png"] {
+	-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/star.svg) !important;
+}
+
+.outline-view .item img.content-mask[alt="important.png"] {
+	-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/important.svg) !important;
+}
+
+.outline-view .item img.content-mask[alt="sent.png"] {
+	-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/send.svg) !important;
+}
+
+.outline-view .item img.content-mask[alt="archive.png"] {
+	-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/archive.svg) !important;
+}
+
+.outline-view .item img.content-mask[alt="spam.png"] {
+	-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/spam.svg) !important;
+}
+
+.outline-view .item img.content-mask[alt="trash.png"] {
+	-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/trash.svg) !important;
+}
+
+.outline-view .item img.content-mask[alt="drafts.png"] {
+	-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/drafts.svg) !important;
+}
+
+.outline-view .item img.content-mask[alt="folder.png"] {
+	-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/folder.svg) !important;
+}
+
+.outline-view .item img.content-mask[alt="label.png"] {
+	-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/label.svg) !important;
+}
+
+//------------------------------------------------------------
+// Threadlist toolbar
+//------------------------------------------------------------
+//---------------------------------
+// Search box
+//---------------------------------
+.thread-search-bar .search-accessory {
+	-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/search.svg) !important;
+	-webkit-mask-size: 16px !important;
+	width: 16px !important;
+	height: 16px !important;
+	padding-top: 16px !important;
+
+	&.clear {
+		-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/search-clear.svg) !important;
+		padding-top: 16px !important;
+	}
+}
+
+//---------------------------------
+// Toolbar buttons
+//---------------------------------
+.toolbar-ThreadList .selection-bar .absolute .btn-toolbar img.content-mask {
+	-webkit-mask-size: 16px !important;
+	width: 16px !important;
+	height: 16px !important;
+
+	&[alt="toolbar-archive.png"] {
+		-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/archive.svg) !important;
+	}
+	
+	&[alt="toolbar-spam.png"] {
+		-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/spam.svg) !important;
+	}
+	
+	&[alt="toolbar-not-spam.png"] {
+		-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/not-spam.svg) !important;
+	}
+
+	&[alt="toolbar-trash.png"] {
+		-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/trash.svg) !important;
+	}
+	
+	&[alt="toolbar-star.png"] {
+		-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/star.svg) !important;
+	}
+	
+	&[alt="toolbar-star-selected.png"] {
+		-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/unstar.svg) !important;
+	}
+	
+	&[alt="toolbar-markasunread.png"] {
+		-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/unread.svg) !important;
+	}
+	
+	&[alt="toolbar-markasread.png"] {
+		-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/read.svg) !important;
+	}
+	
+	&[alt="toolbar-movetofolder.png"] {
+		-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/movetofolder.svg) !important;
+	}	
+}
+
+//------------------------------------------------------------
+// Draftlist toolbar
+//------------------------------------------------------------
+.toolbar-DraftList .btn-toolbar img.content-mask {
+	-webkit-mask-size: 16px !important;
+	width: 16px !important;
+	height: 16px !important;
+
+	&[alt="icon-composer-trash.png"] {
+		-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/trash.svg) !important;
+	}
+}
+
+//------------------------------------------------------------
+// Threadlist icons
+//------------------------------------------------------------
+//---------------------------------
+// Attachment icon
+//---------------------------------
+.draft-list .thread-icon.thread-icon-attachment {
+	-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/attachment.svg) !important;
+	-webkit-mask-size: 16px !important;
+}
+
+.thread-list .list-container .list-item {
+	.thread-icon.thread-icon-attachment {
+		-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/attachment.svg) !important;
+		-webkit-mask-size: 16px !important;
+	}
+	
+	//---------------------------------
+	// Draft icon
+	//---------------------------------
+	.draft-icon {
+		zoom: 1 !important;
+		-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/edit.svg) !important;
+		-webkit-mask-size: 16px !important;
+		width: 16px !important;
+		height: 16px !important;
+		margin-left: 10px !important;
+		padding-top: 16px !important;
+	}
+
+	//---------------------------------
+	// None icon
+	//---------------------------------
+	.thread-icon-none {
+		-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/unstar.svg) !important;
+	}
+
+	//---------------------------------
+	// Star icon
+	//---------------------------------
+	.thread-icon-star-on-hover:hover {
+		-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/unstar.svg) !important;
+	}
+
+	.thread-icon.thread-icon-star {
+		-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/star.svg) !important;
+	}
+
+	//---------------------------------
+	// Unread icon
+	//---------------------------------
+	.thread-icon.thread-icon-unread {
+		-webkit-mask-size: 16px !important;
+	}
+
+	//---------------------------------
+	// Replied/forwarded icons
+	//---------------------------------
+	.thread-icon.thread-icon-replied {
+		-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/reply.svg) !important;
+		-webkit-mask-size: 16px !important;
+	}
+
+	.thread-icon.thread-icon-forwarded {
+		-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/forward.svg) !important;
+		-webkit-mask-size: 16px !important;
+	}
+
+	.thread-icon.thread-icon-replied,
+	.thread-icon.thread-icon-forwarded {
+		&:hover {
+			-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/unstar.svg) !important;
+		}
+	}
+}
+
+//---------------------------------
+// Important icon
+//---------------------------------
+.mail-important-icon {
+	-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/important.svg) !important;
+	opacity: 0.3 !important;
+
+	&.enabled.active {
+		opacity: 1 !important;
+	}
+
+	&.enabled.active:hover {
+		opacity: 1 !important;
+	}
+}
+
+//---------------------------------
+// Adjust icon vertical positions
+//---------------------------------
+.thread-list .list-container .list-item {
+	.draft-icon {
+		margin-top: 10px !important;
+	}
+}
+
+.thread-list-narrow .list-container .list-item {
+	.draft-icon {
+		margin-top: 0px !important;
+	}
+}
+
+//------------------------------------------------------------
+// Messagelist toolbar
+//------------------------------------------------------------
+.toolbar-MessageList .btn-toolbar img.content-mask[alt="toolbar-archive.png"] {
+	-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/archive.svg) !important;
+}
+
+.toolbar-MessageList .btn-toolbar img.content-mask[alt="toolbar-trash.png"] {
+	-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/trash.svg) !important;
+}
+
+.toolbar-MessageList .btn-toolbar img.content-mask[alt="toolbar-spam.png"] {
+	-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/spam.svg) !important;
+}
+
+.toolbar-MessageList .btn-toolbar img.content-mask[alt="toolbar-not-spam.png"] {
+	-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/not-spam.svg) !important;
+}
+
+.toolbar-MessageList .btn-toolbar img.content-mask[alt="toolbar-star.png"] {
+	-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/star.svg) !important;
+}
+
+.toolbar-MessageList .btn-toolbar img.content-mask[alt="toolbar-star-selected.png"] {
+	-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/unstar.svg) !important;
+}
+
+.toolbar-MessageList .btn-toolbar img.content-mask[alt="toolbar-markasunread.png"] {
+	-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/unread.svg) !important;
+}
+
+.toolbar-MessageList .btn-toolbar img.content-mask[alt="toolbar-markasread.png"] {
+	-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/read.svg) !important;
+}
+
+.toolbar-MessageList .btn-toolbar img.content-mask[alt="toolbar-movetofolder.png"] {
+	-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/movetofolder.svg) !important;
+}
+
+.toolbar-MessageList .btn-toolbar img.content-mask[alt="toolbar-person-sidebar.png"],
+.toolbar-MessageListSidebar .btn-toolbar.mode-toggle.mode-false img.content-mask[alt="toolbar-person-sidebar.png"] {
+	-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/person.svg) !important;
+}
+
+//---------------------------------
+// Move to folder dropdown
+//---------------------------------
+.category-picker-popover .item,
+.category-picker-dropdown .item {
+	img.content-mask[alt="undefined.png"] {
+		-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/folder.svg) !important;
+	}
+}
+
+//------------------------------------------------------------
+// Messagelist
+//------------------------------------------------------------
+//---------------------------------
+// Subject area buttons (e.g. print)
+//---------------------------------
+#message-list .message-icons-wrap div img.content-mask {
+	-webkit-mask-size: 16px !important;
+	width: 16px !important;
+	height: 16px !important;
+	zoom: 1 !important;
+
+	&[alt="collapse.png"] {
+		-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/collapse.svg) !important;
+	}
+
+	&[alt="expand.png"] {
+		-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/expand.svg) !important;
+	}
+
+	&[alt="print.png"] {
+		-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/print.svg) !important;
+	}
+	
+	&[alt="thread-popout.png"] {
+		-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/popout.svg) !important;
+	}
+	
+	&[alt="thread-popin.png"] {
+		-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/popin.svg) !important;
+	}
+}
+
+//---------------------------------
+// Reply/forward button
+//---------------------------------
+#message-list .message-header .message-actions-wrap .button-dropdown.bordered .primary-item img.content-mask,
+#message-list .message-header .message-actions-wrap .button-dropdown.bordered .secondary-picker img.content-mask,
+#message-list .message-header .message-actions-wrap .button-dropdown .secondary-items .menu .item img.content-mask {
+	-webkit-mask-size: 16px !important;
+	width: 16px !important;
+	height: 16px !important;
+	zoom: 1 !important;
+}
+
+#message-list .message-header .message-actions-wrap .button-dropdown.bordered .primary-item img.content-mask,
+#message-list .message-header .message-actions-wrap .button-dropdown .secondary-items .menu .item img.content-mask {
+	&[alt="ic-dropdown-reply.png"] {
+		-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/reply.svg) !important;
+	}
+
+	&[alt="ic-dropdown-replyall.png"] {
+		-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/reply-all.svg) !important;
+	}
+
+	&[alt="ic-dropdown-forward.png"] {
+		-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/forward.svg) !important;
+	}
+}
+
+#message-list .message-header .message-actions-wrap .button-dropdown.bordered .secondary-picker {
+	width: 28px !important;
+
+	img.content-mask {
+		-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/dropdown.svg) !important;
+	}
+}
+
+//---------------------------------
+// File attachment download
+//---------------------------------
+.nylas-attachment-item .file-action-icon img.content-mask {
+	-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/download.svg) !important;
+	-webkit-mask-size: 16px !important;
+	width: 16px !important;
+	height: 16px !important;
+}
+
+//---------------------------------
+// Attachment download controls
+//---------------------------------
+.download-all .attachment-number img.content-mask {
+	-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/attachment.svg) !important;
+	-webkit-mask-size: 16px !important;
+	width: 16px !important;
+	height: 16px !important;
+}
+
+.download-all .download-all-action img.content-mask {
+	-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/download.svg) !important;
+	-webkit-mask-size: 16px !important;
+	width: 16px !important;
+	height: 16px !important;
+}
+
+//---------------------------------
+// Footer reply button
+//---------------------------------
+#message-list .footer-reply-area-wrap .footer-reply-area img.content-mask {
+	-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/reply.svg) !important;
+	-webkit-mask-size: 16px !important;
+	width: 16px !important;
+	height: 16px !important;
+	zoom: 1 !important;
+}
+
+//---------------------------------
+// Collapsed message attachment
+//---------------------------------
+#message-list .message-item-wrap.collapsed .message-item-area .collapsed-attachment {
+	-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/attachment.svg) !important;
+	-webkit-mask-size: 16px !important;
+	-webkit-mask-position: 0px 5px !important;
+	width: 16px !important;
+	height: 16px !important;
+}
+
+//------------------------------------------------------------
+// Message draft
+//------------------------------------------------------------
+//---------------------------------
+// Signature button
+//---------------------------------
+.message-item-white-wrap.composer-outer-wrap,
+.composer-full-window .message-item-white-wrap.composer-outer-wrap {
+	.composer-participant-field .dropdown-component .signature-button-dropdown {
+		.button-dropdown {
+			.only-item {
+				min-width: 34px !important;
+				padding: 0 6px 0 9px !important;
+	
+				img.signature-button {
+					-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/signature.svg) !important;
+					width: 16px !important;
+					height: 16px !important;
+					zoom: 1 !important;
+					margin-top: -1px !important;
+				}
+	
+				&::after {
+					content: url(mailspring://Libadwaita/styles/papirus/dummy.svg);
+					-webkit-mask-repeat: no-repeat;
+					-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/dropdown.svg);
+					-webkit-mask-size: 16px;
+					-webkit-mask-position: 3px 1px;
+					background-color: @text_color;
+				}
+			}
+
+			.secondary-items .menu .item.checked {
+				background-image: none;
+
+				&::before {
+					content: url(mailspring://Libadwaita/styles/papirus/dummy.svg);
+					-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/check.svg) !important;
+					-webkit-mask-repeat: no-repeat;
+					-webkit-mask-size: 16px;
+					-webkit-mask-position: 0px 1px;
+					background-color: @text_color;
+					width: 16px;
+					height: 16px;
+					margin-left: -20px;
+					margin-right: 4px;
+				}
+			}
+		}
+	}
+}
+
+//---------------------------------
+// Rich editor toolbar
+//---------------------------------
+.RichEditor-toolbar {
+	.fa-bold:before,
+	.fa-italic:before,
+	.fa-underline:before,
+	.fa-strikethrough:before,
+	.fa-smile-o:before,
+	.fa-link:before,
+	.fa-quote-left:before,
+	.fa-sticky-note-o:before,
+	.fa-list-ol:before,
+	.fa-list-ul:before,
+	.fa-text-height:before {
+		content: url(mailspring://Libadwaita/styles/papirus/dummy.svg);
+		-webkit-mask-repeat: no-repeat;
+		-webkit-mask-size: 16px;
+		-webkit-mask-position: 0px 0px;
+		background-color: @text_color;
+		width: 16px;
+		height: 16px;
+	}
+
+	.fa-bold:before {
+		-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/format-bold.svg);
+	}
+
+	.fa-italic:before {
+		-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/format-italic.svg);
+	}
+
+	.fa-underline:before {
+		-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/format-underline.svg);
+	}
+
+	.fa-strikethrough:before {
+		-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/format-strikethrough.svg);
+	}
+
+	.fa-smile-o:before {
+		-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/format-emoji.svg);
+	}
+
+	.fa-link:before {
+		-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/format-link.svg);
+	}
+
+	.fa-quote-left:before {
+		-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/format-blockquote.svg);
+	}
+
+	.fa-sticky-note-o:before {
+		-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/format-code.svg);
+	}
+
+	.fa-list-ol:before {
+		-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/format-number.svg);
+	}
+
+	.fa-list-ul:before {
+		-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/format-bullet.svg);
+	}
+
+	.fa-text-height:before {
+		-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/format-font-size.svg);
+	}
+}
+
+//---------------------------------
+// Remove signature button
+//---------------------------------
+.RichEditor-root .uneditable {
+	.uneditable-remove:before {
+		content: url(mailspring://Libadwaita/styles/papirus/dummy.svg) !important;
+		-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/cancel.svg);
+		-webkit-mask-repeat: no-repeat;
+		-webkit-mask-size: 16px;
+		-webkit-mask-position: 0px 0px;
+		background-color: @text_color;
+	}
+}
+
+//---------------------------------
+// Remove quoted text button
+//---------------------------------
+.composer-inner-wrap .compose-body .quoted-text-control .remove-quoted-text {
+	top: -2px;
+	right: -1px;
+
+	&:before {
+		content: url(mailspring://Libadwaita/styles/papirus/dummy.svg);
+		-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/cancel.svg);
+		-webkit-mask-repeat: no-repeat;
+		-webkit-mask-size: 16px;
+		-webkit-mask-position: 0px 0px;
+		background-color: @text_color;
+	}
+}
+
+//---------------------------------
+// Footer buttons (send, etc.)
+//---------------------------------
+.composer-inner-wrap .composer-action-bar-wrap .btn-send {
+	.primary-item img.content-mask,
+	.secondary-picker img.content-mask {
+		-webkit-mask-size: 16px !important;
+		width: 16px !important;
+		height: 16px !important;
+		zoom: 1 !important;
+		margin-top: -2px !important;
+	}
+
+	.primary-item img.content-mask {
+		-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/send.svg) !important;
+	}
+
+	.secondary-picker img.content-mask {
+		-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/dropdown.svg) !important;
+	}	
+}
+
+.composer-inner-wrap .composer-action-bar-wrap .btn.btn-toolbar img.content-mask {
+	-webkit-mask-size: 16px !important;
+	width: 16px !important;
+	height: 16px !important;
+	zoom: 1 !important;
+
+	&[alt="icon-composer-sendlater.png"] {
+		-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/send.svg) !important;
+	}
+
+	&[src="mailspring://composer-templates/assets/icon-composer-templates@2x.png"] {
+		-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/template.svg) !important;
+	}
+
+	&[alt="icon-composer-attachment.png"] {
+		-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/attachment.svg) !important;
+	}
+
+	&[alt="icon-composer-trash.png"] {
+		-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/trash.svg) !important;
+	}
+
+	&[alt="icon-composer-dropdown.png"] {
+		-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/dropdown.svg) !important;
+	}
+}
+
+//------------------------------------------------------------
+// Preferences: Nylas editable list
+//------------------------------------------------------------
+//---------------------------------
+// Selected item edit icon
+//---------------------------------
+.nylas-editable-list .items-wrapper .editable-item.selected.with-edit-icon img.edit-icon {
+	-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/edit.svg) !important;
+	-webkit-mask-size: 16px !important;
+	-webkit-mask-position: center !important;
+	zoom: 1 !important;
+}
+
+//------------------------------------------------------------
+// Preferences: Subscription tab
+//------------------------------------------------------------
+.container-identity {
+	.btn.btn-emphasis img.content-mask {
+		zoom: 1 !important;
+		width: 16px !important;
+		height: 16px !important;
+		margin-left: -4px !important;
+		margin-right: 4px !important;
+		padding-top: 16px !important;
+		background-color: @accent_fg_color !important;
+		-webkit-mask-size: 16px !important;
+		-webkit-mask-repeat: no-repeat !important;
+		-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/account.svg) !important;
+	}
+
+	.feature-explore-grid .feature {
+		h3 img {
+			zoom: 1 !important;
+			background-image: none !important;
+			width: 28px !important;
+			height: 16px !important;
+			padding-top: 16px !important;
+			padding-right: 12px !important;
+			background-color: @text_color !important;
+			-webkit-mask-size: 16px !important;
+			-webkit-mask-repeat: no-repeat !important;
+	
+			&[alt="icon-composer-reminders.png"] {
+				-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/alarm.svg) !important;
+			}
+	
+			&[alt="toolbar-person-sidebar.png"] {
+				-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/person.svg) !important;
+			}
+	
+			&[alt="icon-composer-eye.png"] {
+				-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/eye.svg) !important;
+			}
+	
+			&[alt="toolbar-templates.png"] {
+				-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/template.svg) !important;
+			}
+	
+			&[alt="icon-composer-linktracking.png"] {
+				-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/format-link.svg) !important;
+			}
+	
+			&[alt="icon-composer-sendlater.png"] {
+				-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/send.svg) !important;
+			}
+	
+			&[alt="toolbar-snooze.png"] {
+				-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/snoozed.svg) !important;
+			}
+	
+			&[alt="icon-toolbar-activity.png"] {
+				-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/insights.svg) !important;
+			}
+	
+			&[alt="pro-feature-translation.png"] {
+				-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/translate.svg) !important;
+			}
+		}
+	
+		.popout img {
+			-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/link.svg) !important;
+			-webkit-mask-size: 16px !important;
+			width: 16px !important;
+			height: 16px !important;
+			padding-top: 16px !important;
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Preferences: Folders tab
+//------------------------------------------------------------
+.preferences-wrap .category-mapper-container .category-picker-dropdown .btn {
+	padding: 0 6px 0 10px;
+
+	.category-item {
+		img.content-mask[alt="inbox.png"] {
+			-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/inbox.svg) !important;
+		}
+	
+		img.content-mask[alt="sent.png"] {
+			-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/send.svg) !important;
+		}
+	
+		img.content-mask[alt="drafts.png"] {
+			-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/drafts.svg) !important;
+		}
+	
+		img.content-mask[alt="spam.png"] {
+			-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/spam.svg) !important;
+		}
+	
+		img.content-mask[alt="archive.png"] {
+			-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/archive.svg) !important;
+		}
+	
+		img.content-mask[alt="trash.png"] {
+			-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/trash.svg) !important;
+		}
+	
+		img.content-mask[alt="snoozed.png"] {
+			-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/snoozed.svg) !important;
+		}
+	
+		img.content-mask[alt="starred.png"] {
+			-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/star.svg) !important;
+		}
+	
+		img.content-mask[alt="important.png"] {
+			-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/important.svg) !important;
+		}
+	
+		img.content-mask[alt="all.png"],
+		img.content-mask[alt=".png"] {
+			-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/folder.svg) !important;
+		}
+	
+		& + img {
+			-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/dropdown.svg) !important;
+			-webkit-mask-size: 16px !important;
+			width: 16px !important;
+			height: 16px !important;
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Preferences: Signatures tab
+//------------------------------------------------------------
+.preferences-signatures-container .signature-wrap .account-picker .button-dropdown .secondary-items .menu .item.checked {
+	background-image: none;
+
+	&::before {
+		content: url(mailspring://Libadwaita/styles/papirus/dummy.svg);
+		-webkit-mask-image: url(mailspring://Libadwaita/styles/papirus/check.svg) !important;
+		-webkit-mask-repeat: no-repeat;
+		-webkit-mask-size: 16px;
+		-webkit-mask-position: 0px 1px;
+		background-color: @text_color;
+		width: 16px;
+		height: 16px;
+		margin-left: -20px;
+		margin-right: 4px;
+	}
+}

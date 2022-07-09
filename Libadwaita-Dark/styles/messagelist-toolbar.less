@@ -1,0 +1,86 @@
+@import "main.less";
+
+//------------------------------------------------------------
+// Message list toolbar
+//------------------------------------------------------------
+.toolbar-MessageList {
+	.message-toolbar-items {
+		margin-right: 10.5px;
+	}
+}
+
+.toolbar-MessageList,
+.toolbar-MessageListSidebar {
+	height: 100%;
+	background: @window_bg_color;
+	border-bottom: 1px solid @borders_color;
+	padding-right: 6px;
+
+	//---------------------------------
+	// Toolbar buttons
+	//---------------------------------
+	.btn-toolbar,
+	.btn-icon {
+		background: none;
+		box-shadow: none;
+		border: 0 !important;
+		border-radius: @button_radius !important;
+		margin-left: 4px !important;
+		margin-right: 4px !important;
+		padding: 0;
+		width: @button_height;
+		height: @button_height;
+
+		img.content-mask {
+			background-color: @text_color;
+		}
+
+		&:hover {
+			background-color: @view_hover_color;
+		}
+
+		&:active {
+			background-color: @view_active_color;
+
+			img.content-mask {
+				background-color: @text_color;
+			}
+		}
+
+		// Toggle button (show contacts sidebar)
+		&.mode-toggle.mode-false {
+			background-color: @view_selected_color;
+
+			img.content-mask {
+				background-color: @text_color;
+			}
+
+			&:hover {
+				background-color: @view_selected_hover_color;
+			}
+
+			&:active {
+				background-color: @view_selected_active_color;
+			}
+		}
+
+		&.disabled {
+			opacity: @disabled_opacity;
+		}
+
+		//---------------------------------
+		// Inactive window toolbar buttons
+		//---------------------------------
+		body.is-blurred & {
+			opacity: @disabled_opacity;
+
+			&:hover {
+				background-color: @view_hover_color;
+			}
+		}
+
+		body.is-blurred &.mode-toggle.mode-false {
+			background-color: @view_selected_color;
+		}
+	}
+}

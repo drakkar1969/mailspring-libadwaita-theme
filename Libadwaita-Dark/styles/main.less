@@ -1,0 +1,159 @@
+//------------------------------------------------------------
+// Variant colors (light/dark)
+//------------------------------------------------------------
+
+// Text color
+@text_color: #ffffff;
+
+// Accent colors
+@accent_bg_color: #3584e4;
+@accent_fg_color: #ffffff;
+@accent_color: #78aeed;
+
+// Success colors
+@success_bg_color: #26a269;
+@success_fg_color: #ffffff;
+@success_color: #8ff0a4;
+
+// Warning colors
+@warning_color: #f8e45c;
+@warning_bg_color: #cd9309;
+@warning_fg_color: rgba(0, 0, 0, 0.8);
+
+// Error colors
+@error_color: #ff7b63;
+@error_bg_color: #c01c28;
+@error_fg_color: #ffffff;
+
+// Window/header colors
+@window_bg_color: #242424;
+@headerbar_bg_color: #303030;
+@headerbar_shade_color: fade(black, 36%);
+
+// Card colors
+@card_bg_color: #363636;
+
+// Popover colors
+@popover_bg_color: #383838;
+
+// View colors
+@view_bg_color: #1e1e1e;
+@view_fg_color: #ffffff;
+
+// Scrollbar colors
+@scrollbar_outline_color: fade(black, 50%);
+
+//------------------------------------------------------------
+// User variables
+//------------------------------------------------------------
+
+// Text size
+@text_size: 15px;
+
+// Control height (button/input/select)
+@button_height: 34px;
+
+// Popover item height
+@popover_item_height: 32px;
+
+//------------------------------------------------------------
+// Palette colors (fixed)
+//------------------------------------------------------------
+@yellow_4: #f5c211;
+
+//------------------------------------------------------------
+// Calculated + fixed colors (do not modify)
+//------------------------------------------------------------
+
+// Dim text color
+@text_color_dim: fade(@text_color, alpha(@text_color)*100*0.55);
+
+// Border color
+@borders_color: fade(@text_color, alpha(@text_color)*100*0.15);
+
+// Focus border color
+@focus_border_color: fade(@accent_color, 50%);
+
+// View colors
+@view_hover_color: fade(@text_color, alpha(@text_color)*100*0.07);
+@view_active_color: fade(@text_color, alpha(@text_color)*100*0.16);
+@view_selected_color: fade(@text_color, alpha(@text_color)*100*0.1);
+@view_selected_hover_color: fade(@text_color, alpha(@text_color)*100*0.13);
+@view_selected_active_color: fade(@text_color, alpha(@text_color)*100*0.19);
+
+// Button colors
+@button_color: fade(@text_color, alpha(@text_color)*100*0.1);
+@button_hover_color: fade(@text_color, alpha(@text_color)*100*0.15);
+@button_active_color: fade(@text_color, alpha(@text_color)*100*0.3);
+@button_checked_color: fade(@text_color, alpha(@text_color)*100*0.3);
+@button_checked_hover_color: fade(@text_color, alpha(@text_color)*100*0.35);
+
+// Default button colors
+@button_default_hover_color: linear-gradient(fade(@text_color, alpha(@text_color)*100*0.1), fade(@text_color, alpha(@text_color)*100*0.1));
+@button_default_active_color: linear-gradient(fade(black, 20%), fade(black, 20%));
+
+// Trough colors (used for checkboxes and radio buttons)
+@trough_color: fade(@text_color, alpha(@text_color)*100*0.15);
+@trough_hover_color: fade(@text_color, alpha(@text_color)*100*0.2);
+@trough_active_color: fade(@text_color, alpha(@text_color)*100*0.25);
+
+// Checkbox/radio button colors
+@check_shadow: inset 0 0 0 2px @trough_color;
+@check_hover_shadow: inset 0 0 0 2px @trough_hover_color;
+@check_active_color: @trough_active_color;
+@check_selected_hover_color: linear-gradient(fade(@accent_fg_color, 10%), fade(@accent_fg_color, 10%));
+@check_selected_active_color: linear-gradient(fade(black, 20%), fade(black, 20%));
+
+// Card colors
+@card_shadow: 0 0 0 1px fade(black, 3%), 0 1px 3px 1px fade(black, 7%), 0 2px 6px 2px fade(black, 3%);
+
+// Popover colors
+@popover_border_color: fade(black, 14%);
+@popover_shadow: 0 1px 5px 1px fade(black, 9%), 0 2px 14px 3px fade(black, 5%);
+
+// OSD colors
+@osd_bg_color: fade(black, 70%);
+@osd_fg_color: fade(white, 90%);
+@osd_button_color: fade(white, 9%);
+@osd_button_hover_color: fade(white, 13.5%);
+
+// Link colors
+@link_color: @accent_color;
+@link_hover_color: mix(@accent_color, @view_fg_color, 80%);
+
+// Scale slider colors
+@slider_color: mix(white, @view_bg_color, 80%);
+@slider_shadow: 0 2px 4px fade(black, 20%);
+@slider_outline: 1px solid fade(black, 10%);
+@slider_hover_color: white;
+
+// Tooltip colors
+@tooltip_bg_color: fade(black, 80%);
+@tooltip_fg_color: white;
+@tooltip_border_color: fade(white, 10%);
+
+// Scrollbar colors
+@scrollbar_track_color: fade(@text_color, alpha(@text_color)*100*0.1);
+@scrollbar_slider_color: fade(@text_color, alpha(@text_color)*100*0.2);
+@scrollbar_slider_hover_color: fade(@text_color, alpha(@text_color)*100*0.4);
+@scrollbar_slider_dragging_color: fade(@text_color, alpha(@text_color)*100*0.6);
+
+// Tab colors
+@tab_color: fade(@headerbar_shade_color, alpha(@headerbar_shade_color)*100*0.6);
+@tab_hover_color: linear-gradient(fade(@text_color, alpha(@text_color)*100*0.03), fade(@text_color, alpha(@text_color)*100*0.03));
+
+//------------------------------------------------------------
+// Other fixed variables
+//------------------------------------------------------------
+
+// Disabled opacity
+@disabled_opacity: 0.5;
+
+// Button radius
+@button_radius: 6px;
+
+// Card radius
+@card_radius: 12px;
+
+// Popover radius
+@popover_radius: 12px;

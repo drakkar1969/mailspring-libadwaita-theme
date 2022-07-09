@@ -1,0 +1,55 @@
+@import "main.less";
+
+//------------------------------------------------------------
+// Drafts list toolbar
+//------------------------------------------------------------
+.toolbar-DraftList {
+	height: 100%;
+	background: @window_bg_color;
+	border-bottom: 1px solid @borders_color;
+
+	.selection-bar .absolute {
+		background: @window_bg_color;
+		border-left: 1px solid @borders_color;
+		margin-top: 1px;
+	}
+
+	//---------------------------------
+	// Toolbar buttons
+	//---------------------------------
+	.btn-toolbar {
+		box-shadow: none;
+		background: transparent;
+		border: 0;
+		border-radius: @button_radius;
+		height: @button_height;
+		line-height: @button_height;
+		margin-left: 4px !important;
+		margin-right: 4px !important;
+		padding: 0 9px;
+		color: @text_color;
+		font-size: @text_size;
+		font-weight: bold;
+
+		img.content-mask {
+			background-color: @text_color;
+		}
+
+		&:hover {
+			background: @view_hover_color;
+		}
+
+		&:active {
+			background: @view_active_color;
+		}
+	}
+
+	//---------------------------------
+	// Toolbar text
+	//---------------------------------
+	.inner .centered {
+		padding-top: 5px;
+		color: @text_color !important;
+		font-size: @text_size;
+	}
+}

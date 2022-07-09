@@ -1,0 +1,181 @@
+@import "main.less";
+
+//------------------------------------------------------------
+// Thread list toolbar
+//------------------------------------------------------------
+.toolbar-ThreadList {
+	height: 100%;
+	background: @window_bg_color;
+	border-bottom: 1px solid @borders_color;
+}
+
+//------------------------------------------------------------
+// Search box
+//------------------------------------------------------------
+.thread-search-bar {
+	background: @button_color;
+	box-shadow: none;
+	border-radius: @button_radius;
+	font-size: @text_size;
+	height: @button_height;
+	line-height: @button_height;
+	margin: 5px 20px;
+	padding-left: 9px;
+
+	&:focus-within {
+		outline: 2px solid @focus_border_color;
+		outline-offset: -2px;
+	}
+
+	//---------------------------------
+	// Search box text
+	//---------------------------------
+	color: @text_color;
+
+	&.placeholder .tokenizing-contenteditable .layer-tokens {
+		color: @text_color_dim;
+	}
+
+	.tokenizing-contenteditable .layer-tokens {
+		color: @text_color;
+
+		.layer-token {
+			font-weight: 600;
+			color: @accent_color;
+		}
+	}
+
+	.tokenizing-contenteditable .layer-text {
+		caret-color: @text_color;
+	}
+
+	//---------------------------------
+	// Search box icons
+	//---------------------------------
+	.threadlist-icon(@image, @size, @color) {
+		background-image: none;
+		-webkit-mask-repeat: no-repeat;
+		-webkit-mask-image: @image;
+		-webkit-mask-size: @size;
+		-webkit-mask-position: 0px 0px;
+		filter: none;
+		background-color: @color;
+		padding-top: @size;
+	}
+
+	.search-accessory {
+		.threadlist-icon(url(../static/images/toolbar/searchloupe@2x.png), 15px, @text_color_dim);
+
+		&.clear {
+			.threadlist-icon(url(../static/images/search/searchclear@2x.png), 21px, @text_color);
+			opacity: 0.7;
+
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+
+	//---------------------------------
+	// Search box dropdown
+	//---------------------------------
+	.suggestions {
+		background: @popover_bg_color;
+		border: 1px solid @popover_border_color;
+		box-shadow: @popover_shadow;
+		border-radius: @popover_radius;
+		top: 40px;
+		padding: 8px;
+
+		.suggestion {
+			font-size: @text_size;
+			font-weight: normal;
+			color: @text_color;
+			border-radius: @button_radius;
+			margin: 3px 0;
+			padding-top: 0;
+			padding-bottom: 0;
+
+			.suggestion-token {
+				font-weight: 600;
+				color: @accent_color;
+			}
+
+			&:hover:not(.selected) {
+				background-color: @view_hover_color;
+			}
+
+			&.selected {
+				background-color: @view_selected_color;
+				color: @text_color;
+
+				&:hover {
+					background-color: @view_selected_hover_color;
+				}
+
+				.suggestion-token {
+					color: @accent_color;
+				}
+			}
+		}
+
+		.footer {
+			display: none;
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Selection toolbar (single pane mode)
+//------------------------------------------------------------
+.toolbar-ThreadList {
+	.selection-bar .absolute {
+		background: @window_bg_color;
+		border-color: @borders_color;
+		height: 100%;
+
+		.btn-toolbar {
+			box-shadow: none;
+			background: transparent;
+			border: 0;
+			border-radius: @button_radius !important;
+			height: @button_height;
+			line-height: @button_height;
+			margin-left: 4px !important;
+			margin-right: 4px !important;
+			padding: 0 9px;
+			color: @text_color;
+			font-size: @text_size;
+			font-weight: bold;
+
+			img.content-mask {
+				background-color: @text_color;
+			}
+
+			&:hover {
+				background: @view_hover_color;
+			}
+
+			&:active {
+				background: @view_active_color;
+			}
+		}
+
+		.inner .centered {
+			padding-top: 5px;
+			color: @text_color !important;
+			font-size: @text_size;
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Drafts/trash empty button header
+//------------------------------------------------------------
+.thread-list-empty-folder-bar {
+	background-color: mix(@accent_bg_color, @window_bg_color, 30%);
+	border-bottom-color: @borders_color;
+	color: @text_color;
+	font-size: @text_size;
+	padding: 5px 14px 5px 18px;
+}

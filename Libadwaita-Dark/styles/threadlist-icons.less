@@ -1,0 +1,164 @@
+@import "main.less";
+
+//------------------------------------------------------------
+// LESS mixin
+//------------------------------------------------------------
+.threadlist-icon(@image, @size, @color) {
+	background-image: none;
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-image: @image;
+	-webkit-mask-size: @size;
+	-webkit-mask-position: center;
+	filter: none;
+	background-color: @color;
+}
+
+//------------------------------------------------------------
+// Draft list icons
+//------------------------------------------------------------
+//---------------------------------
+// Attachment icon
+//---------------------------------
+.draft-list {
+	.thread-icon.thread-icon-attachment {
+		.threadlist-icon(url(../static/images/thread-list/icon-attachment-@2x.png), 15px, @text_color);
+	}
+}
+
+//------------------------------------------------------------
+// Thread list icons
+//------------------------------------------------------------
+.thread-list {
+	.list-container .list-item {
+		//---------------------------------
+		// Attachment icon
+		//---------------------------------
+		.thread-icon.thread-icon-attachment {
+			.threadlist-icon(url(../static/images/thread-list/icon-attachment-@2x.png), 15px, @text_color);
+		}
+
+		//---------------------------------
+		// Draft icon
+		//---------------------------------
+		.draft-icon {
+			.threadlist-icon(url(../static/images/thread-list/icon-draft-pencil@2x.png), 32px, @text_color);
+			width: 32px;
+			height: 32px;
+			margin-left: 20px;
+			padding-top: 32px;
+		}
+
+		//---------------------------------
+		// None icon
+		//---------------------------------
+		.thread-icon-none {
+			.threadlist-icon(url(../static/images/thread-list/icon-star-hover-@2x.png), 16px, transparent);
+
+		}
+
+		&:hover {
+			.thread-icon-none {
+				background-color: @text_color_dim;
+			}
+		}
+
+		//---------------------------------
+		// Star icon
+		//---------------------------------
+		.thread-icon-star-on-hover:hover {
+			.threadlist-icon(url(../static/images/thread-list/icon-star-hover-@2x.png), 16px, @text_color);
+		}
+
+		.thread-icon.thread-icon-star {
+			.threadlist-icon(url(../static/images/thread-list/icon-star-@2x.png), 16px, @accent_bg_color);
+
+			&:hover {
+				background-image: @button_default_hover_color;
+			}
+		}
+
+		//---------------------------------
+		// Unread icon
+		//---------------------------------
+		.thread-icon.thread-icon-unread {
+			.threadlist-icon(url(../static/images/thread-list/icon-unread-@2x.png), 15px, @accent_bg_color);
+
+			&:hover {
+				.threadlist-icon(url(../static/images/thread-list/icon-star-hover-@2x.png), 16px, @text_color);
+			}
+		}
+
+		//---------------------------------
+		// Replied/forwarded icons
+		//---------------------------------
+		.thread-icon.thread-icon-replied {
+			.threadlist-icon(url(../static/images/thread-list/icon-replied-@2x.png), 15px, @text_color);
+		}
+
+		.thread-icon.thread-icon-forwarded {
+			.threadlist-icon(url(../static/images/thread-list/icon-forwarded-@2x.png), 15px, @text_color);
+		}
+
+		.thread-icon.thread-icon-replied,
+		.thread-icon.thread-icon-forwarded {
+			&:hover {
+				.threadlist-icon(url(../static/images/thread-list/icon-star-hover-@2x.png), 16px, @text_color);
+			}
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Adjust icon vertical positions
+//------------------------------------------------------------
+.thread-list .list-container .list-item {
+	.draft-icon {
+		margin-top: 18px;
+	}
+}
+
+.thread-list-narrow .list-container .list-item {
+	.draft-icon {
+		margin-top: 0px;
+	}
+}
+
+//------------------------------------------------------------
+// Important icon (gmail)
+//------------------------------------------------------------
+.thread-list-narrow .mail-important-icon {
+	margin-top: -2px;
+}
+
+.mail-important-icon {
+	.threadlist-icon(url(../static/images/important/Icon-Important-Hover@2x.png), 16px, @text_color_dim);
+	opacity: 0.6;
+
+	&.enabled:hover {
+		.threadlist-icon(url(../static/images/important/Icon-Important-Hover@2x.png), 16px, @text_color);
+		opacity: 0.6;
+	}
+
+	&.enabled.active {
+		.threadlist-icon(url(../static/images/important/Icon-Important-Active@2x.png), 16px, @yellow_4);
+		opacity: 1;
+	}
+
+	&.enabled.active:hover {
+		background-image: @button_default_hover_color;
+	}
+}
+
+//------------------------------------------------------------
+// Gmail labels
+//------------------------------------------------------------
+.thread-list .focused .mail-label,
+.draft-list .focused .mail-label {
+	filter: none;
+	background: @success_bg_color !important;
+}
+
+.thread-list.handler-split .list-item.selected .mail-label {
+	filter: none;
+	background: @success_bg_color !important;
+}

@@ -1,0 +1,683 @@
+@import "main.less";
+
+//------------------------------------------------------------
+// Message list area
+//------------------------------------------------------------
+.column-MessageList {
+	background: @window_bg_color;
+	border-left: 1px solid @borders_color;
+}
+
+#message-list {
+	background: @window_bg_color;
+}
+
+#message-list .messages-wrap .scroll-region-content-inner {
+	padding: 6px 20px;
+}
+
+//------------------------------------------------------------
+// Message subject area
+//------------------------------------------------------------
+#message-list {
+	.message-subject-wrap {
+		padding: 0;
+
+		& > div:first-child:not(.message-icons-wrap) {
+			margin-right: 16px;
+		}
+	}
+
+	.message-subject {
+		color: @text_color;
+		font-size: 20px;
+		font-weight: bold;
+	}
+
+	.message-icons-wrap {
+		cursor: default;
+
+		div {
+			background: none;
+			border: 0;
+		 	border-radius: @button_radius;
+			width: @button_height;
+			height: @button_height;
+			line-height: @button_height;
+			text-align: center;
+
+			img.content-mask {
+				background-color: @text_color;
+			}
+
+			&:hover {
+				background-color: @view_hover_color;
+			}
+
+			&:active {
+				background-color: @view_active_color;
+			}
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Message body
+//------------------------------------------------------------
+#message-list .message-item-wrap .message-item-white-wrap {
+	box-shadow: @card_shadow !important;
+	background: @card_bg_color;
+	border: 0;
+	border-radius: @card_radius;
+}
+
+//------------------------------------------------------------
+// Message header
+//------------------------------------------------------------
+#message-list .message-header {
+	font-size: @text_size;
+}
+
+.message-participants {
+	&.to-participants {
+		margin-top: 16px;
+	}
+
+	.from-contact {
+		color: @text_color;
+		font-weight: 600;
+	}
+
+	&.to-participants .collapsed-participants {
+		margin-top: 3px;
+	}
+
+	.from-label,
+	.to-label,
+	.reply-to-label,
+	.cc-label,
+	.bcc-label {
+		color: @text_color;
+		font-weight: 600;
+	}
+
+	.to-contact,
+	.reply-to-contact,
+	.cc-contact,
+	.bcc-contact,
+	.to-everyone {
+		color: @text_color;
+	}
+
+	.expanded-participants {
+		.from-label,
+		.to-label,
+		.reply-to-label,
+		.cc-label,
+		.bcc-label {
+			color: @text_color;
+			font-weight: 600;
+		}
+	
+		.participant-primary,
+		.participant-secondary {
+			color: @text_color;
+		}
+
+		.from-contact {
+			.participant-primary,
+			.participant-secondary {
+				color: @text_color;
+				font-weight: 600;
+			}
+		}
+	}
+}
+
+#message-list {
+	.message-header {
+		margin-bottom: 12px;
+
+		.message-header-right {
+			align-items: inherit;
+		}
+
+		.header-row {
+			.header-label {
+				color: @text_color;
+				font-weight: 600;
+			}
+
+			.header-name {
+				color: @text_color;
+			}
+		}
+
+		.message-time,
+		.message-indicator {
+			color: @text_color_dim;
+			margin-top: 2px;
+		}
+	}
+
+	.header-toggle-control img {
+		background: @text_color;
+		opacity: 0.7;
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Message header buttons (reply/forward)
+//------------------------------------------------------------
+#message-list .message-header .message-actions-wrap {
+	.button-dropdown.bordered {
+		.primary-item,
+		.secondary-picker {
+			box-shadow: none;
+			background: @button_color;
+			border: 0;
+			height: @button_height;
+			line-height: @button_height;
+
+			img.content-mask {
+				background-color: @text_color;
+			}
+		}
+
+		.primary-item {
+			border-radius: @button_radius 0 0 @button_radius;
+			margin-right: -1px;
+		}
+
+		.secondary-picker {
+			border-radius: 0 @button_radius @button_radius 0;
+			width: 24px;
+		}
+
+		.primary-item:hover,
+		.secondary-picker:hover {
+			background: @button_hover_color;
+		}
+
+		.primary-item:active,
+		.secondary-picker:active {
+			background: @button_active_color;
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Message footer
+//------------------------------------------------------------
+#message-list  .footer-reply-area-wrap {
+	box-shadow: none;
+	background: @window_bg_color;
+	border: 0;
+	margin-top: 16px;
+	margin-bottom: 16px;
+
+	//---------------------------------
+	// Reply icon/text
+	//---------------------------------
+	.footer-reply-area {
+		width: max-content;
+		background: @button_color;
+		border: 0;
+		border-radius: @button_radius;
+		color: @text_color;
+		font-size: @text_size;
+		font-weight: bold;
+		height: @button_height;
+		line-height: @button_height;
+		padding: 0 10px;
+
+		img.content-mask {
+			background-color: @text_color;
+		}
+
+		&:hover {
+			background-color: @button_hover_color;
+		}
+
+		&:active {
+			background-color: @button_active_color;
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Collapsed message
+//------------------------------------------------------------
+#message-list .message-item-wrap.collapsed {
+	.message-item-white-wrap {
+		box-shadow: @card_shadow !important;
+		background-color: mix(@window_bg_color, @view_fg_color, 98.5%);
+		border: 0;
+
+		&:hover {
+			background-color: mix(@window_bg_color, @view_fg_color, 96%);
+		}
+	}
+
+	.message-item-area {
+		font-size: @text_size;
+
+		.collapsed-from {
+			color: @text_color_dim;
+		}
+
+		.collapsed-timestamp {
+			color: @text_color_dim;
+		}
+
+		.collapsed-snippet {
+			color: @text_color_dim;
+		}
+
+		.collapsed-attachment {
+			background-image: none;
+			-webkit-mask-image: url(../static/images/message-list/icon-attachment-@2x.png);
+			-webkit-mask-repeat: no-repeat;
+			-webkit-mask-size: 15px;
+			-webkit-mask-position: 0px 5px;
+			background-color: @text_color_dim;
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Minified messages
+//------------------------------------------------------------
+#message-list .minified-bundle {
+	.msg-lines {
+		margin-top: 4px;
+		margin-bottom: 20px;
+	}
+
+	.msg-line {
+ 		box-shadow: @card_shadow;
+		background-color: mix(@window_bg_color, @view_fg_color, 98.5%);
+		border: 0;
+		border-radius: @card_radius;
+	}
+
+	.num-messages {
+		// Note: use background color/image for opaque background over minified lines
+		background-color: @window_bg_color;
+		background-image: linear-gradient(@button_color, @button_color);
+		border: 0;
+		border-radius: @button_radius;
+		color: @text_color;
+		font-size: @text_size;
+		font-weight: bold;
+		height: @button_height;
+		line-height: @button_height;
+
+		&:hover {
+			background-image: linear-gradient(@button_hover_color, @button_hover_color);
+		}
+	
+		&:active {
+			background-image: linear-gradient(@button_active_color, @button_active_color);
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Selected messages stack
+//------------------------------------------------------------
+.selected-items-stack .selected-items-stack-content {
+	.stack .card {
+		&:nth-child(2) {
+			transform: translate(5px, 0) !important;
+		}
+
+		&:nth-child(3) {
+			transform: translate(10px, 0) !important;
+		}
+
+		&:nth-child(4) {
+			transform: translate(15px, 0) !important;
+		}
+
+		&:nth-child(5) {
+			transform: translate(20px, 0) !important;
+		}
+
+		svg {
+			stroke: @borders_color;
+			fill: @card_bg_color;	
+		}
+	}
+
+	.count-info {
+		.count {
+			color: @text_color_dim;
+			font-size: 42px;
+			font-weight: 200;
+		}
+
+		.count-message {
+			color: @text_color_dim;
+			font-size: @text_size;
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Unsubscribe link
+//------------------------------------------------------------
+.unsubscribe-action {
+	color: @link_color;
+	font-size: @text_size;
+	width: max-content;
+
+	&:hover {
+		cursor: pointer;
+		color: @link_hover_color;
+	}
+}
+
+//------------------------------------------------------------
+// Quoted text button
+//------------------------------------------------------------
+.quoted-text-control {
+	background: @button_color;
+	border: 0;
+	border-radius: @button_radius;
+	color: @text_color;
+	min-width: @button_height;
+	height: @button_height;
+	line-height: @button_height;
+	font-size: @text_size;
+	text-align: center;
+	margin-top: 32px !important;
+
+	&:hover {
+		background: @button_hover_color;
+		border: 0;
+		color: @text_color;
+		cursor: default;
+	}
+
+	&:active {
+		background: @button_active_color;
+		border: 0;
+		color: @text_color;
+	}
+}
+
+//------------------------------------------------------------
+// Message file attachments
+//------------------------------------------------------------
+.nylas-attachment-item {
+	font-size: @text_size;
+	font-weight: bold;
+
+	.inner {
+		background: transparent;
+		border-radius: @button_radius;
+		color: @text_color;
+	}
+
+	.file-info-wrap,
+	.file-action-icon {
+		background: @button_color;
+		border: 0 !important;
+		height: @button_height;
+		line-height: @button_height;
+
+		&:hover {
+			background-color: @button_hover_color;
+		}
+
+		&:active {
+			background-color: @button_active_color;
+		}
+
+		&:focus {
+			outline: 2px solid @focus_border_color;
+			outline-offset: -2px;	
+		}
+	}
+
+	.file-info-wrap {
+		border-radius: @button_radius 0 0 @button_radius !important;
+		margin-right: -1px;
+
+		.file-name {
+			font-weight: bold;
+		}
+
+		.file-size {
+			color: @text_color;
+		}
+	}
+
+	.file-action-icon {
+		border-radius: 0 @button_radius @button_radius 0 !important;
+
+		img.content-mask {
+			background-color: @text_color;
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Image attachment
+//------------------------------------------------------------
+.nylas-attachment-item.image-attachment-item {
+	&:hover {
+		border: none;
+	}
+
+	//---------------------------------
+	// Download button (covers whole image)
+	//---------------------------------
+	.file-action-icon {
+		right: 0px;
+		top: 0px;
+		width: 100%;
+		height: 100%;
+		border-radius: 0 !important;
+		cursor: pointer;
+
+		img {
+			display: none;
+		}
+	}
+
+	//---------------------------------
+	// Image name overlay
+	//---------------------------------
+	.file-preview .file-name-container {
+		background: @osd_bg_color;
+		border-radius: 150px;
+		left: 8px;
+		top: 8px;
+
+		.file-name {
+			color: @osd_fg_color;
+			font-size: @text_size;
+			font-weight: 600;
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Attachment download controls
+//------------------------------------------------------------
+.download-all {
+	.attachment-number {
+		color: @text_color_dim;
+		font-size: @text_size;
+
+		img.content-mask {
+			background-color: @text_color_dim;
+		}
+	}
+
+	.separator {
+		color: @text_color_dim;
+		font-size: @text_size;
+	}
+
+	.download-all-action {
+		color: @link_color;
+		font-size: @text_size;
+
+		img.content-mask {
+			background-color: @link_color;
+		}
+
+		&:hover {
+			color: @link_hover_color;
+			cursor: pointer;
+
+			img.content-mask {
+				background-color: @link_hover_color;
+			}
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Gmail labels
+//------------------------------------------------------------
+.mail-label {
+	box-shadow: none !important;
+	background: @success_bg_color !important;
+	border-radius: @button_radius;
+	color: @success_fg_color !important;
+	margin-top: 1px;
+	font-weight: 600;
+
+	img.content-mask {
+		background-color: @success_fg_color !important;
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Message warning bar
+//------------------------------------------------------------
+#message-list .show-hidden-messages {
+	background-color: transparent;
+	border: 0;
+	color: @text_color_dim;
+	font-size: @text_size;
+	margin-bottom: 12px;
+	padding: 5px 0;
+
+	a {
+		color: @link_color;
+
+		&:hover {
+			color: @link_hover_color;
+			cursor: pointer;
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Autoload images warning bar
+//------------------------------------------------------------
+.autoload-images-header {
+	border: 0;
+	border-radius: @button_radius;
+	background-color: mix(@warning_bg_color, @card_bg_color, 30%);
+	color: @warning_fg_color;
+	font-size: @text_size;
+	margin-bottom: 16px;
+
+	.option {
+		color: @link_color;
+
+		&:hover {
+			color: @link_hover_color;
+			cursor: pointer;
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Event header (calendar)
+//------------------------------------------------------------
+.event-wrapper {
+	font-size: @text_size;
+	border: 1px solid @borders_color;
+	border-radius: @card_radius;
+
+	.event-header {
+		border-bottom: 1px solid @borders_color;
+		padding: 6px 10px;
+
+		.event-title-text {
+			color: @text_color;
+			font-weight: bold;
+			line-height: @button_height;
+		}
+
+		.event-title {
+			color: @text_color
+		}
+
+		.event-download {
+			background: @button_color;
+			border: 0;
+			border-radius: @button_radius;
+			color: @text_color;
+			font-size: @text_size;
+			font-weight: bold;
+			width: @button_height;
+			height: @button_height;
+			line-height: @button_height;
+			text-align: center;
+
+			img.content-mask {
+				background: @text_color;
+			}
+
+			&:hover {
+				background-color: @button_hover_color;
+			}
+
+			&:active {
+				background-color: @button_active_color;
+			}
+		}
+	}
+
+	.event-body {
+		color: @text_color;
+
+		.event-date {
+			.event-day {
+				font-size: @text_size;
+				color: @success_color;
+			}
+
+			.event-time {
+				color: @success_color;
+				font-weight: normal;
+			}
+		}
+
+		.event-actions .btn-rsvp {
+			&:hover {
+				background: @button_hover_color;
+			}
+
+			&:active {
+				background: @button_active_color;
+			}
+		}
+	}
+}

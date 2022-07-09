@@ -1,0 +1,562 @@
+@import "main.less";
+
+//------------------------------------------------------------
+// Draft message (edit mode) body
+//------------------------------------------------------------
+#message-list .message-item-wrap .message-item-white-wrap.composer-outer-wrap {
+	background: @card_bg_color;
+	border: 0;
+	box-shadow: @card_shadow !important;
+
+	.composer-content-wrap {
+		border: 0;
+		border-radius: @card_radius @card_radius 0 0;
+		box-shadow: none;
+	}
+
+	.composer-action-bar-wrap {
+		background-color: @window_bg_color;
+		box-shadow: none;
+		border: 0;
+		border-top: 1px solid @borders_color;
+		border-radius: 0 0 @card_radius @card_radius;
+	}
+
+	&.focused {
+		background: @card_bg_color;
+		outline: 2px solid @focus_border_color;
+
+		.composer-action-bar-wrap {
+			background-color: @window_bg_color;
+		}
+	}
+}
+
+//---------------------------------
+// New message
+//---------------------------------
+.composer-full-window .composer-inner-wrap .composer-action-bar-wrap {
+	background-color: @window_bg_color;
+	box-shadow: none;
+	border-top: 1px solid @borders_color;
+}
+
+//------------------------------------------------------------
+// Draft message footer buttons
+//------------------------------------------------------------
+.composer-inner-wrap .composer-action-bar-wrap {
+	.composer-action-bar-content {
+		padding: 9px 12px;
+	}
+
+	.btn.btn-toolbar {
+		box-shadow: none;
+		background: @button_color !important;
+		border: 0;
+		border-radius: @button_radius;
+		color: @text_color;
+		font-weight: bold;
+		height: @button_height;
+		line-height: @button_height;
+		min-width: @button_height;
+		padding: 0 6px !important;
+		margin: 0 4px !important;
+
+		img.content-mask {
+			background-color: @text_color !important;
+		}
+
+		&:hover {
+			background-color: @button_hover_color !important;
+		}
+
+		&:active,
+		&.btn-enabled {
+			background-color: @button_active_color !important;
+		}
+	}
+
+	//---------------------------------
+	// Send button
+	//---------------------------------
+	.btn-send {
+		.primary-item,
+		.secondary-picker {
+			box-shadow: none;
+			background: @accent_bg_color;
+			border: 0;
+			color: @accent_fg_color;
+			font-weight: bold;
+			height: @button_height;
+			line-height: @button_height;
+			padding: 0 6px;
+
+			img.content-mask {
+				background-color: @accent_fg_color;
+			}
+		}
+
+		.primary-item {
+			border-radius: @button_radius 0 0 @button_radius;
+			margin-left: 4px;
+		}
+
+		.secondary-picker {
+			border-radius: 0 @button_radius @button_radius 0;
+			margin-right: 4px;
+
+			img.content-mask {
+				margin-top: -2px;
+			}
+		}
+
+		.primary-item:hover,
+		.secondary-picker:hover {
+			background-image: @button_default_hover_color;
+		}
+
+		.primary-item:active,
+		.secondary-picker:active {
+			background-image: @button_default_active_color;
+		}
+	}
+}
+
+//---------------------------------
+// New message
+//---------------------------------
+.composer-full-window .composer-inner-wrap {
+	.composer-action-bar-content {
+		padding: 9px 12px;
+	}
+}
+
+//------------------------------------------------------------
+// Draft message (edit mode) header labels
+//------------------------------------------------------------
+.tokenizing-field .tokenizing-field-label {
+	color: @text_color;
+	font-size: @text_size;
+	font-weight: 600;
+	margin-top: 1px;
+}
+
+.composer-inner-wrap .composer-field-label {
+	color: @text_color;
+	font-size: @text_size;
+	font-weight: 600;
+}
+
+.composer-participant-field {
+	color: @text_color;
+	font-size: @text_size;
+}
+
+//------------------------------------------------------------
+// Draft message (edit mode) header horizontal lines
+//------------------------------------------------------------
+.composer-participant-field:after {
+	background: @borders_color;
+}
+
+//------------------------------------------------------------
+// Draft message (edit mode) recipient tokens
+//------------------------------------------------------------
+.tokenizing-field {
+	.header-container {
+		background: transparent;
+		border: none;
+	}
+
+	.token {
+		box-shadow: none;
+		background: @button_color;
+		border: 0;
+		border-radius: @button_radius;
+		color: @text_color;
+		height: @button_height;
+		line-height: @button_height;
+		margin: -2px 5px 5px 1px;
+
+		.participant .participant-primary {
+			font-weight: bold;
+		}
+
+		.action img {
+			background-color: @text_color;
+		}
+
+		&:hover {
+			box-shadow: none;
+			background: @button_hover_color;
+		}
+
+		&.selected,
+		&.dragging {
+			box-shadow: none;
+			background: @button_checked_color;
+			border: 0;
+			border-radius: @button_radius;
+			color: @text_color;
+			margin: -2px 5px 5px 1px;
+
+			.action img {
+				background-color: @text_color;
+			}
+
+			&:hover {
+				background: @button_checked_hover_color;
+			}
+		}
+
+		body.is-blurred &:not(.invalid) {
+			background: @button_color;
+			color: @text_color;
+
+			&:hover {
+				background: @button_hover_color;
+			}
+		}
+
+		&.invalid {
+			background-color: @button_color;
+			color: @error_color;
+			border-bottom: 2px solid @error_bg_color;
+			margin-bottom: 5px;
+
+			&:hover {
+				box-shadow: none;
+				background-color: @button_hover_color;
+			}
+
+			&.selected,
+			&.dragging {
+				box-shadow: none;
+				background: @button_checked_color;
+				border: 0;
+				border-bottom: 2px solid @error_bg_color;
+
+				&:hover {
+					background: @button_checked_hover_color;
+				}
+			}
+		}
+	}
+
+	.tokenizing-field-input input {
+		margin-top: -2px;
+		margin-bottom: 5px;
+		border-radius: 0;
+
+		&:focus {
+			border: none;
+			outline: none;
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Draft message (edit mode) header actions (cc etc.)
+//------------------------------------------------------------
+.composer-inner-wrap .composer-header-actions {
+	.action {
+		color: @link_color;
+		font-size: @text_size;
+
+		img.content-mask {
+			background-color: @link_color;
+		}
+
+		&:hover {
+			color: @link_hover_color;
+			cursor: pointer;
+
+			img.content-mask {
+				background-color: @link_hover_color;
+			}
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Draft message (edit mode) from dropdown button (new message)
+//------------------------------------------------------------
+.composer-participant-field .button-dropdown ,
+.composer-participant-field .button-dropdown {
+	padding-top: 6px;
+
+	.primary-item,
+	.only-item {
+		box-shadow: none;
+		background: @button_color;
+		border: 0;
+		border-radius: @button_radius !important;
+		color: @text_color;
+		font-size: @text_size;
+		font-weight: bold;
+		height: @button_height;
+		line-height: @button_height;
+	
+		img.content-mask {
+			background-color: @text_color;
+		}
+	
+		&:hover {
+			background: @button_hover_color;
+		}
+	
+		&:active {
+			background: @button_active_color;
+		}
+	
+	}
+}
+
+//------------------------------------------------------------
+// Draft message (edit mode) subject (new message)
+//------------------------------------------------------------
+.composer-inner-wrap .composer-subject {
+	input {
+		margin: 3px 0 6px;
+
+		&::placeholder {
+			color: @text_color_dim;
+		}
+
+		&:focus {
+			border: none;
+			outline: none;
+		}
+	}
+
+	&:after {
+		background: @borders_color;
+	}
+}
+
+//------------------------------------------------------------
+// Draft message (edit mode) signature button
+//------------------------------------------------------------
+.message-item-white-wrap.composer-outer-wrap,
+.composer-full-window .message-item-white-wrap.composer-outer-wrap {
+	.composer-participant-field .dropdown-component .signature-button-dropdown {
+		.button-dropdown {
+			padding-top: 6px;
+
+			.only-item {
+				background: @button_color;
+				border: 0;
+				border-radius: @button_radius;
+				height: @button_height;
+				line-height: @button_height;
+				font-size: @text_size;
+				padding-right: 8px;
+	
+				img.signature-button {
+					background-color: @text_color;
+				}
+	
+				&:hover {
+					background: @button_hover_color;
+				}
+	
+				&:active {
+					background: @button_active_color;
+				}
+			}
+			
+			&.open {
+				.only-item {
+					background: @button_checked_color;
+	
+					img.signature-button {
+						background-color: @text_color;
+					}
+	
+					&:hover {
+						background-color: @button_checked_hover_color;
+					}	
+				}
+			}
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Draft message (edit mode) rich edit toolbar
+//------------------------------------------------------------
+.RichEditor-toolbar {
+	margin-bottom: 8px;
+	
+	.inner {
+		background: @card_bg_color !important;
+	}
+
+	.floating-container {
+		border: 0;
+	}
+
+	//---------------------------------
+	// Buttons
+	//---------------------------------
+	button:not(.with-select) {
+		background: @button_color;
+		border-radius: @button_radius;
+		min-width: @button_height;
+		max-width: @button_height;
+		height: @button_height;
+		line-height: @button_height;
+		color: @text_color;
+		font-size: @text_size;
+		font-weight: bold;
+		margin: 8px 4px 0px;
+		padding: 0;
+		cursor: auto;
+
+		&:hover {
+			background-color: @button_hover_color;
+			color: @text_color;
+		}
+
+		&.active {
+			background-color: @button_checked_color;
+			color: @text_color;
+
+			&:hover {
+				background-color: @button_checked_hover_color;
+			}
+		}
+	}
+
+	.link-picker {
+		margin-left: -4px;
+		margin-right: 7px;
+	}
+
+	//---------------------------------
+	// Selects
+	//---------------------------------
+	button.with-select {
+		max-width: 120px;
+		color: @text_color;
+		padding: 0 !important;
+		cursor: auto;
+
+		select {
+			background: @button_color;
+			border: 0;
+			height: @button_height;
+			line-height: @button_height;
+			font-size: @text_size;
+			font-weight: bold;
+			margin: 8px 4px 0px;
+
+			&:hover,
+			&:focus {
+				background: @button_hover_color;
+			}
+
+			&:active {
+				background: @button_checked_color;
+
+				&:hover {
+					background: @button_checked_hover_color;
+				}
+			}
+		}
+
+		.fa {
+			font-size: @text_size;
+			font-weight: normal;
+			padding-left: 6px;
+			padding-right: 3px;
+		}
+	}
+
+	//---------------------------------
+	// Dividers
+	//---------------------------------
+	.divider {
+		border: 0;
+	}
+}
+
+//------------------------------------------------------------
+// Draft message (edit mode) body text
+//------------------------------------------------------------
+.RichEditor-root .RichEditor-content {
+	color: @text_color;
+	font-size: @text_size;
+}
+
+//------------------------------------------------------------
+// Draft message (edit mode) signature
+//------------------------------------------------------------
+.RichEditor-root .uneditable {
+	.uneditable-remove {
+		background-color: @button_color;
+		border-radius: 50%;
+		width: 21px;
+		height: 21px;
+		line-height: 21px;
+		text-align: center;
+		align-items: center;
+
+		img {
+			display: none;
+		}
+	
+		&:before {
+			content: 'x';
+			color: @text_color;
+			font-size: @text_size;
+			font-weight: bold;
+		}
+	
+		&:hover {
+			background-color: @button_hover_color;
+		}
+
+		&:active {
+			background-color: @button_active_color;
+		}
+	}
+
+	&:hover {
+		border-color: transparent;
+	}
+
+	&.custom-block.focused {
+		border-color: transparent;
+	}
+}
+
+//------------------------------------------------------------
+// Draft message (edit mode) remove quoted text button
+//------------------------------------------------------------
+.composer-inner-wrap .compose-body .quoted-text-control .remove-quoted-text {
+	background: transparent;
+	border: 0;
+	height: 16px;
+	line-height: 16px;
+	width: 16px;
+	top: 0;
+	right: 0px;
+	cursor: default;
+	opacity: 0.7;
+
+	img {
+		display: none;
+	}
+
+	&:before {
+		content: 'x';
+		color: @text_color;
+		font-size: @text_size;
+		font-weight: bold;
+	}
+
+	&:hover {
+		opacity: 1;
+	}
+}

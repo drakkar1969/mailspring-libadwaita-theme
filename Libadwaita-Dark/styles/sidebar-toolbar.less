@@ -1,0 +1,50 @@
+@import "main.less";
+
+//------------------------------------------------------------
+// Sidebar toolbar
+//------------------------------------------------------------
+.toolbar-RootSidebar {
+	height: 100%;
+	background-color: @window_bg_color;
+	border-right: 1px solid @borders_color;
+
+	//---------------------------------
+	// New email button
+	//---------------------------------
+	.item-compose {
+		background: none;
+		box-shadow: none;
+		border: 0;
+		border-radius: @button_radius;
+		padding: 0;
+		width: @button_height;
+		height: @button_height;
+
+		img.content-mask {
+			background-color: @text_color;
+		}
+
+		&:hover {
+			background-color: @view_hover_color;
+		}
+
+		&:active {
+			background-color: @view_active_color;
+
+			img.content-mask {
+				background-color: @text_color;
+			}
+		}
+
+		//---------------------------------
+		// New email button - inactive window
+		//---------------------------------
+		body.is-blurred & {
+			opacity: @disabled_opacity;
+
+			&:hover {
+				background-color: @view_hover_color;
+			}
+		}
+	}
+}

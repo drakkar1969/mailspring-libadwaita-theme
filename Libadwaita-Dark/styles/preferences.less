@@ -1,0 +1,1112 @@
+@import "main.less";
+
+//------------------------------------------------------------
+// Toolbar
+//------------------------------------------------------------
+body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
+	background: @window_bg_color;
+	border-bottom: 1px solid @borders_color;
+}
+
+//------------------------------------------------------------
+// Back button
+//------------------------------------------------------------
+.sheet-toolbar .item-back {
+	box-shadow: none;
+	background: transparent;
+	border: 0;
+	border-radius: @button_radius;
+	height: @button_height;
+	line-height: @button_height;
+	padding-right: 0.8em;
+	margin-left: 10px;
+	margin-top: 5px;
+
+	img.content-mask {
+		zoom: 0.4 !important;
+		background-color: @text_color;
+		margin-bottom: 4px;
+	}
+
+	.item-back-title {
+		color: @text_color;
+		font-size: @text_size;
+		font-weight: bold;
+	}
+
+	&:hover {
+		background-color: @view_hover_color;
+	}
+
+	&:active {
+		background-color: @view_active_color;
+
+		img.content-mask {
+			background-color: @text_color;
+		}
+	
+		.item-back-title {
+			color: @text_color;
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Tab control
+//------------------------------------------------------------
+.preferences-wrap .container-preference-tabs {
+	background-color: @window_bg_color;
+	border-color: @borders_color;
+
+	.preferences-tabs {
+		background-color: @headerbar_bg_color;
+		padding-top: 0;
+
+		body.is-blurred & {
+			background-color: @window_bg_color;
+		}
+
+		div:first-child {
+			border-right: 1px solid @borders_color;
+		}
+
+		.item {
+			box-shadow: none;
+			background-color: @tab_color;
+			border: 0;
+			border-right: 1px solid @borders_color;
+			border-radius: 0;
+			padding-top: 0px;
+
+			.tab-icon {
+				display: none;
+			}
+
+			.name {
+				padding: 15px;
+				font-size: @text_size;
+				font-weight: normal;
+				color: @text_color;
+			}
+
+			&:hover {
+				background-image: @tab_hover_color;
+			}
+
+			&.active {
+				box-shadow: none;
+				background: transparent;
+				border-radius: 0;
+
+				&:hover {
+					background-image: @tab_hover_color;
+				}
+			}
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Preferences body common settings
+//------------------------------------------------------------
+.preferences-wrap {
+	color: @text_color;
+	font-size: @text_size;
+
+	.preferences-content {
+		background-color: @window_bg_color;
+	}
+
+	//---------------------------------
+	// Section headers
+	//---------------------------------
+	h6 {
+		font-size: @text_size;
+		font-weight: bold;
+		color: @text_color;
+		margin-bottom: 10px;
+	}
+
+	.container-keymaps .shortcut-section-title,
+	.account-section-title {
+		font-size: @text_size;
+		font-weight: bold;
+		color: @text_color;
+		border-bottom: 0;
+		margin-bottom: 10px;
+	}
+
+	//---------------------------------
+	// Checkboxes / radio buttons
+	//---------------------------------
+	input[type='checkbox'],
+	input[type='radio'] {
+		-webkit-appearance: none;
+		box-shadow: @check_shadow;
+		background-color: transparent;
+		background-image: none;
+		background-size: 20px 20px;
+		border: 0;
+		width: 20px;
+		height: 20px;
+		padding: 3px;
+
+		&:hover {
+			box-shadow: @check_hover_shadow;
+		}
+	
+		&:active {
+			box-shadow: none;
+			background-color: @check_active_color;
+		}
+
+		&:checked {
+			box-shadow: none;
+			background-color: @accent_bg_color;
+			background-image: none;
+
+			&:hover {
+				background-image: @check_selected_hover_color;
+			}
+	
+			&:active {
+				background-image: @check_selected_active_color;
+			}
+		}
+	}
+
+	input[type='checkbox'] {
+		top: 4px;
+		border-radius: @button_radius;
+		
+		&:checked {
+			content: url(mailspring://Libadwaita/styles/assets/check-symbolic.png);
+		}
+	}
+
+	input[type='radio'] {
+		border-radius: 50%;
+		
+		&:checked {
+			content: url(mailspring://Libadwaita/styles/assets/radio-symbolic.png);
+		}
+	}
+
+	//---------------------------------
+	// Gray text
+	//---------------------------------
+	p {
+		color: @text_color_dim;
+		font-size: @text_size;
+	}
+
+	//---------------------------------
+	// Warning bar
+	//---------------------------------
+	.platform-note {
+		background-color: transparent;
+		border: 0;
+		color: @text_color_dim;
+		font-size: @text_size;
+		padding: 6px 0;
+
+		&::before {
+			color: @text_color_dim;
+			font-size: @text_size;
+			font-weight: 600;
+		}
+	}
+
+	//---------------------------------
+	// Labels (top left Shortcuts/Mail rules)
+	//---------------------------------
+	.preferences-content .container-dropdown {
+		margin: 5px 0 10px;
+
+		div:first-child {
+			line-height: @button_height;
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Preferences Nylas editable list
+//------------------------------------------------------------
+.nylas-editable-list {
+	.items-wrapper {
+		background-color: @card_bg_color;
+		border-color: @borders_color;
+		border-radius: @button_radius @button_radius 0 0;
+		color: @text_color;
+		font-size: @text_size;
+
+		//---------------------------------
+		// Items
+		//---------------------------------
+		.editable-item {
+			background-color: @card_bg_color;
+			border-color: @borders_color;
+			border-radius: 0;
+			min-height: 38px;
+			display: flex;
+			align-items: center;
+			padding-top: 0;
+			padding-bottom: 0;
+
+			&:first-child {
+				border-radius: @button_radius @button_radius 0 0;
+			}
+
+			&:hover {
+				background-color: @view_hover_color;
+			}
+
+			&.selected {
+				background-color: @view_selected_color;
+				color: @text_color;
+
+				&:hover {
+					background-color: @view_selected_hover_color;
+				}
+			}
+
+			&.selected.with-edit-icon img.edit-icon {
+				background-color: @text_color;
+			}
+
+			&.editing {
+				outline: 2px solid @focus_border_color;
+				outline-offset: -2px;
+
+				input {
+					background-color: transparent;
+					color: @text_color;
+					font-size: @text_size;
+					outline: none;
+					margin-top: -2px;
+				}
+			}
+		}
+
+		//---------------------------------
+		// Selected item
+		//---------------------------------
+		.selected {
+			background-color: @view_selected_color;
+			border-radius: 0;
+			color: @text_color;
+
+			&:first-child {
+				border-radius: @button_radius @button_radius 0 0;
+			}
+
+			&:hover {
+				background-color: @view_selected_hover_color;
+			}
+		}
+
+		//---------------------------------
+		// New item (edit box)
+		//---------------------------------
+		.create-item-input {
+			min-height: 38px;
+			display: flex;
+			align-items: center;
+			border-radius: 0;
+			outline: 2px solid @focus_border_color;
+			outline-offset: -2px;
+
+			&:first-child {
+				border-radius: @button_radius @button_radius 0 0;
+			}
+
+			& > input {
+				background-color: transparent;
+				border: 0;
+				color: @text_color;
+				font-size: @text_size;
+				outline: none;
+
+				&::placeholder {
+					color: @text_color_dim;
+					font-style: normal;
+				}
+			}
+		}
+	}
+
+	//---------------------------------
+	// Footer area/buttons
+	//---------------------------------
+	.buttons-wrapper {
+		background-color: @window_bg_color;
+		border-color: @borders_color;
+		border-radius: 0 0 @button_radius @button_radius;
+
+		.btn-editable-list {
+			background-color: @button_color;
+			border-right: 0;
+			border-radius: @button_radius;
+			color: @text_color;
+			font-size: @text_size;
+			font-weight: bold;
+			width: @button_height;
+			height: @button_height;
+			line-height: @button_height;
+			margin: 6px 0 6px 6px;
+
+			&.btn-disabled,
+			&.btn-disabled:active {
+				opacity: @disabled_opacity;
+				background-color: @button_color;
+				color: @text_color;
+			}
+
+			&:hover:not(.btn-disabled) {
+				background-color: @button_hover_color;
+			}
+
+			&:active:not(.btn-disabled) {
+				box-shadow: none;
+				background-color: @button_active_color;
+			}
+		}
+	}
+
+	//---------------------------------
+	// Selected item (when focused)
+	//---------------------------------
+	&:focus .items-wrapper .selected {
+		background-color: @view_selected_color;
+		color: @text_color;
+
+		&:hover {
+			background-color: @view_selected_hover_color;
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Preferences: General tab
+//------------------------------------------------------------
+.preferences-wrap .container-general {
+	max-width: 900px;
+
+	.two-columns-flexbox {
+		& > div:first-child,
+		& > div:last-child {
+			box-shadow: @card_shadow;
+			background-color: @card_bg_color;
+			border-radius: @card_radius;
+			padding: 24px;
+		}
+	}
+
+	//---------------------------------
+	// Headers
+	//---------------------------------
+	h6 {
+		margin-top: 0 !important;
+	}
+
+	//---------------------------------
+	// Local data buttons (bottom of page)
+	//---------------------------------
+	.local-data {
+		box-shadow: @card_shadow;
+		background-color: @card_bg_color;
+		border-radius: @card_radius;
+		margin-top: 30px;
+		padding: 24px;
+
+		.btn {
+			border: 0;
+			border-radius: @button_radius;
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Preferences: Accounts tab
+//------------------------------------------------------------
+.preferences-wrap .container-accounts .accounts-content {
+	//---------------------------------
+	// Left pane items
+	//---------------------------------
+	.account-list {
+		.items-wrapper {
+			background-color: @window_bg_color;
+			border-width: 0 1px 0 0;
+			border-radius: 0;
+	
+			.scroll-region-content-inner {
+				margin-right: 30px;
+			}
+		}
+
+		.list-item {
+			border-radius: @button_radius;
+			margin-top: 12px;
+			margin-bottom: 12px;
+	
+			&:hover:not(.selected) {
+				background-color: @view_hover_color;
+			}
+		}
+
+		.account {
+			border-bottom: 0;
+		}
+
+		.account-name {
+			font-size: @text_size;
+			font-weight: 600;
+		}
+
+		.account-subtext {
+			font-size: @text_size;
+		}
+
+		.buttons-wrapper {
+			border-width: 0 1px 0 0;
+			border-radius: 0;
+		}
+
+		.btn-editable-list {
+			font-size: @text_size;
+			width: @button_height;
+			height: @button_height;
+			line-height: @button_height;
+		}
+	}
+
+	//---------------------------------
+	// Right pane
+	//---------------------------------
+	.account-details {
+		box-shadow: @card_shadow;
+		background-color: @card_bg_color;
+		border: 0;
+		border-radius: @card_radius;
+		width: 460px;
+		margin-left: 30px;
+		padding: 24px;
+
+		& > input {
+			font-size: @text_size;
+		}
+
+		select {
+			margin-right: 6px;
+		}
+
+		.default-alias-selector > select {
+			font-size: @text_size;
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Preferences: Subscription tab
+//------------------------------------------------------------
+.container-identity {
+	.identity-content-box {
+		color: @text_color_dim;
+
+	//---------------------------------
+	// Button
+	//---------------------------------
+	.btn-emphasis {
+			width: 200px;
+			background: none;
+			background-color: @accent_bg_color;
+			color: @accent_fg_color;
+
+			&::before {
+				display:none
+			}	
+
+			&:hover {
+				background-image: @button_default_hover_color;
+			}
+	
+			&:active {
+				background-image: @button_default_active_color;
+			}
+		}
+
+		//---------------------------------
+		// Horizontal line
+		//---------------------------------
+		.padded:last-child {
+			border-top: 1px solid @borders_color;
+		}
+	}
+
+	//---------------------------------
+	// Feature title
+	//---------------------------------
+	.feature-explore-title {
+		color: @text_color;
+		font-size: @text_size;
+		font-weight: bold;
+		margin-top: 16px;
+		margin-bottom: 16px;
+	}
+
+	//---------------------------------
+	// Feature grid
+	//---------------------------------
+	.feature-explore-grid .feature {
+		box-shadow: @card_shadow;
+		background-color: @card_bg_color;
+		border: 0;
+		border-radius: @card_radius;
+		padding: 24px;
+
+		&:hover {
+			box-shadow: @card_shadow;
+			background-color: @view_hover_color;
+			transform: translate(0, 0);
+			cursor: pointer;
+		}
+
+		&:active {
+			background-color: @view_active_color;
+		}
+
+		.popout {
+			img {
+				-webkit-mask-repeat: no-repeat;
+				-webkit-mask-size: 12px;
+				-webkit-mask-image: url(../static/images/message-list/thread-popout@1x.png);
+				background-color: @text_color;
+				width: 12px;
+				height: 12px;
+				padding-top: 12px;
+			}
+		}
+
+		h3 {
+			color: @text_color;
+			font-size: @text_size;
+			font-weight: bold;
+		}
+
+		p {
+			color: @text_color;
+			font-size: @text_size;
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Preferences: Appearance tab
+//------------------------------------------------------------
+.preferences-wrap .container-appearance {
+	section {
+		box-shadow: @card_shadow;
+		background-color: @card_bg_color;
+		border-radius: @card_radius;
+		padding: 24px;
+		margin-bottom: 30px;
+	}
+
+	//---------------------------------
+	// Headers
+	//---------------------------------
+	h6 {
+		margin-top: 0 !important;
+	}
+
+	//---------------------------------
+	// Layout selection buttons
+	//---------------------------------
+	.appearance-mode-switch .appearance-mode {
+		background-color: @card_bg_color;
+		border: 0;
+		border-radius: @button_radius;
+		color: @text_color;
+		font-size: @text_size;
+		margin-bottom: 16px;
+		padding: 12px 12px 9px;
+
+		img.content-mask {
+			background-color: @text_color;
+		}
+
+		& > div {
+			margin-top: 8px;
+		}
+
+		&.active {
+			border: 0;
+			color: @text_color;
+			box-shadow: 0 0 0 3px @accent_color;
+		}
+	}
+
+	//---------------------------------
+	// Scale slider
+	//---------------------------------
+	.appearance-scale-slider {
+		.ruler {
+			.midpoint {
+				border-right: 1px solid @borders_color;
+			}
+
+			img {
+				background-image: none;
+				-webkit-mask-repeat: no-repeat;
+				-webkit-mask-size: 48px;
+				background-color: @text_color;
+				width: 48px;
+				height: 48px;
+				padding-top: 48px;
+			}
+
+			img[alt='appearance-scale-small.png'] {
+				-webkit-mask-image: url(../static/images/preferences/appearance/appearance-scale-small@2x.png);
+			}
+
+			img[alt='appearance-scale-big.png'] {
+				-webkit-mask-image: url(../static/images/preferences/appearance/appearance-scale-big@2x.png);
+			}
+		}
+
+		input[type='range'] {
+			-webkit-appearance: none;
+			background: transparent;
+
+			&::-webkit-slider-runnable-track {
+				background-color: @accent_bg_color;
+				border-radius: 10px;
+				height: 4px;
+			}
+
+			&::-webkit-slider-thumb {
+				-webkit-appearance: none;
+				width: 20px;
+				height: 20px;
+				background: @slider_color;
+				border: 0;
+				border-radius: 50%;
+				box-shadow: @slider_shadow;
+				outline: @slider_outline;
+				margin-top: -8px;
+				margin-bottom: -8px;
+
+				&:hover {
+					background-color: @slider_hover_color
+				}
+			}
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Preferences: Shortcuts tab
+//------------------------------------------------------------
+.preferences-wrap .container-keymaps {
+	max-width: 900px;
+
+	.two-columns-flexbox section {
+		box-shadow: @card_shadow;
+		background-color: @card_bg_color;
+		border-radius: @card_radius;
+		padding: 24px;
+		margin-bottom: 30px;
+	}
+
+	section:last-child {
+		box-shadow: @card_shadow;
+		background-color: @card_bg_color;
+		border-radius: @card_radius;
+		padding: 24px;
+		margin-bottom: 30px;
+	}
+
+	//---------------------------------
+	// Headers
+	//---------------------------------
+	.shortcut-section-title {
+		margin-top: 0;
+	}
+
+	//---------------------------------
+	// Shortcut items
+	//---------------------------------
+	.shortcut {
+		color: @text_color;
+
+		.col-left {
+			line-height: @button_height;
+		}
+
+		.col-right {
+			max-width: 130px;
+		}
+
+		.values {
+			border: 0;
+			border-radius: @button_radius;
+			color: @text_color;
+			font-family: 'Ubuntu', 'Cantarell', 'Nylas-Pro', 'Helvetica', sans-serif;
+			font-weight: normal;
+			height: @button_height;
+			line-height: @button_height;
+		}
+
+		&:hover {
+			.values {
+				background: @button_color;
+				border-radius: @button_radius;
+				outline: 0;
+			}
+		}
+
+		&.editing {
+			.values {
+				background: @button_color;
+				border-radius: @button_radius;
+				color: @text_color;
+				outline: 2px solid @focus_border_color;
+				outline-offset: -2px;
+			}
+		}
+	}
+
+	//---------------------------------
+	// Large title (bottom of page)
+	//---------------------------------
+	h2 {
+		color: @text_color;
+		font-size: @text_size;
+		font-weight: bold;
+		margin-top: 0;
+	}
+}
+
+//------------------------------------------------------------
+// Preferences: Mail Rules tab
+//------------------------------------------------------------
+.container-mail-rules {
+	max-width: 1000px;
+
+	//---------------------------------
+	// Empty pane
+	//---------------------------------
+	.empty-list {
+		background-color: @window_bg_color;
+		border: 0;
+
+		h2 {
+			color: @text_color_dim;
+		}
+
+		.icon-mail-rules {
+			background-image: none;
+			-webkit-mask-repeat: no-repeat;
+			-webkit-mask-image: url(../static/images/preferences/mail-rules/rules-big@2x.png);
+			background-color: @text_color_dim;
+			zoom: 0.5 !important;
+			width: 330px;
+			height: 330px;
+		}
+	}
+
+	//---------------------------------
+	// Rules
+	//---------------------------------
+	.rule-list {
+		margin-top: 16px;
+	}
+
+	.rule-detail {
+		background-color: @window_bg_color;
+		border: 0;
+		margin-left: 14px;
+
+		.scroll-region-content-inner {
+			box-shadow: @card_shadow;
+			background-color: @card_bg_color;
+			border: 0;
+			border-radius: @card_radius;
+			margin: 16px;
+			padding: 24px;
+		}
+
+		.inner {
+			padding: 0;
+
+			& > select {
+				margin: 0 6px;
+			}
+		}
+
+		.well {
+			background-color: @card_bg_color;
+			border: 0;
+
+			.well-row {
+				border-color: @borders_color;
+			}
+
+			.well-row .actions .btn {
+				margin-top: 6px;
+			}
+		}
+
+	}
+}
+
+//------------------------------------------------------------
+// Preferences: Folders tab
+//------------------------------------------------------------
+.preferences-wrap .category-mapper-container {
+	& > div {
+		box-shadow: @card_shadow;
+		background-color: @card_bg_color;
+		border-radius: @card_radius;
+		margin-top: 30px;
+		padding: 24px;
+	}
+
+	//---------------------------------
+	// Headers
+	//---------------------------------
+	h6 {
+		margin-top: 0;
+	}
+
+	.account-section-title {
+		margin-top: 0;
+	}
+
+	//---------------------------------
+	// Labels
+	//---------------------------------
+	.role-section .col-left {
+		color: @text_color;
+		font-size: @text_size;
+		line-height: @button_height;
+	}
+
+	//---------------------------------
+	// Dropdowns
+	//---------------------------------
+	.role-section .col-right {
+		margin-bottom: 8px;
+	}
+	
+	.category-picker-dropdown {
+		.btn {
+			.category-item {
+				font-size: @text_size;
+				font-weight: bold;
+
+				img.content-mask {
+					background-color: @text_color;
+				}
+
+				& + img {
+					width: 10px;
+					height: 6px;
+					background-image: none;
+					-webkit-mask-repeat: no-repeat;
+					-webkit-mask-image: url(../static/images/dropdown-menu/dropdown-chevron@2x.png);
+					-webkit-mask-size: 10px 6px;
+					-webkit-mask-position: 0px 0px;
+					background-color: @text_color;
+				}
+			}
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Preferences: Signatures tab
+//------------------------------------------------------------
+.preferences-signatures-container .signature-wrap {
+	//---------------------------------
+	// Account select
+	//---------------------------------
+	.account-picker {
+		color: @text_color;
+	}
+
+	.button-dropdown .primary-item, .button-dropdown .only-item {
+		box-shadow: none;
+		background: @button_color;
+		border: 0;
+		border-radius: @button_radius;
+		color: @text_color;
+		font-size: @text_size;
+		font-weight: bold;
+		height: @button_height;
+		line-height: @button_height;
+		margin-left: 6px;
+
+		img.content-mask {
+			background-color: @text_color;
+		}
+
+		&:hover {
+			background: @button_hover_color;
+		}
+
+		&:active {
+			background: @button_active_color;
+		}
+	}
+
+	//---------------------------------
+	// Headers
+	//---------------------------------
+	.section-header {
+		font-weight: bold;
+		margin-left: 16px;
+	}
+
+	.section {
+		border: 0;
+		margin: 16px;
+
+		&.basic-info {
+			margin-top: 0;
+		}
+
+		//---------------------------------
+		// Preview pane
+		//---------------------------------
+		&.preview {
+			background: @card_bg_color;
+			box-shadow: @card_shadow;
+			border-radius: @card_radius;
+			padding: 24px;
+
+			.label {
+				color: @text_color_dim;
+				font-size: @text_size;
+			}
+
+			span, strong {
+				color: @text_color;
+				font-size: @text_size;
+			}
+
+			a {
+				color: @link_color;
+				font-size: @text_size;
+			}
+		}
+
+		//---------------------------------
+		// Information pane
+		//---------------------------------
+		&.information {
+			background: @card_bg_color;
+			box-shadow: @card_shadow;
+			border-radius: @card_radius;
+			padding: 24px;
+
+			.field {
+				margin-bottom: 12px;
+				padding: 0 12px;
+
+				label {
+					color: @text_color;
+				}
+	
+				&.photo-picker {
+					margin-bottom: 0;
+
+					input[id="photoURL"] {
+						margin-top: 8px;
+					}
+				}
+			}
+		}
+	}
+
+	//---------------------------------
+	// Signature template buttons
+	//---------------------------------
+	.signature-template-picker {
+		background: @window_bg_color;
+
+		.option {
+			background: @card_bg_color;
+			border: 1px solid @borders_color;
+			border-radius: @button_radius;
+			margin-right: 4px;
+
+			&.active {
+				box-shadow: 0 0 0 2px @accent_color;
+				border: 0;
+			}
+		}
+	}
+
+	//---------------------------------
+	// Raw HTML editor
+	//---------------------------------
+	textarea.raw-html {
+		background: @card_bg_color;
+		border: 0;
+		border-radius: @card_radius;
+		box-shadow: @card_shadow;
+		font-family: 'Ubuntu', 'Cantarell', 'Nylas-Pro', 'Helvetica', sans-serif;
+		font-size: @text_size;
+		width: auto;
+	
+		&:focus {
+			outline: 2px solid @focus_border_color;
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Preferences: Templates tab
+//------------------------------------------------------------
+.preferences-templates-container {
+	//---------------------------------
+	// Links
+	//---------------------------------
+	a {
+		color: @link_color;
+		font-size: @text_size !important;
+		text-decoration: underline;
+
+		&:hover {
+			color: @link_hover_color;
+			cursor: pointer;
+		}
+	}
+
+	//---------------------------------
+	// Template pane
+	//---------------------------------
+	.template-wrap {
+		&.empty {
+			opacity: @disabled_opacity;
+		}
+
+		.RichEditor-root {
+			background: @card_bg_color;
+			border: 0;
+			border-radius: @card_radius;
+			box-shadow: @card_shadow;
+
+			&.focused {
+				outline: 2px solid @focus_border_color;
+			}
+		}
+
+		.section.note {
+			color: @text_color_dim;
+			font-size: @text_size;
+
+		}
+	}
+}

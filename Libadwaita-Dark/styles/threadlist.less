@@ -1,0 +1,205 @@
+@import "main.less";
+
+//------------------------------------------------------------
+// Thread list
+//------------------------------------------------------------
+.column-ThreadList {
+	background: @window_bg_color;
+
+	.scroll-region .scroll-region-content-inner {
+		margin: 16px 20px;
+	}
+
+	.flexbox-handle-horizontal div {
+		box-shadow: none;
+	}
+
+	.empty-state .perspective-empty-state {
+		transition: none;
+		
+		.message {
+			color: @text_color_dim;
+
+			.btn {
+				background-color: @button_color;
+				border: 0;
+				border-radius: @button_radius;
+				color: @text_color;
+				font-size: @text_size;
+				font-weight: 600;
+	
+				&:hover {
+					background-color: @button_hover_color;
+				}
+	
+				&:active {
+					background-color: @button_active_color;
+				}
+			}
+			
+		}
+
+		img {
+			background-color: @text_color_dim;
+		}
+	}
+}
+
+.list-container .list-rows {
+	background: @card_bg_color;
+	border-radius: @card_radius;
+
+	&:not(:empty) {
+		box-shadow: @card_shadow;
+	}
+
+	& > div {
+		&:first-child .list-item {
+			border-radius: @card_radius @card_radius 0 0;
+		}
+
+		&:last-child .list-item {
+			border-radius: 0 0 @card_radius @card_radius;
+		}
+
+		&:only-child .list-item {
+			border-radius: @card_radius;
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Thread list items
+//------------------------------------------------------------
+.thread-list {
+	.list-item {
+		background-color: @card_bg_color !important;
+		border-bottom: 1px solid @borders_color !important;
+		border-left: 0 !important;
+		color: @text_color !important;
+
+		&:hover {
+			background-color: @view_hover_color !important;
+		}
+
+		&.focused,
+		&.selected {
+			background-color: @view_selected_color !important;
+			color: @text_color !important;
+
+			&:hover {
+				background-color: @view_selected_hover_color !important;
+			}
+		}
+
+		&.keyboard-cursor {
+			outline: 2px solid @focus_border_color;
+			outline-offset: -2px;
+		}
+
+		&.unread {
+			.participants span,
+			.subject {
+				font-weight: 600 !important;
+			}
+		}
+
+		.participants, .subject {
+			font-size: @text_size !important;
+		}
+	
+		.snippet, .timestamp {
+			opacity: 1 !important;
+			font-size: @text_size !important;
+			color: @text_color_dim !important
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Thread list items (single pane view)
+//------------------------------------------------------------
+.list-tabular .list-tabular-item {
+	.list-column.list-column-Check {
+		margin-right: 12px;
+	}
+	.checkmark {
+		padding: 8px 11px;
+		
+		.inner {
+			box-shadow: @check_shadow;
+			background-color: transparent;
+			background-image: none;
+			background-size: 20px 20px;
+			border: 0;
+			border-radius: 50%;
+			width: 20px;
+			height: 20px;
+			padding: 3px;
+	
+			&:hover {
+				box-shadow: @check_hover_shadow;
+			}
+		
+			&:active {
+				box-shadow: none;
+				background-color: @check_active_color;
+			}
+		}
+	}
+
+	&:hover {
+		background-color: @view_hover_color;
+	}
+
+	&.selected {
+		background-color: @view_selected_color;
+
+		&:hover {
+			background-color: @view_selected_hover_color;
+		}
+
+		.checkmark {
+			.inner {
+				box-shadow: none;
+				background-color: @accent_bg_color;
+				background-image: none;
+				border-radius: 50%;
+				content: url(mailspring://Libadwaita/styles/assets/check-symbolic.png);
+		
+				&:hover {
+					background-image: @check_selected_hover_color;
+				}
+		
+				&:active {
+					background-image: @check_selected_active_color;
+				}
+			}
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Syncing message
+//------------------------------------------------------------
+.syncing-list-state {
+	color: @text_color_dim;
+	font-size: @text_size;
+
+	a {
+		color: @link_color;
+		font-size: @text_size;
+
+		&:hover {
+			color: @link_hover_color;
+			cursor: pointer;
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Hover action bar
+//------------------------------------------------------------
+.thread-list .list-item:hover .list-column-HoverActions .inner {
+	display: none;
+}

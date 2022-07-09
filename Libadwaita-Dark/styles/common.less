@@ -1,0 +1,551 @@
+@import "main.less";
+
+//------------------------------------------------------------
+// Application font
+//------------------------------------------------------------
+mailspring-popover-container,
+mailspring-modal-container,
+mailspring-workspace {
+	font-family: 'Ubuntu', 'Cantarell', 'Nylas-Pro', 'Helvetica', sans-serif;
+}
+
+//------------------------------------------------------------
+// Main toolbar
+//------------------------------------------------------------
+.sheet-toolbar {
+	border: none;
+	height: 45px;
+	max-height: 45px;
+}
+
+//------------------------------------------------------------
+// Controls
+//------------------------------------------------------------
+//---------------------------------
+// Input
+//---------------------------------
+.fixed-popover-container .fixed-popover input[type='text'],
+input[type='text'],
+input[type='email'],
+input[type='date'],
+input[type='datetime'],
+input[type='datetime-local'],
+input[type='month'],
+input[type='number'],
+input[type='password'],
+input[type='search'],
+input[type='tel'],
+input[type='time'],
+input[type='url'],
+input[type='color'] {
+	background: @button_color;
+	border: 0;
+	box-shadow: none;
+	border-radius: @button_radius;
+	color: @text_color;
+	font-size: @text_size;
+	height: @button_height;
+	line-height: @button_height;
+	padding-left: 10px;
+	padding-right: 10px;
+
+	&:focus {
+		border: 0;
+		box-shadow: none;
+		outline: 2px solid @focus_border_color;
+		outline-offset: -2px;
+	}
+
+	&::placeholder {
+		color: @text_color_dim;
+	}
+}
+
+input[type='color'] {
+	&:hover {
+		background: @button_hover_color;
+	}
+
+	&:active {
+		background: @button_active_color;
+	}
+}
+
+//---------------------------------
+// Button
+//---------------------------------
+.btn, .btn.btn-emphasis {
+	box-shadow: none;
+	background: @button_color;
+	border: 0;
+	border-radius: @button_radius;
+	color: @text_color;
+	font-size: @text_size;
+	font-weight: bold;
+	height: @button_height;
+	line-height: @button_height;
+
+	&.btn-small, &.btn-large {
+		font-size: @text_size;
+		height: @button_height;
+		line-height: @button_height;
+	}
+
+	&:hover {
+		background: @button_hover_color;
+	}
+
+	&:active {
+		background: @button_active_color;
+	}
+
+	&.btn-disabled,
+	&.btn-disabled:active {
+		background: @button_color;
+		color: @text_color;
+		opacity: @disabled_opacity;
+	}
+}
+
+//---------------------------------
+// Select
+//---------------------------------
+select {
+	background: @button_color;
+	border: 0;
+	border-radius: @button_radius;
+	color: @text_color;
+	font-size: @text_size;
+	font-weight: bold;
+	height: @button_height;
+	line-height: @button_height;
+	padding-left: 10px;
+	padding-right: 10px;
+
+	&:hover {
+		background: @button_hover_color;
+	}
+
+	&:active {
+		background: @button_active_color;
+	}
+
+	option {
+		background: @popover_bg_color;
+		color: @text_color;
+	}
+}
+
+//------------------------------------------------------------
+// Popover menus
+//------------------------------------------------------------
+.menu {
+	.header-container {
+		background: none;
+		border-bottom: 0;
+		margin-bottom: 8px;
+		padding: 0;
+	}
+
+	.content-container {
+		background: @popover_bg_color;
+		margin-top: 0;
+	}
+
+	.item {
+		border-radius: @button_radius;
+		color: @text_color;
+		font-size: @text_size;
+		height: @popover_item_height;
+		line-height: @popover_item_height;
+		margin: 6px 0;
+		padding-top: 0;
+		padding-bottom: 0;
+
+		.secondary {
+			color: @text_color_dim;
+		}
+	}
+
+	.item.selected,
+	.item:active {
+		background-color: @view_selected_color;
+		color: @text_color;
+
+		&:hover {
+			background-color: @view_selected_hover_color;
+		}
+
+		.primary {
+			color: @text_color;
+		}
+
+		.secondary {
+			color: @text_color_dim;
+		}
+	}
+
+	.item:not(.active):not(.selected):hover {
+		background-color: @view_hover_color;
+	}
+}
+
+.dropdown-menu {
+	.menu {
+		box-shadow: @popover_shadow;
+		background: @popover_bg_color;
+		border: 1px solid @popover_border_color;
+		border-radius: @popover_radius;
+		margin-top: 6px;
+		padding: 8px;
+	}
+}
+
+.fixed-popover-container {
+	.fixed-popover {
+		box-shadow: @popover_shadow;
+		background: @popover_bg_color;
+		border: 1px solid @popover_border_color;
+		border-radius: @popover_radius;
+		color: @text_color;
+		padding: 8px;
+
+		.menu {
+			background-color: @popover_bg_color;
+
+			.header-container {
+				background: @popover_bg_color;
+				border-bottom: none;
+				border-radius: 0;
+				color: @text_color;
+				font-size: @text_size;
+				font-weight: 600;
+				margin-bottom: 8px;
+				padding: 0;
+			}
+
+			.content-container {
+				background: @popover_bg_color;
+			}
+
+			.footer-container {
+				background: @popover_bg_color;
+			}
+		}
+
+		.section {
+			margin-top: 8px;
+			padding: 0;
+		}
+  
+		.divider {
+			background: @borders_color;
+			border: 0;
+			height: 1px;
+			margin: 6px 0;
+		}
+  
+		input[type='text'] {
+			&.search {
+				background-position: 7px 9px;
+			}
+		}
+	}
+  
+	.fixed-popover-pointer,
+	.fixed-popover-pointer.shadow {
+		display: none;
+	}
+}
+
+.category-picker-popover,
+.category-picker-dropdown {
+	.menu {
+		background: @popover_bg_color;
+
+		.item.divider {
+			background-color: @borders_color;
+			border: 0;
+			height: 1px;
+		}
+	}
+
+	.item {
+		img.content-mask {
+			background-color: @text_color;
+		}
+	}
+
+	.category-item {
+		font-size: @text_size;
+	}
+
+	.item.selected,
+	.item.active {
+		img.content-mask {
+			background-color: @text_color;
+		}
+	}
+}
+
+.button-dropdown {
+	&.open.open-up {
+		.secondary-items {
+			box-shadow: @popover_shadow;
+			background: @popover_bg_color;
+			border: 1px solid @popover_border_color;
+			border-radius: @popover_radius;
+			padding: 8px;
+			margin-bottom: 6px;
+		}
+	}
+	&.open.open-down {
+		.secondary-items {
+			box-shadow: @popover_shadow;
+			background: @popover_bg_color;
+			border: 1px solid @popover_border_color;
+			border-radius: @popover_radius;
+			padding: 8px;
+			margin-top: 6px;
+		}
+	}
+
+	.secondary-items {
+		z-index: 4;
+
+		.menu {
+			.content-container {
+				background: @popover_bg_color;
+			}
+
+			.item {
+				border-radius: @button_radius;
+				font-size: @text_size;
+				height: @popover_item_height;
+				line-height: @popover_item_height;
+				margin: 6px 0;
+				padding: 0 10px;
+
+				&:first-child {
+					padding-top: 0;
+				}
+
+				&:last-child {
+					padding-bottom: 0;
+				}
+
+				&:hover {
+					background-color: @view_hover_color;
+				}
+
+				&.selected {
+					background-color: @view_selected_color;
+					color: @text_color;
+
+					&:hover {
+						background-color: @view_selected_hover_color;
+					}
+				}
+			}
+
+			.item:first-child {
+				border-top-left-radius: @button_radius;
+			}
+
+			.item:last-child {
+				border-bottom-left-radius: @button_radius;
+				border-bottom-right-radius: @button_radius;
+			}
+		}
+	}
+}
+
+.tokenizing-field {
+	.header-container {
+		margin-bottom: 0;
+	}
+
+	.content-container {
+		box-shadow: @popover_shadow;
+		background: @popover_bg_color;
+		border: 1px solid @popover_border_color;
+		border-radius: @popover_radius;
+		padding: 8px;
+	
+		&:empty {
+			padding: 0;
+		}
+	}
+}
+
+.preferences-wrap .category-mapper-container .category-picker-dropdown .btn .menu .category-item {
+	font-weight: normal;
+}
+
+.message-item-white-wrap.composer-outer-wrap .composer-participant-field .dropdown-component .signature-button-dropdown .button-dropdown .secondary-items .menu {
+	.item {
+		padding: 0 16px 0 26px;
+	}
+
+	.footer-container {
+		border-color: @borders_color;
+	}
+}
+
+.preferences-signatures-container .signature-wrap .account-picker .button-dropdown .secondary-items .menu {
+	.item {
+		padding: 0 16px 0 26px;
+
+		&.checked {
+			margin: 6px 0;
+			padding: 0 16px 0 26px;
+		}
+	}
+}
+
+// ------------------------------------------------------------
+// Undo/redo toasts
+// ------------------------------------------------------------
+.undo-redo-toast {
+	.content {
+		background: @osd_bg_color;
+		border: 0;
+		border-radius: 23px;
+		height: 46px;
+		opacity: 1;
+	}
+
+	.message {
+		color: @osd_fg_color;
+		font-size: @text_size;
+		font-weight: bold;
+		margin-left: 24px;
+	}
+
+	.action {
+		background: @osd_button_color;
+		border: 0;
+		border-radius: @button_radius;
+		height: @button_height;
+		line-height: @button_height;
+		margin-right: 24px;
+		padding: 0 8px;
+
+		.undo-action-text {
+			color: @osd_fg_color;
+			font-size: @text_size;
+			font-weight: bold;
+		}
+
+		img {
+			background-color: @osd_fg_color;
+		}
+
+		&:hover {
+			background: @osd_button_hover_color;
+			border: 0;
+
+			.undo-action-text {
+				color: white;
+			}
+	
+			img {
+				background-color: white;
+			}
+		}
+	}
+}
+
+.countdown {
+	font-size: @text_size;
+	font-weight: bold;
+	margin-left: 7px;
+
+	.countdown-number {
+		color: @osd_fg_color;
+	}
+
+	svg circle {
+		stroke: @osd_fg_color;
+		stroke-width: 2px;
+	}
+}
+
+@keyframes countdown {
+	0% {
+		stroke-dashoffset: 0;
+		stroke: @osd_fg_color;
+	}
+	65% {
+		stroke-dashoffset: 57.2px;
+		stroke: @osd_fg_color
+	}
+	100% {
+		stroke-dashoffset: 88px;
+		stroke: @warning_color;
+	}
+}
+
+//------------------------------------------------------------
+// Scrollbars
+//------------------------------------------------------------
+.scrollbar-track {
+	background: transparent;
+	border: 0;
+	width: 14px;
+	margin: 7px 0;
+	padding: 0 3px 0 8px;
+
+	.scrollbar-track-inner {
+		background: transparent;
+		border-radius: 10px;
+	}
+
+	.scrollbar-handle {
+		background-color: @scrollbar_slider_color;
+		border: 0;
+		border-radius: 10px;
+		outline: 1px solid fade(@scrollbar_outline_color, alpha(@scrollbar_outline_color)*100*0.35);
+
+		&:hover {
+			background-color: @scrollbar_slider_hover_color;
+		}
+	}
+
+	&:hover,
+	&.dragging {
+		padding: 0 6px 0 0;
+
+		.scrollbar-track-inner {
+			background: @scrollbar_track_color;
+			outline: 1px solid fade(@scrollbar_outline_color, alpha(@scrollbar_outline_color)*100*0.4);
+		}
+
+		.scrollbar-handle {
+			outline: 1px solid fade(@scrollbar_outline_color, alpha(@scrollbar_outline_color)*100*0.4);
+		}
+	}
+
+	&.dragging {
+		.scrollbar-handle {
+			background-color: @scrollbar_slider_dragging_color;
+		}
+	}
+}
+
+//---------------------------------
+// Scrollbar tooltips
+//---------------------------------
+.scroll-tooltip {
+	box-shadow: none;
+	background: @tooltip_bg_color;
+	border: 1px solid @tooltip_border_color;
+	border-radius: 10px;
+	color: @tooltip_fg_color;
+	transform: translate(-8px, 0);
+
+	&:before,
+	&:after {
+		display: none;
+	}
+}

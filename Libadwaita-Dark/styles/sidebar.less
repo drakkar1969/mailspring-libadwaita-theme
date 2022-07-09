@@ -1,0 +1,324 @@
+@import "main.less";
+
+//------------------------------------------------------------
+// Sidebar background
+//------------------------------------------------------------
+.account-sidebar {
+	background-color: @window_bg_color;
+	border-right: 1px solid @borders_color;
+	padding-left: 6px;
+}
+
+.column-RootSidebar {
+	.flexbox-handle-horizontal div {
+		box-shadow: none;
+	}
+}
+
+//------------------------------------------------------------
+// Account switcher (dropdown arrow)
+//------------------------------------------------------------
+.account-switcher {
+	top: 12px;
+	right: 24px;
+
+	img.content-dark {
+		background-image: none;
+		background-color: @text_color;
+		-webkit-mask-repeat: no-repeat;
+		-webkit-mask-image: url(../static/images/sidebar/account-switcher-dropdown@2x.png);
+		-webkit-mask-position: 0px 0px;
+		-webkit-mask-size: @button_height;
+		width: @button_height !important;
+		height: @button_height !important;
+		padding-top: @button_height;
+	}
+
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+//------------------------------------------------------------
+// Sidebar headings
+//------------------------------------------------------------
+.outline-view .heading {
+	font-size: @text_size;
+	color: @text_color;
+	margin-top: 4px;
+	margin-bottom: 8px;
+	height: 36px;
+
+	.add-item-button {
+		background: transparent;
+		width: @button_height;
+		height: @button_height;
+		line-height: @button_height;
+		margin-top: 0;
+		padding: 10px;
+
+		img.content-mask {
+			background-color: @text_color;
+		}
+	}
+
+	.collapse-button {
+		margin-right: 24px;
+	}
+}
+
+//------------------------------------------------------------
+// Sidebar items
+//------------------------------------------------------------
+.nylas-outline-view {
+	//---------------------------------
+	// Item
+	//---------------------------------
+	.item {
+		font-size: @text_size;
+		font-weight: normal;
+		color: @text_color;
+		border-radius: @button_radius;
+		margin-top: 3px;
+		margin-bottom: 3px;
+		margin-right: 24px;
+		height: @button_height;
+		line-height: @button_height;
+
+		.icon {
+			margin-left: 8px;
+		}
+
+		img.content-mask {
+			background-color: @text_color;
+		}
+
+		&:hover {
+			background-color: @view_hover_color;
+		}
+
+		&:active {
+			background-color: @view_active_color;
+		}
+
+		&.selected {
+			background-color: @view_selected_color;
+			color: @text_color;
+
+			img.content-mask {
+				background-color: @text_color;
+			}
+
+			&:hover {
+				background-color: @view_selected_hover_color;
+			}
+		}
+	}
+
+	//---------------------------------
+	// Drop target item
+	//---------------------------------
+	.item-container.dropping {
+		background: transparent;
+
+		.item {
+			box-shadow: 0 0 0 2px @accent_color;
+			background-color: @window_bg_color;
+			color: @text_color;
+
+			img.content-mask {
+				background-color: @text_color
+			}
+		}
+	}
+
+	//---------------------------------
+	// New folder edit box
+	//---------------------------------
+	.item.editing .item-input {
+		font-size: @text_size;
+		height: @button_height;
+		text-indent: 10px;
+	}
+}
+
+//------------------------------------------------------------
+// Item count badges
+//------------------------------------------------------------
+.outline-view .item {
+	.item-count-box, .item-count-box.alt-count {
+		box-shadow: none;
+		background-color: @accent_bg_color;
+		color: @accent_fg_color;
+		border-radius: 10px;
+		font-size: 12px;
+		min-width: 20px;
+		height: 20px;
+		line-height: 20px;
+		padding: 0 5px;
+	}
+}
+
+//------------------------------------------------------------
+// Folder expand/collapse arrows
+//------------------------------------------------------------
+.disclosure-triangle {
+	padding-top: 16px;
+
+	&.visible div {
+		opacity: 0.7;
+		border-left-color: @text_color;
+	}
+
+	&:hover {
+		&.visible div {
+			opacity: 1;
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Sidebar syncing box
+//------------------------------------------------------------
+.sidebar-activity {
+	background-color: @headerbar_bg_color;
+	box-shadow: none;
+	border: 1px solid @borders_color;
+	border-width: 0 1px 0 0;
+	color: @text_color;
+	font-size: @text_size;
+
+	.item .inner {
+		border-color: @borders_color;
+		font-weight: 600;
+	}
+
+	//---------------------------------
+	// Task count label
+	//---------------------------------
+	.item .count {
+		font-weight: 600;
+		color: @text_color;
+	}
+
+	//---------------------------------
+	// Hide link
+	//---------------------------------
+	.inner a {
+		color: @link_color;
+		font-weight: normal;
+		text-decoration: underline;
+
+		&:hover {
+			cursor: pointer;
+			color: @link_hover_color;
+		}
+	}
+
+	//---------------------------------
+	// Account name
+	//---------------------------------
+	.item h2 {
+		font-size: @text_size;
+		font-weight: 600;
+		color: @text_color;
+		margin: 12px 0px;
+	}
+
+	//---------------------------------
+	// Progress labels
+	//---------------------------------
+	.item .sync-activity .account {
+		background: @window_bg_color;
+	}
+
+	.item .sync-activity .account .folder-progress {
+		color: @text_color;
+		font-size: @text_size;
+
+		.progress-label {
+			color: @text_color_dim;
+			font-size: @text_size;
+		}
+	}
+
+	//---------------------------------
+	// Syncing indicators (circles)
+	//---------------------------------
+	.item .sync-activity .account .folder-progress {
+		&::before {
+			background-color: @accent_bg_color;
+			border-color: @accent_bg_color;
+		}
+
+		&.busy::before {
+			animation: border-pulse 3s ease-in infinite;
+		}
+	}
+
+	@keyframes border-pulse {
+		0% {
+			border-color: transparent;
+		}
+		100% {
+			border-color: @accent_bg_color;
+		}
+	}
+}
+
+//------------------------------------------------------------
+// Sidebar notifications (error/offline/update)
+//------------------------------------------------------------
+.notifications {
+	background-color: @headerbar_bg_color;
+	box-shadow: none;
+	border: 1px solid @borders_color;
+	border-width: 1px 1px 0 0;
+}
+
+.notification {
+	background: mix(@accent_bg_color, @headerbar_bg_color, 30%);
+	border-radius: @card_radius;
+	color: @text_color;
+	font-size: @text_size;
+	margin: 12px 12px 8px;
+
+	.icon {
+		display: none;
+	}
+
+	.subtitle {
+		opacity: 1;
+		color: @text_color;
+		font-size: @text_size;
+		font-weight: 600;
+	}
+
+	.action {
+		background-color: @button_color;
+		border: 0 !important;
+		border-radius: @button_radius;
+		color: @text_color;
+		font-weight: bold;
+		height: @button_height;
+		line-height: @button_height;
+		margin: 4px 8px 12px;
+
+		&:hover {
+			box-shadow: none !important;
+			background-color: @button_hover_color;
+		}
+
+		&:active {
+			background: @button_active_color;
+		}
+	}
+
+	&.error {
+		background: mix(@error_bg_color, @headerbar_bg_color, 30%);
+	}
+
+	&.offline {
+		background: mix(@warning_bg_color, @headerbar_bg_color, 30%);
+	}
+}
