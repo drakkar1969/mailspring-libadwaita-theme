@@ -69,9 +69,10 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 		.item {
 			box-shadow: none;
 			background-color: transparent;
-			border: 0;
-			border-radius: @button_radius;
-			height: @button_height;
+			border-left: 1px solid @borders_color;
+			border-radius: 0;
+			height: calc(@button_height - 8px);
+			margin: 4px 0;
 			padding-top: 0px;
 
 			.tab-icon {
@@ -79,70 +80,68 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 			}
 
 			.name {
-				border-left: 1px solid @borders_color;
+				background-color: transparent;
+				border-radius: @button_radius;
 				font-size: @text_size;
 				font-weight: normal;
 				color: @text_color;
-				line-height: calc(@button_height - 8px);
-				margin: 4px 0;
+				line-height: @button_height;
+				margin: -4px 1px;
 				padding: 0 15px;
 			}
 
 			&:nth-child(2) {
-				.name {
-					border-color: transparent;
-				}
+				border-color: transparent;
 			}
 
 			&:hover {
-				background-color: @view_hover_color;
+				border-color: transparent;
 
-				.name {
+				& + div {
 					border-color: transparent;
 				}
 
-				& + div {
-					.name {
-						border-color: transparent;
-					}
+				.name {
+					background-color: @view_hover_color;
 				}
 			}
 
 			&:active {
-				background-color: @view_active_color;
+				border-color: transparent;
 
-				.name {
+				& + div {
 					border-color: transparent;
 				}
 
-				& + div {
-					.name {
-						border-color: transparent;
-					}
+				.name {
+					background-color: @view_active_color;
 				}
 			}
 
 			&.active {
 				box-shadow: none;
-				background-color: @view_selected_color;
-				border-radius: @button_radius;
+				background-color: transparent;
+				border-radius: 0;
+				border-color: transparent;
 
-				.name {
+				& + div {
 					border-color: transparent;
 				}
 
-				& + div {
-					.name {
-						border-color: transparent;
-					}
+				.name {
+					background-color: @view_selected_color;
 				}
 
 				&:hover {
-					background-color: @view_selected_hover_color;
+					.name {
+						background-color: @view_selected_hover_color;
+					}
 				}
 
 				&:active {
-					background-color: @view_selected_active_color;
+					.name {
+						background-color: @view_selected_active_color;
+					}
 				}
 			}
 		}
