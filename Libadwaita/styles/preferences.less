@@ -60,22 +60,18 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 
 	.preferences-tabs {
 		background-color: @headerbar_bg_color;
-		padding-top: 0;
+		padding: 5px 0;
 
 		body.is-blurred & {
 			background-color: @window_bg_color;
 		}
 
-		div:first-child {
-			border-right: 1px solid @borders_color;
-		}
-
 		.item {
 			box-shadow: none;
-			background-color: @tab_color;
+			background-color: transparent;
 			border: 0;
-			border-right: 1px solid @borders_color;
-			border-radius: 0;
+			border-radius: @button_radius;
+			height: @button_height;
 			padding-top: 0px;
 
 			.tab-icon {
@@ -83,23 +79,70 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 			}
 
 			.name {
-				padding: 15px;
+				border-left: 1px solid @borders_color;
 				font-size: @text_size;
 				font-weight: normal;
 				color: @text_color;
+				line-height: calc(@button_height - 8px);
+				margin: 4px 0;
+				padding: 0 15px;
+			}
+
+			&:nth-child(2) {
+				.name {
+					border-color: transparent;
+				}
 			}
 
 			&:hover {
-				background-image: @tab_hover_color;
+				background-color: @view_hover_color;
+
+				.name {
+					border-color: transparent;
+				}
+
+				& + div {
+					.name {
+						border-color: transparent;
+					}
+				}
+			}
+
+			&:active {
+				background-color: @view_active_color;
+
+				.name {
+					border-color: transparent;
+				}
+
+				& + div {
+					.name {
+						border-color: transparent;
+					}
+				}
 			}
 
 			&.active {
 				box-shadow: none;
-				background: transparent;
-				border-radius: 0;
+				background-color: @view_selected_color;
+				border-radius: @button_radius;
+
+				.name {
+					border-color: transparent;
+				}
+
+				& + div {
+					.name {
+						border-color: transparent;
+					}
+				}
 
 				&:hover {
-					background-image: @tab_hover_color;
+					background-color: @view_selected_hover_color;
+				}
+
+				&:active {
+					background-color: @view_selected_active_color;
 				}
 			}
 		}
