@@ -10,25 +10,27 @@
 	border-radius: @card_radius !important;
 	height: 410px !important;
 
-// 	.modal-close {
-// 		width: 16px !important;
-// 		height: 16px !important;
-// 		zoom: 0.9 !important;
-// 		margin: 8px;
-// 		content: @imgBtnClose;
+	.modal-close {
+		left: 212px;
+		width: 24px !important;
+		height: 24px !important;
+		background-color: @button_color;
+		border-radius: 50%;
+		padding: 4px;
+		content: url(mailspring://Libadwaita-Dark/styles/assets/window-close-symbolic.svg);
 
-// 		&:hover {
-// 			content: @imgBtnCloseHover;
-// 		}
+		&:hover {
+			background-color: @button_hover_color;
+		}
 
-// 		&:active {
-// 			content: @imgBtnCloseActive;
-// 		}
+		&:active {
+			background-color: @button_active_color;
+		}
 
 // 		.platform-linux.is-blurred & {
 // 			content: @imgBtnCloseBackdrop;
 // 		}
-// 	}
+	}
 
 	.scroll-region {
 		height: 300px !important;
