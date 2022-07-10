@@ -222,7 +222,7 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 		border-radius: @button_radius;
 		
 		&:checked {
-			content: url(mailspring://Libadwaita-Dark/styles/assets/check-symbolic.png);
+			content: url("mailspring://@{asset_path}/styles/assets/check-symbolic.png");
 		}
 	}
 
@@ -230,7 +230,7 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 		border-radius: 50%;
 		
 		&:checked {
-			content: url(mailspring://Libadwaita-Dark/styles/assets/radio-symbolic.png);
+			content: url("mailspring://@{asset_path}/styles/assets/radio-symbolic.png");
 		}
 	}
 
@@ -621,7 +621,7 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 			img {
 				-webkit-mask-repeat: no-repeat;
 				-webkit-mask-size: 12px;
-				-webkit-mask-image: url(../static/images/message-list/thread-popout@1x.png);
+				-webkit-mask-image: url("../static/images/message-list/thread-popout@1x.png");
 				background-color: @text_color;
 				width: 12px;
 				height: 12px;
@@ -708,11 +708,11 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 			}
 
 			img[alt='appearance-scale-small.png'] {
-				-webkit-mask-image: url(../static/images/preferences/appearance/appearance-scale-small@2x.png);
+				-webkit-mask-image: url("../static/images/preferences/appearance/appearance-scale-small@2x.png");
 			}
 
 			img[alt='appearance-scale-big.png'] {
-				-webkit-mask-image: url(../static/images/preferences/appearance/appearance-scale-big@2x.png);
+				-webkit-mask-image: url("../static/images/preferences/appearance/appearance-scale-big@2x.png");
 			}
 		}
 
@@ -849,7 +849,7 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 		.icon-mail-rules {
 			background-image: none;
 			-webkit-mask-repeat: no-repeat;
-			-webkit-mask-image: url(../static/images/preferences/mail-rules/rules-big@2x.png);
+			-webkit-mask-image: url("../static/images/preferences/mail-rules/rules-big@2x.png");
 			background-color: @text_color_dim;
 			zoom: 0.5 !important;
 			width: 330px;
@@ -956,7 +956,7 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 					height: 6px;
 					background-image: none;
 					-webkit-mask-repeat: no-repeat;
-					-webkit-mask-image: url(../static/images/dropdown-menu/dropdown-chevron@2x.png);
+					-webkit-mask-image: url("../static/images/dropdown-menu/dropdown-chevron@2x.png");
 					-webkit-mask-size: 10px 6px;
 					-webkit-mask-position: 0px 0px;
 					background-color: @text_color;

@@ -21,7 +21,7 @@
 //---------------------------------
 .draft-list {
 	.thread-icon.thread-icon-attachment {
-		.threadlist-icon(url(../static/images/thread-list/icon-attachment-@2x.png), 15px, @text_color);
+		.threadlist-icon(url("../static/images/thread-list/icon-attachment-@2x.png"), 15px, @text_color);
 	}
 }
 
@@ -34,14 +34,14 @@
 		// Attachment icon
 		//---------------------------------
 		.thread-icon.thread-icon-attachment {
-			.threadlist-icon(url(../static/images/thread-list/icon-attachment-@2x.png), 15px, @text_color);
+			.threadlist-icon(url("../static/images/thread-list/icon-attachment-@2x.png"), 15px, @text_color);
 		}
 
 		//---------------------------------
 		// Draft icon
 		//---------------------------------
 		.draft-icon {
-			.threadlist-icon(url(../static/images/thread-list/icon-draft-pencil@2x.png), 32px, @text_color);
+			.threadlist-icon(url("../static/images/thread-list/icon-draft-pencil@2x.png"), 32px, @text_color);
 			width: 32px;
 			height: 32px;
 			margin-left: 20px;
@@ -52,7 +52,7 @@
 		// None icon
 		//---------------------------------
 		.thread-icon-none {
-			.threadlist-icon(url(../static/images/thread-list/icon-star-hover-@2x.png), 16px, transparent);
+			.threadlist-icon(url("../static/images/thread-list/icon-star-hover-@2x.png"), 16px, transparent);
 
 		}
 
@@ -66,11 +66,11 @@
 		// Star icon
 		//---------------------------------
 		.thread-icon-star-on-hover:hover {
-			.threadlist-icon(url(../static/images/thread-list/icon-star-hover-@2x.png), 16px, @text_color);
+			.threadlist-icon(url("../static/images/thread-list/icon-star-hover-@2x.png"), 16px, @text_color);
 		}
 
 		.thread-icon.thread-icon-star {
-			.threadlist-icon(url(../static/images/thread-list/icon-star-@2x.png), 16px, @accent_bg_color);
+			.threadlist-icon(url("../static/images/thread-list/icon-star-@2x.png"), 16px, @accent_bg_color);
 
 			&:hover {
 				background-image: @button_default_hover_color;
@@ -81,10 +81,10 @@
 		// Unread icon
 		//---------------------------------
 		.thread-icon.thread-icon-unread {
-			.threadlist-icon(url(../static/images/thread-list/icon-unread-@2x.png), 15px, @accent_bg_color);
+			.threadlist-icon(url("../static/images/thread-list/icon-unread-@2x.png"), 15px, @accent_bg_color);
 
 			&:hover {
-				.threadlist-icon(url(../static/images/thread-list/icon-star-hover-@2x.png), 16px, @text_color);
+				.threadlist-icon(url("../static/images/thread-list/icon-star-hover-@2x.png"), 16px, @text_color);
 			}
 		}
 
@@ -92,17 +92,17 @@
 		// Replied/forwarded icons
 		//---------------------------------
 		.thread-icon.thread-icon-replied {
-			.threadlist-icon(url(../static/images/thread-list/icon-replied-@2x.png), 15px, @text_color);
+			.threadlist-icon(url("../static/images/thread-list/icon-replied-@2x.png"), 15px, @text_color);
 		}
 
 		.thread-icon.thread-icon-forwarded {
-			.threadlist-icon(url(../static/images/thread-list/icon-forwarded-@2x.png), 15px, @text_color);
+			.threadlist-icon(url("../static/images/thread-list/icon-forwarded-@2x.png"), 15px, @text_color);
 		}
 
 		.thread-icon.thread-icon-replied,
 		.thread-icon.thread-icon-forwarded {
 			&:hover {
-				.threadlist-icon(url(../static/images/thread-list/icon-star-hover-@2x.png), 16px, @text_color);
+				.threadlist-icon(url("../static/images/thread-list/icon-star-hover-@2x.png"), 16px, @text_color);
 			}
 		}
 	}
@@ -131,16 +131,16 @@
 }
 
 .mail-important-icon {
-	.threadlist-icon(url(../static/images/important/Icon-Important-Hover@2x.png), 16px, @text_color_dim);
+	.threadlist-icon(url("../static/images/important/Icon-Important-Hover@2x.png"), 16px, @text_color_dim);
 	opacity: 0.6;
 
 	&.enabled:hover {
-		.threadlist-icon(url(../static/images/important/Icon-Important-Hover@2x.png), 16px, @text_color);
+		.threadlist-icon(url("../static/images/important/Icon-Important-Hover@2x.png"), 16px, @text_color);
 		opacity: 0.6;
 	}
 
 	&.enabled.active {
-		.threadlist-icon(url(../static/images/important/Icon-Important-Active@2x.png), 16px, @yellow_4);
+		.threadlist-icon(url("../static/images/important/Icon-Important-Active@2x.png"), 16px, @yellow_4);
 		opacity: 1;
 	}
 
