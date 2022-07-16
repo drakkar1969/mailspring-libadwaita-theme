@@ -88,6 +88,17 @@
 }
 
 //------------------------------------------------------------
+// Fix toolbar border (vertical split view)
+//------------------------------------------------------------
+.column-ThreadList > div > div[style="height: 100%;width: 100%;border-top: 0.5px solid rgb(221, 221, 221);"] {
+	border-top: 1px solid @borders_color !important;
+
+	.sheet-toolbar {
+		border-bottom: 1px solid @borders_color !important;
+	}
+}
+
+//------------------------------------------------------------
 // Hamburger button (Custom Window Frame)
 //------------------------------------------------------------
 body.platform-linux .toolbar-menu-control .btn-toolbar {
