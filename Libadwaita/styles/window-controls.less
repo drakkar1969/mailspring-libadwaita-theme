@@ -1,0 +1,78 @@
+@import "main.less";
+
+//------------------------------------------------------------
+// Titlebar buttons
+//------------------------------------------------------------
+body.platform-linux .toolbar-window-controls {
+	min-width: 90px;
+	width: 90px;
+	margin-top: 6px;
+	margin-right: 12px;
+
+	button {
+		width: 24px;
+		height: 24px;
+		background-size: 16px;
+		background-position: 4px 4px;
+		background-color: @button_color;
+		border-radius: 50%;
+		margin: 4px 3px;
+		
+		&:hover {
+			background-color: @button_hover_color;
+		}
+
+		&:active {
+			background-color: @button_active_color;
+		}
+	}	
+
+	&:hover {
+		button {
+			background-position: 4px 4px;
+		}
+	}
+
+	.close {
+		background-image: url("mailspring://@{asset_path}/styles/assets/window-close-symbolic.svg");
+
+		&:hover {
+			background-image: url("mailspring://@{asset_path}/styles/assets/window-close-symbolic.svg");
+		}
+
+		&:active {
+			background-image: url("mailspring://@{asset_path}/styles/assets/window-close-symbolic.svg");
+		}
+	}
+
+	.minimize {
+		background-image: url("mailspring://@{asset_path}/styles/assets/window-minimize-symbolic.svg");
+
+		&:hover {
+			background-image: url("mailspring://@{asset_path}/styles/assets/window-minimize-symbolic.svg");
+		}
+
+		&:active {
+			background-image: url("mailspring://@{asset_path}/styles/assets/window-minimize-symbolic.svg");
+		}
+	}
+
+	.maximize {
+		background-image: url("mailspring://@{asset_path}/styles/assets/window-maximize	-symbolic.svg");
+
+		&:hover {
+			background-image: url("mailspring://@{asset_path}/styles/assets/window-maximize	-symbolic.svg");
+		}
+
+		&:active {
+			background-image: url("mailspring://@{asset_path}/styles/assets/window-maximize	-symbolic.svg");
+		}
+	}
+}
+
+body.platform-linux.is-blurred .toolbar-window-controls {
+	button {
+		background-position: 4px 4px;
+		opacity: @disabled_opacity;
+	}
+}
