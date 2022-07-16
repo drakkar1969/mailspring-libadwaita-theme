@@ -30,6 +30,6 @@ Modify the color variables in the `Variant colors` section of `main.less` file f
 
 ## Papirus icons
 
-The theme includes custom icons to match the Papirus icon theme. If you want to use Mailspring's own internal icons, delete the `papirus.less` file for the selected variant:
+The theme includes custom icons to match the [Papirus](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme) icon theme. If you want to use Mailspring's own internal icons, delete the `papirus.less` file for the selected variant:
 * ~/.config/Mailspring/packages/Libadwaita/styles/papirus.less
 * ~/.config/Mailspring/packages/Libadwaita-Dark/styles/papirus.less
