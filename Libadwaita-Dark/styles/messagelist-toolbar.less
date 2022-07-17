@@ -68,6 +68,11 @@
 
 		&.disabled {
 			opacity: @disabled_opacity;
+
+			&:hover,
+			&:active {
+				background-color: transparent;
+			}
 		}
 
 		//---------------------------------
@@ -79,10 +84,28 @@
 			&:hover {
 				background-color: @view_hover_color;
 			}
+
+			&.disabled {
+				opacity: @disabled_opacity;
+	
+				&:hover,
+				&:active {
+					background-color: transparent;
+				}
+			}
 		}
 
 		body.is-blurred &.mode-toggle.mode-false {
 			background-color: @view_selected_color;
+		}
+	}
+
+	.message-toolbar-arrow.down,
+	.message-toolbar-arrow.up {
+		margin-top: 5px;
+
+		img.content-mask {
+			zoom: 0.4 !important;
 		}
 	}
 }
