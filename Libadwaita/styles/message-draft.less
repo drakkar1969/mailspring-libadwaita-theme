@@ -534,8 +534,19 @@
 		border-color: transparent;
 	}
 
-	&.custom-block.focused {
-		border-color: transparent;
+	&.custom-block {
+		a {
+			color: @link_color;
+
+			&:hover {
+				color: @link_hover_color;
+				cursor: pointer;
+			}
+		}
+
+		&.focused {
+			border-color: transparent;
+		}
 	}
 }
 
