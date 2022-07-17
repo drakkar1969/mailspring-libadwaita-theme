@@ -84,6 +84,15 @@
 			&:hover {
 				background-color: @view_hover_color;
 			}
+
+			&.disabled {
+				opacity: @disabled_opacity;
+	
+				&:hover,
+				&:active {
+					background-color: transparent;
+				}
+			}
 		}
 
 		body.is-blurred &.mode-toggle.mode-false {
