@@ -326,6 +326,25 @@ body.platform-linux .toolbar-menu-control .btn-toolbar img.content-mask[alt="win
 	-webkit-mask-image: url("mailspring://@{asset_path}/styles/papirus/person.svg") !important;
 }
 
+.sheet-toolbar .message-toolbar-arrow.down,
+.sheet-toolbar .message-toolbar-arrow.up {
+	text-align: center;
+
+	img.content-mask {
+		zoom: 1 !important;
+		width: 16px;
+		height: 16px;	
+	}
+}
+
+.sheet-toolbar .message-toolbar-arrow.down img.content-mask[alt="toolbar-down-arrow.png"] {
+	-webkit-mask-image: url("mailspring://@{asset_path}/styles/papirus/down.svg") !important;
+}
+
+.sheet-toolbar .message-toolbar-arrow.up img.content-mask[alt="toolbar-up-arrow.png"] {
+	-webkit-mask-image: url("mailspring://@{asset_path}/styles/papirus/up.svg") !important;
+}
+
 //---------------------------------
 // Move to folder dropdown
 //---------------------------------
