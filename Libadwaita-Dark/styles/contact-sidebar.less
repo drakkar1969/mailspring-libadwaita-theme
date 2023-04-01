@@ -36,7 +36,45 @@
 }
 
 .sidebar-contact-card p {
-	margin: 0 0 24px;
+	margin: 0 0 20px;
 	font-size: @text_size;
 	color: @text_color_dim;
+}
+
+//------------------------------------------------------------
+// Related threads
+//------------------------------------------------------------
+.related-threads {
+	border-top: 0;
+	height: auto !important;
+
+	.related-thread {
+		border-top: 0;
+		border-bottom: 1px solid @borders_color;
+		font-size: @text_size;
+		color: @text_color;
+
+		&:first-child {
+			border-top: 1px solid @borders_color;
+		}
+
+		&:hover {
+			background: @view_hover_color;
+		}
+
+		&:active {
+			background: @view_active_color;
+		}
+	}
+
+	.toggle {
+		border-top: 0;
+		font-size: @text_size;
+		color: @link_color;
+
+		&:hover {
+			color: @link_hover_color;
+			cursor: pointer;
+		}
+	}
 }
