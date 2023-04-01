@@ -13,8 +13,41 @@
 	}
 
 	.sidebar-section.visible {
+		margin-top: 40px;
 		background: @window_bg_color;
 		border: 0;
+	}
+}
+
+//------------------------------------------------------------
+// Avatar
+//------------------------------------------------------------
+@avatar_size: 64px;
+
+.participant-profile, .company-profile {
+	.contact-profile-photo {
+		width: @avatar_size;
+		height: @avatar_size;
+		left: ~"calc(50% - @{avatar_size}/2)";
+		top: -44px;
+		background: none;
+		box-shadow: none;
+		padding: 0;
+
+		.profile-photo {
+			width: @avatar_size;
+			height: @avatar_size;
+			border-radius: 50%;
+
+			.default-profile-image {
+				width: @avatar_size;
+				height: @avatar_size;
+				line-height: @avatar_size;
+				border-radius: 50%;
+				font-size: 20px;
+				font-weight: bold;
+			}
+		}
 	}
 }
 
