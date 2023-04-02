@@ -578,8 +578,8 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 	//---------------------------------
 	.btn-emphasis {
 			width: 200px;
-			background: none;
-			background-color: @accent_bg_color;
+			background: none !important;
+			background-color: @accent_bg_color !important;
 			color: @accent_fg_color;
 
 			&::before {
@@ -587,11 +587,11 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 			}	
 
 			&:hover {
-				background-image: @button_default_hover_color;
+				background-image: @button_default_hover_color !important;
 			}
 	
 			&:active {
-				background-image: @button_default_active_color;
+				background-image: @button_default_active_color !important;
 			}
 		}
 
