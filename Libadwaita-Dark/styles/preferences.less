@@ -552,8 +552,26 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 // Preferences: Subscription tab
 //------------------------------------------------------------
 .container-identity {
+	//---------------------------------
+	// Identity details
+	//---------------------------------
 	.identity-content-box {
 		color: @text_color_dim;
+
+		.identity-info {
+			.name {
+				color: @text_color;
+				font-size: @text_size_large;
+			}
+
+			.email {
+				color: @text_color;
+			}
+		}
+
+		.identity-actions {
+			margin-top: 12px;
+		}
 
 	//---------------------------------
 	// Button
