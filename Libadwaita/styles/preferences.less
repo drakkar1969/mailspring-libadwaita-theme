@@ -552,12 +552,12 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 // Preferences: Subscription tab
 //------------------------------------------------------------
 .container-identity {
-	//---------------------------------
-	// Identity details
-	//---------------------------------
 	.identity-content-box {
 		color: @text_color_dim;
 
+		//---------------------------------
+		// Identity details
+		//---------------------------------
 		.identity-info {
 			.name {
 				color: @text_color;
@@ -571,6 +571,16 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 
 		.identity-actions {
 			margin-top: 12px;
+		}
+
+		//---------------------------------
+		// Subscription actions
+		//---------------------------------
+		.subscription-actions {
+			box-shadow: @card_shadow;
+			background-color: @card_bg_color;
+			border: 0;
+			border-radius: @card_radius;
 		}
 
 	//---------------------------------
