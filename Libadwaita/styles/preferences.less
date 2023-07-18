@@ -555,13 +555,58 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 	.identity-content-box {
 		color: @text_color_dim;
 
+		//---------------------------------
+		// Identity details
+		//---------------------------------
+		.identity-info {
+			.name {
+				color: @text_color;
+				font-size: @text_size_large;
+			}
+
+			.email {
+				color: @text_color;
+			}
+		}
+
+		.identity-actions {
+			margin-top: 12px;
+		}
+
+		//---------------------------------
+		// Subscription actions
+		//---------------------------------
+		.subscription-actions {
+			box-shadow: @card_shadow;
+			background-color: @card_bg_color;
+			border: 0;
+			border-radius: @card_radius;
+		}
+
+		//---------------------------------
+		// Subscription feature list
+		//---------------------------------
+		.features {
+			img.content-dark {
+				zoom: 1 !important;
+				-webkit-mask-repeat: no-repeat;
+				-webkit-mask-size: 16px;
+				-webkit-mask-image: url("../static/images/preferences/identity/pro-feature-checkmark@2x.png");
+				background-color: @text_color_dim;
+				width: 16px;
+				height: 16px;
+				margin-right: 8px;
+				padding-top: 16px;
+			}
+		}
+
 	//---------------------------------
 	// Button
 	//---------------------------------
 	.btn-emphasis {
 			width: 200px;
-			background: none;
-			background-color: @accent_bg_color;
+			background: none !important;
+			background-color: @accent_bg_color !important;
 			color: @accent_fg_color;
 
 			&::before {
@@ -569,11 +614,11 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 			}	
 
 			&:hover {
-				background-image: @button_default_hover_color;
+				background-image: @button_default_hover_color !important;
 			}
 	
 			&:active {
-				background-image: @button_default_active_color;
+				background-image: @button_default_active_color !important;
 			}
 		}
 
