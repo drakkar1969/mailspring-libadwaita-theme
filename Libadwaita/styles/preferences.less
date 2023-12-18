@@ -300,15 +300,15 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 			}
 
 			&:hover {
-				background-color: @view_hover_color;
+				background-color: @list_hover_color;
 			}
 
 			&.selected {
-				background-color: @view_selected_color;
+				background-color: @list_selected_color;
 				color: @text_color;
 
 				&:hover {
-					background-color: @view_selected_hover_color;
+					background-color: @list_selected_hover_color;
 				}
 			}
 
@@ -334,7 +334,7 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 		// Selected item
 		//---------------------------------
 		.selected {
-			background-color: @view_selected_color;
+			background-color: @list_selected_color;
 			border-radius: 0;
 			color: @text_color;
 
@@ -343,7 +343,7 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 			}
 
 			&:hover {
-				background-color: @view_selected_hover_color;
+				background-color: @list_selected_hover_color;
 			}
 		}
 
@@ -419,11 +419,11 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 	// Selected item (when focused)
 	//---------------------------------
 	&:focus .items-wrapper .selected {
-		background-color: @view_selected_color;
+		background-color: @list_selected_color;
 		color: @text_color;
 
 		&:hover {
-			background-color: @view_selected_hover_color;
+			background-color: @list_selected_hover_color;
 		}
 	}
 }
@@ -492,7 +492,7 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 			margin-bottom: 12px;
 	
 			&:hover:not(.selected) {
-				background-color: @view_hover_color;
+				background-color: @list_hover_color;
 			}
 		}
 

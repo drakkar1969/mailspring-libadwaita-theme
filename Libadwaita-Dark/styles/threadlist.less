@@ -50,22 +50,22 @@
 //------------------------------------------------------------
 .thread-list {
 	.list-item {
-		background-color: @card_bg_color !important;
+		background-color: @view_bg_color !important;
 		border-bottom: 1px solid @borders_color !important;
 		border-left: 0 !important;
 		color: @text_color !important;
 
 		&:hover {
-			background-color: @view_hover_color !important;
+			background-color: @list_hover_color !important;
 		}
 
 		&.focused,
 		&.selected {
-			background-color: @view_selected_color !important;
+			background-color: @list_selected_color !important;
 			color: @text_color !important;
 
 			&:hover {
-				background-color: @view_selected_hover_color !important;
+				background-color: @list_selected_hover_color !important;
 			}
 		}
 
@@ -126,14 +126,14 @@
 	}
 
 	&:hover {
-		background-color: @view_hover_color;
+		background-color: @list_hover_color;
 	}
 
 	&.selected {
-		background-color: @view_selected_color;
+		background-color: @list_selected_color;
 
 		&:hover {
-			background-color: @view_selected_hover_color;
+			background-color: @list_selected_hover_color;
 		}
 
 		.checkmark {
