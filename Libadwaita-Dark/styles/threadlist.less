@@ -6,10 +6,6 @@
 .column-ThreadList {
 	background: @window_bg_color;
 
-	.scroll-region .scroll-region-content-inner {
-		margin: 16px 20px;
-	}
-
 	.flexbox-handle-horizontal div {
 		box-shadow: none;
 	}
@@ -47,25 +43,6 @@
 
 .list-container .list-rows {
 	background: @card_bg_color;
-	border-radius: @card_radius;
-
-	&:not(:empty) {
-		box-shadow: @card_shadow;
-	}
-
-	& > div {
-		&:first-child .list-item {
-			border-radius: @card_radius @card_radius 0 0;
-		}
-
-		&:last-child .list-item {
-			border-radius: 0 0 @card_radius @card_radius;
-		}
-
-		&:only-child .list-item {
-			border-radius: @card_radius;
-		}
-	}
 }
 
 //------------------------------------------------------------
