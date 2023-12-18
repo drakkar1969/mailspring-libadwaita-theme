@@ -47,15 +47,15 @@
 	color: @text_color;
 	margin-top: 4px;
 	margin-bottom: 8px;
-	height: 36px;
+	height: unset;
+	min-height: 36px;
 
 	.add-item-button {
 		background: transparent;
 		width: @button_height;
-		height: @button_height;
 		line-height: @button_height;
 		margin-top: 0;
-		padding: 10px;
+		padding: 0 10px !important;
 
 		img.content-mask {
 			background-color: @text_color;
