@@ -181,15 +181,15 @@
 // Sidebar syncing box
 //------------------------------------------------------------
 .sidebar-activity {
-	background-color: @headerbar_bg_color;
+	background-color: @sidebar_bg_color;
 	box-shadow: none;
-	border: 1px solid @borders_color;
+	border: 1px solid @sidebar_border_color;
 	border-width: 0 1px 0 0;
 	color: @text_color;
 	font-size: @text_size;
 
 	.item .inner {
-		border-color: @borders_color;
+		border: none;
 		font-weight: 600;
 	}
 
@@ -270,14 +270,14 @@
 // Sidebar notifications (error/offline/update)
 //------------------------------------------------------------
 .notifications {
-	background-color: @headerbar_bg_color;
+	background-color: @sidebar_bg_color;
 	box-shadow: none;
-	border: 1px solid @borders_color;
+	border: 1px solid @sidebar_border_color;
 	border-width: 1px 1px 0 0;
 }
 
 .notification {
-	background: mix(@accent_bg_color, @headerbar_bg_color, 30%);
+	background: mix(@accent_bg_color, @sidebar_bg_color, 30%);
 	border-radius: @card_radius;
 	color: @text_color;
 	font-size: @text_size;
@@ -315,10 +315,10 @@
 	}
 
 	&.error {
-		background: mix(@error_bg_color, @headerbar_bg_color, 30%);
+		background: mix(@error_bg_color, @sidebar_bg_color, 30%);
 	}
 
 	&.offline {
-		background: mix(@warning_bg_color, @headerbar_bg_color, 30%);
+		background: mix(@warning_bg_color, @sidebar_bg_color, 30%);
 	}
 }
