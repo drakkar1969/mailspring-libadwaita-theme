@@ -5,7 +5,7 @@
 //------------------------------------------------------------
 body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 	background: @window_bg_color;
-	border-bottom: 1px solid @borders_color;
+	border-bottom: none;
 }
 
 //------------------------------------------------------------
@@ -56,15 +56,11 @@ body.platform-linux .sheet-toolbar-container[data-id="Preferences"] {
 //------------------------------------------------------------
 .preferences-wrap .container-preference-tabs {
 	background-color: @window_bg_color;
-	border-color: @borders_color;
+	border: none;
 
 	.preferences-tabs {
-		background-color: @headerbar_bg_color;
+		background-color: @window_bg_color;
 		padding: 5px 0;
-
-		body.is-blurred & {
-			background-color: @window_bg_color;
-		}
 
 		.item {
 			box-shadow: none;
