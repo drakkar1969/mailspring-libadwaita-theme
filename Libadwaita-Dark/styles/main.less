@@ -153,6 +153,15 @@
 @scrollbar_slider_hover_color: fade(@text_color, alpha(@text_color)*100*0.4);
 @scrollbar_slider_dragging_color: fade(@text_color, alpha(@text_color)*100*0.6);
 
+// Message list stack colors
+@a_bg: alpha(@card_bg_color);
+
+@stack_bg_color: rgb(red(@card_bg_color) * @a_bg + red(@window_bg_color) * (1 - @a_bg), green(@card_bg_color) * @a_bg + green(@window_bg_color) * (1 - @a_bg), blue(@card_bg_color) * @a_bg + blue(@window_bg_color) * (1 - @a_bg));
+
+@a_border: alpha(@borders_color);
+
+@stack_border_color: rgb(red(@borders_color) * @a_border + red(@window_bg_color) * (1 - @a_border), green(@borders_color) * @a_border + green(@window_bg_color) * (1 - @a_border), blue(@borders_color) * @a_border + blue(@window_bg_color) * (1 - @a_border));
+
 //------------------------------------------------------------
 // Other fixed variables
 //------------------------------------------------------------

@@ -332,6 +332,8 @@
 //------------------------------------------------------------
 .selected-items-stack .selected-items-stack-content {
 	.stack .card {
+		box-shadow: @card_shadow;
+
 		&:nth-child(2) {
 			transform: translate(5px, 0) !important;
 		}
@@ -349,8 +351,8 @@
 		}
 
 		svg {
-			stroke: @borders_color;
-			fill: @card_bg_color;	
+			stroke: @stack_border_color;
+			fill: @stack_bg_color;
 		}
 	}
 
