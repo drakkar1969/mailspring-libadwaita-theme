@@ -448,7 +448,6 @@
 	}
 
 	.file-info-wrap {
-		border-radius: @button_radius 0 0 @button_radius !important;
 		margin-right: -1px;
 
 		.file-name {
@@ -461,10 +460,12 @@
 	}
 
 	.file-action-icon {
-		border-radius: 0 @button_radius @button_radius 0 !important;
-
 		img.content-mask {
 			background-color: @text_color;
+		}
+
+		&.quicklook {
+			margin-right: -1px;
 		}
 	}
 }
