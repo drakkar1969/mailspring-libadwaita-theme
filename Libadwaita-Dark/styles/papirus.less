@@ -443,10 +443,18 @@ body.platform-linux .toolbar-menu-control .btn-toolbar img.content-mask[alt="win
 // File attachment download
 //---------------------------------
 .nylas-attachment-item .file-action-icon img.content-mask {
-	mask-image: url("mailspring://@{asset_path}/styles/papirus/download.svg") !important;
 	mask-size: 16px !important;
 	width: 16px !important;
 	height: 16px !important;
+	zoom: 1 !important;
+
+	&[alt="attachment-quicklook.png"] {
+		mask-image: url("mailspring://@{asset_path}/styles/papirus/eye.svg") !important;
+	}
+
+	&[alt="icon-attachment-download.png"] {
+		mask-image: url("mailspring://@{asset_path}/styles/papirus/download.svg") !important;
+	}
 }
 
 //---------------------------------
@@ -457,6 +465,7 @@ body.platform-linux .toolbar-menu-control .btn-toolbar img.content-mask[alt="win
 	mask-size: 16px !important;
 	width: 16px !important;
 	height: 16px !important;
+	zoom: 1 !important;
 }
 
 .download-all .download-all-action img.content-mask {
@@ -464,6 +473,7 @@ body.platform-linux .toolbar-menu-control .btn-toolbar img.content-mask[alt="win
 	mask-size: 16px !important;
 	width: 16px !important;
 	height: 16px !important;
+	zoom: 1 !important;
 }
 
 //---------------------------------
