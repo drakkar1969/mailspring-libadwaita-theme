@@ -1,7 +1,11 @@
-@import "main.less";
-
 .ignore-in-parent-frame {
-	html, body {
-		color: @text_color !important;
+	body {
+		filter: invert(100%) hue-rotate(180deg);
+		/* Note: text color needs to be inverted */
+		color: #000000;
+	}
+
+	img {
+		filter: invert(100%) hue-rotate(180deg);
 	}
 }
