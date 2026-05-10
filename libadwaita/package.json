@@ -1,9 +1,9 @@
 {
-	"name": "Libadwaita-Dark",
-  "displayName": "Libadwaita-Dark",
+	"name": "libadwaita",
+  "displayName": "Libadwaita",
   "theme": "ui",
   "version": "1.0.0",
-  "description": "Libadwaita Dark theme for Mailspring",
+  "description": "Libadwaita theme for Mailspring",
   "license": "MIT",
   "engines": {
     "mailspring": "*"
